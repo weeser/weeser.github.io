@@ -6,6 +6,7 @@ authors:
 - Joshua Levi Weese
 - Nathan H Bean
 date: '2018-01-01'
+featured: true
 publishDate: '2023-11-22T04:06:08.378272Z'
 publication_types:
 - paper-conference
