@@ -5,8 +5,8 @@
 
 i_am_a_sponsor: true
 
-power_ups:
-  hide_published_with: true
+# power_ups:
+#   hide_published_with: true
 
 # Appearance
 
