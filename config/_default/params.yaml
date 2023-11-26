@@ -119,3 +119,7 @@ extensions:
 security:
   # Allow frame for embedding speaker notes in slides
   allow_frame: true
+
+# for include shortcode
+## Included-Files Root Content Directory
+includes_dir: ""

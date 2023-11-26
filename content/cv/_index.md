@@ -386,7 +386,8 @@ tags:
 </table>
 <h2><a href="http://weeser.net/publications/">Publications</a></h2>
 
-{{% include "publication/_index.md" %}}
+{{% include file="..public/publication/index.html" %}}
+
 
 ## Awards
 <table>
