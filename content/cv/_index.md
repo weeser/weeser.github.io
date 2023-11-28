@@ -11,51 +11,51 @@ sections:
   - block: markdown
     content:
       title: Education
-      subtitle: ''
+      subtitle: ""
       text: |-
-        {{% include file="/cv/education.md" type="md" %}} 
+        {{% include file="/cv/education.md" type="md" %}}
     design:
-      columns: '1'
+      columns: "1"
   - block: markdown
     content:
       title: Professional Experience
-      subtitle: ''
+      subtitle: ""
       text: |-
-        {{% include file="/cv/professionalExperience.md" type="md" %}} 
+        {{% include file="/cv/professionalExperience.md" type="md" %}}
     design:
-      columns: '1'
+      columns: "1"
   - block: markdown
     content:
       title: Teaching Experience
-      subtitle: ''
+      subtitle: ""
       text: |-
-        {{% include file="/cv/teachingExperience.md" type="md" %}} 
+        {{% include file="/cv/teachingExperience.md" type="md" %}}
     design:
-      columns: '1'
+      columns: "1"
   - block: markdown
     content:
       title: Organizaions
-      subtitle: ''
+      subtitle: ""
       text: |-
-        {{% include file="/cv/organizations.md" type="md" %}} 
+        {{% include file="/cv/organizations.md" type="md" %}}
     design:
-      columns: '1'
+      columns: "1"
   - block: markdown
     content:
       title: Service
-      subtitle: ''
+      subtitle: ""
       text: |-
-        {{% include file="/cv/service.md" type="md" %}} 
+        {{% include file="/cv/service.md" type="md" %}}
     design:
-      columns: '1'
+      columns: "1"
   - block: markdown
     content:
       title: Awards
-      subtitle: ''
+      subtitle: ""
       text: |-
-        {{% include file="/cv/awards.md" type="md" %}} 
+        {{% include file="/cv/awards.md" type="md" %}}
     design:
-      columns: '1'
+      columns: "1"
   - block: collection
     content:
       title: Publications
@@ -66,6 +66,6 @@ sections:
           - publication
         exclude_featured: false
     design:
-      columns: '2'
+      columns: "2"
       view: citation
 ---
