@@ -25,9 +25,9 @@ main:
   - name: CV
     url: 'cv'
     weight: 65
-  - name: Education
-    parent: CV
-    url: 'cv/#Education'
+  # - name: Education
+  #   parent: CV
+  #   url: 'cv/#Education'
     weight: 65
   - name: Contact
     url: '#contact'
