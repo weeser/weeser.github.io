@@ -386,8 +386,15 @@ tags:
 </table>
 <h2><a href="http://weeser.net/publications/">Publications</a></h2>
 
-{{% include file="..public/publication/index.html" %}}
+<!-- {{% include file="..public/publication/index.html" %}} -->
 
+{{% collection title="Publications" 
+			   count=0 
+			   folder=publication
+			   exclude_featured=false} 
+			   columns=2
+			   view=citation 
+%}}
 
 ## Awards
 <table>

@@ -1,0 +1,88 @@
+{{/* Hugo Blox: Collection */}}
+{{/* Documentation: https://hugoblox.com/blocks/ */}}
+{{/* License: https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md */}}
+
+{{/* Initialise */}}
+{{ $page := .Page }}
+
+{{ $items_offset := .Get "offset" | default 0 }}
+{{ $items_count := .Get "count" }}
+{{ if eq $items_count 0 }}
+  {{ $items_count = 65535 }}
+{{ else }}
+  {{ $items_count = $items_count | default 5 }}
+{{ end }}
+
+{{/* Query */}}
+{{ $query := site.RegularPages }}
+
+{{/* Filters */}}
+
+{{ if .Get "page_type" }}
+  {{ $page_type :=.Get "page_type" }}
+  {{ $query = where $query "Type" $page_type }}
+{{ end }}
+{{ if .Get "folder" }}
+  {{ $folder :=.Get "folder" }}
+  {{ $query = where $query "Section" "in" $folder }}
+{{ end }}
+{{ if .Get "tag" }}
+  {{ $tag :=.Get "tag" }}
+  {{ $archive_page = site.GetPage (printf "tags/%s" (urlize $tag)) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if .Get "category" }}
+  {{ $category :=.Get "category" }}
+  {{ $archive_page = site.GetPage (printf "categories/%s" (urlize $category)) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if .Get "publication_type" }}
+  {{ $publication_type :=.Get "publication_type" }}
+  {{ $archive_page = site.GetPage (printf "publication_types/%s" $publication_type) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if .Get "author" }}
+  {{ $author :=.Get "author" }}
+  {{ $archive_page = site.GetPage (printf "authors/%s" (urlize $author)) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if .Get "featured_only" }}
+  {{ $query = where $query "Params.featured" "==" true }}
+{{ end }}
+{{ if .Get "exclude_featured" }}
+  {{ $query = where $query "Params.featured" "!=" true }}
+{{ end }}
+{{ if .Get "exclude_past" }}
+  {{ $query = where $query "Date" ">=" now }}
+{{ end }}
+{{ if .Get "exclude_future" }}
+  {{ $query = where $query "Date" "<" now }}
+{{ end }}
+
+{{ $count := len $query }}
+
+{{/* Sort */}}
+{{ $sort_by := .Get "sort_by" | default "Date" }}
+{{ $sort_by = partial "blox-core/functions/get_sort_by_parameter" $sort_by }}
+
+{{ $sort_order := .Get "order" | default "asc"}}
+{{ $query = sort $query $sort_by $sort_order }}
+
+{{/* Offset and Limit */}}
+{{ if gt $items_offset 0 }}
+  {{ $query = first $items_count (after $items_offset $query) }}
+{{ else }}
+  {{ $query = first $items_count $query }}
+{{ end }}
+
+{{ $columns := .Get "columns" | default "2" }}
+
+<div class="col-12 {{if eq $columns "2"}}col-lg-8{{end}}">
+
+  {{/*  {{ with .Get "text" }}{{ . | emojify | $page.RenderString }}{{ end }}
+
+  {{ range $index, $item := $query }}
+    {{ partial "functions/render_view" (dict "page" $page "item" . "view" (.Get "view" | default "compact") "index" $index) }}
+  {{end}}  */}}
+
+</div>
