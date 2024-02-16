@@ -14,5 +14,3 @@ banner:
   caption: ''
   image: ''
 ---
-
-stuff
