@@ -4,6 +4,7 @@
 # Hugo
 resources/
 public/
+ebug/
 jsconfig.json
 node_modules/
 go.sum

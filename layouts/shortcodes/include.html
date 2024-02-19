@@ -7,19 +7,12 @@
 {{ $options :=.Get "options" | default ""}}
 
 
-{{ warnf ($file)}}
-{{ warnf ($type)}}
-{{ warnf ($language)}}
-{{ warnf ($raw)}}
-
 <div class="gdoc-include">
     {{- if eq $type "md" -}}
         {{- with .Site.GetPage $file }}
             {{- if eq $raw "true" -}}
-                {{ warnf ("raw")}}
                 {{- .RawContent -}}
             {{- else -}}
-                {{ warnf ("rendered")}}
                 {{- .Content -}}
             {{- end -}}
         {{- else -}}
