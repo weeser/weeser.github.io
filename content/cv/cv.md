@@ -23,12 +23,4 @@ sections:
       autolink: true
     design:
       columns: '2'
-  - block: markdown
-    content:
-      title: Education
-      subtitle: ''
-      text: |-
-        {{% include file="/cv/sections/education.md" type="md" %}} 
-    design:
-      columns: '1'
 ---
