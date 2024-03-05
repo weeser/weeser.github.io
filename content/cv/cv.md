@@ -23,6 +23,7 @@ sections:
       autolink: true
     design:
       columns: '2'
+
   - block: markdown
     content:
       title: Education
