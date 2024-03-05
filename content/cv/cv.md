@@ -28,7 +28,7 @@ sections:
       title: Education
       subtitle: ''
       text: |-
-        {{% include file="/cv/education.md" type="md" %}} 
+        {{% include file="/cv/sections/education.md" type="md" %}} 
     design:
       columns: '1'
   - block: markdown
@@ -36,7 +36,7 @@ sections:
       title: Professional Experience
       subtitle: ''
       text: |-
-        {{% include file="/cv/professionalExperience.md" type="md" %}} 
+        {{% include file="/cv/sections/professionalExperience.md" type="md" %}} 
     design:
       columns: '1'
   - block: markdown
@@ -44,7 +44,7 @@ sections:
       title: Teaching Experience
       subtitle: ''
       text: |-
-        {{% include file="/cv/teachingExperience.md" type="md" %}} 
+        {{% include file="/cv/sections/teachingExperience.md" type="md" %}} 
     design:
       columns: '1'
   - block: markdown
@@ -52,7 +52,7 @@ sections:
       title: Organizaions
       subtitle: ''
       text: |-
-        {{% include file="/cv/organizations.md" type="md" %}} 
+        {{% include file="/cv/sections/organizations.md" type="md" %}} 
     design:
       columns: '1'
   - block: markdown
@@ -60,7 +60,7 @@ sections:
       title: Service
       subtitle: ''
       text: |-
-        {{% include file="/cv/service.md" type="md" %}} 
+        {{% include file="/cv/sections/service.md" type="md" %}} 
     design:
       columns: '1'
   - block: markdown
@@ -68,7 +68,7 @@ sections:
       title: Awards
       subtitle: ''
       text: |-
-        {{% include file="/cv/awards.md" type="md" %}} 
+        {{% include file="/cv/sections/awards.md" type="md" %}} 
     design:
       columns: '1'
   - block: collection
