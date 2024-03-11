@@ -9,8 +9,14 @@ import ThemeToggle from '@/components/menu/ToggleTheme.vue'
 const items = ref([
 	{
 		label: 'Home',
-		icon: 'pi pi-home'
-	}
+		icon: 'pi pi-home',
+    url: '/'
+	},
+  {
+    label: 'Publications',
+    icon: 'pi pi-book',
+    url: '/publications'
+  }
 ])
 
 </script>

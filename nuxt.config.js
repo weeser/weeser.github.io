@@ -3,6 +3,22 @@ export default defineNuxtConfig({
         'nuxt-primevue',
         '@nuxt/content'
     ],
+    build: {
+        // Extend webpack config
+        extend(config) {
+            config.module.rules = config.module.rules
+                .map(x => {
+                    if (x.test.source.includes(".bib")) {
+                        return {
+                            test: /\.bib$/,
+                            use: "raw-loader",
+                        }
+                    } else {
+                        return x
+                    }
+                })
+        },
+    },
     primevue: {
         /* Options */
         options: {
