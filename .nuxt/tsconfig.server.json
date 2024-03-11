@@ -45,8 +45,14 @@
       "assets": [
         "../assets"
       ],
+      "assets/*": [
+        "../assets/*"
+      ],
       "public": [
         "../public"
+      ],
+      "public/*": [
+        "../public/*"
       ],
       "#primevue-style": [
         "./primevue-style"

@@ -14,21 +14,18 @@ export default defineNuxtConfig({
         }
     },
     css: [
-        'primevue/resources/themes/aura-light-teal/theme.css',
+        // TODO: Come back to this later when primevue is updated
+        // 'primevue/resources/themes/aura-light-teal/theme.css',
+        // 'primevue/resources/themes/aura-dark-teal/theme.css',
         "primeicons/primeicons.css",
     ],
     app: {
         head: {
             link: [
                 {
-                    id: 'theme-link-light-teal',
+                    id: 'theme-link',
                     rel: 'stylesheet',
                     href: '/themes/aura-light-teal/theme.css'
-                },
-                {
-                    id: 'theme-link-dark-teal',
-                    rel: 'stylesheet',
-                    href: '/themes/aura-dark-teal/theme.css'
                 }
             ]
         }

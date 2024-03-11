@@ -42,13 +42,15 @@ onMounted(() => {
  */
 const updateTheme = () => {
 	//   Logger.info('Update theme to ' + themeDark.value)
-	if (themeDark.value == 'light-theme') {
+	if (themeDark.value === 'light-theme') {
 		PrimeVue.changeTheme('aura-dark-teal', 'aura-light-teal', 'theme-link', () => {
 			// localStorage.setItem('user-theme', themeDark.value)
+      console.debug('Theme changed to light');
 		})
 	} else {
 		PrimeVue.changeTheme('aura-light-teal', 'aura-dark-teal', 'theme-link', () => {
 			// localStorage.setItem('user-theme', themeDark.value)
+      console.debug('Theme changed to dark');
 		})
 	}
 }
@@ -57,7 +59,7 @@ const updateTheme = () => {
  * Toggle theme value and trigger update
  */
 const toggleDarkMode = () => {
-	if (themeDark.value == 'dark-theme') {
+	if (themeDark.value === 'dark-theme') {
 		themeDark.value = 'light-theme'
 	} else {
 		themeDark.value = 'dark-theme'
