@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/content": "^2.12.1",
+    "primevue": "^3.49.1",
+    "vue": "^3.4.15"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "nuxt": "^3.7.3",
+    "nuxt-primevue": "^0.3.1",
+    "primeicons": "^6.0.1"
+  }
+}
