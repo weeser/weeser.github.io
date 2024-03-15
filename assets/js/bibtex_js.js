@@ -220,11 +220,13 @@ export function BibtexParser() {
         if (directive == "@INCOLLECTION") {
             this.entries[this.currentEntry]["BIBTEXTYPE"] = "book chapter";
         } else if (directive == "@INPROCEEDINGS") {
-            this.entries[this.currentEntry]["BIBTEXTYPE"] = "conference, workshop";
+            this.entries[this.currentEntry]["BIBTEXTYPE"] = "conference";
         } else if (directive == "@ARTICLE") {
             this.entries[this.currentEntry]["BIBTEXTYPE"] = "journal";
-        } else if (directive == "@TECHREPORT") {
-            this.entries[this.currentEntry]["BIBTEXTYPE"] = "technical report";
+        } else if (directive == "@PHDTHESIS") {
+            this.entries[this.currentEntry]["BIBTEXTYPE"] = "phd thesis";
+        } else if (directive == "@MASTERSTHESIS") {
+            this.entries[this.currentEntry]["BIBTEXTYPE"] = "masters thesis";
         }
         this.entries[this.currentEntry]["BIBTEXTYPEKEY"] = directive.substr(1);
         this.match(",");

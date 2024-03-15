@@ -26,7 +26,8 @@ export default defineNuxtConfig({
             usePrimeVue: true
         },
         components: {
-            include: ['Button', 'Menubar']
+            include: '*',
+            exclude: ['Galleria', 'Carousel']
         }
     },
     css: [
@@ -34,6 +35,7 @@ export default defineNuxtConfig({
         // 'primevue/resources/themes/aura-light-teal/theme.css',
         // 'primevue/resources/themes/aura-dark-teal/theme.css',
         "primeicons/primeicons.css",
+        "primeflex/primeflex.css"
     ],
     app: {
         head: {
