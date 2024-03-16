@@ -1,12 +1,12 @@
 <script setup>
 // Libraries
-import fs from 'fs';
 import {ref} from 'vue'
 import {BibtexParser} from 'assets/js/bibtex_js';
-import { FilterMatchMode, FilterService } from 'primevue/api';
+import {FilterMatchMode, FilterService} from 'primevue/api';
 
 //read the bibtex file
-let bib_file = fs.readFileSync('data/publications.bib', 'utf8');
+// let bib_file = fs.readFileSync('data/publications.bib', 'utf8');
+let bib_file = (await import(`../data/publications.bib?raw`)).default;
 let parser = new BibtexParser();
 parser.setInput(bib_file)
 parser.bibtex();
@@ -22,7 +22,7 @@ for (let key in entry_dict) {
 }
 
 const bib_entries = ref(entry_list);
-console.log(entry_list);
+//console.log(entry_list);
 // console.log(entry_list.length);
 
 // Define filters
@@ -36,7 +36,14 @@ const filterAsYouType = () => {
   // Perform the filtering operation here
   // This could involve calling an API, filtering an array, etc.
   // For example, if `bib_entries` is an array of objects:
-  bib_entries.value = entry_list.filter(entry => entry['BIBTEXTYPE'].includes(filters.value['BIBTEXTYPE'].value));
+  console.debug('Filtering as you type');
+  console.debug(filters.value['BIBTEXTYPE'].value)
+  // bib_entries.value = entry_list.filter(entry => entry['BIBTEXTYPE'].includes(filters.value['BIBTEXTYPE'].value));
+
+  bib_entries.value = entry_list.filter(entry =>
+      entry['BIBTEXTYPE'].some(type => type.includes(filters.value['BIBTEXTYPE'].value))
+  );
+  console.debug(bib_entries.value);
 };
 
 const sortKey = ref();
@@ -47,6 +54,8 @@ const sortOptions = ref([
   {label: 'Earliest', value: 'YEAR'},
 ]);
 const onSortChange = (event) => {
+  console.debug("sorting")
+  // console.log("sorting")
   const value = event.value.value;
   const sortValue = event.value;
 
@@ -54,8 +63,7 @@ const onSortChange = (event) => {
     sortOrder.value = -1;
     sortField.value = value.substring(1, value.length);
     sortKey.value = sortValue;
-  }
-  else {
+  } else {
     sortOrder.value = 1;
     sortField.value = value;
     sortKey.value = sortValue;
@@ -73,9 +81,10 @@ const onSortChange = (event) => {
       <template #header>
         <!-- Add filter inputs for each field you want to filter -->
         <InputText v-model="filters['BIBTEXTYPE'].value" placeholder="Filter by type" @input="filterAsYouType"/>
-        <Dropdown v-model="sortKey" :options="sortOptions" optionLabel="label" placeholder="Sort By Year" @change="onSortChange($event)" />
+        <Dropdown v-model="sortKey" :options="sortOptions" optionLabel="label" placeholder="Sort By Year"
+                  @change="onSortChange($event)"/>
       </template>
-      <template #empty> No publications found. </template>
+      <template #empty> No publications found.</template>
 
       <template #list="slotProps">
         <div class="grid grid-nogutter">
