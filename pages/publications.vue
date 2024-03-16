@@ -12,39 +12,71 @@ parser.setInput(bib_file)
 parser.bibtex();
 let entry_dict = parser.getEntries()
 let entry_list = [];
+let bib_types_set = new Set();
 for (let key in entry_dict) {
   if ('BIBTEXTYPE' in entry_dict[key]) {
-    entry_dict[key]['BIBTEXTYPE'] = entry_dict[key]['BIBTEXTYPE'].split(',');
+    let types = entry_dict[key]['BIBTEXTYPE'].split(',');
+    entry_dict[key]['BIBTEXTYPE'] = types;
+    types.forEach(type => bib_types_set.add(type)); // Add each type to the set
   } else {
     entry_dict[key]['BIBTEXTYPE'] = ['misc'];
+    bib_types_set.add('misc');
   }
   entry_list.push(entry_dict[key]);
+}
+let bib_types = [];
+for (let type of bib_types_set) {
+  bib_types.push({label: type, value: type});
 }
 
 const bib_entries = ref(entry_list);
 //console.log(entry_list);
-// console.log(entry_list.length);
+//console.log(entry_list.length);
 
-// Define filters
-const filters = ref({
-  'BIBTEXTYPE': {value: null, matchMode: FilterMatchMode.CONTAINS},
-  // Add more fields to filter here
-});
+//-------------------------------- Define filters -----------------------------------
+
 
 // Define a method to filter as you type
-const filterAsYouType = () => {
+const filterAsYouType = (filterID, field, isList) => {
   // Perform the filtering operation here
   // This could involve calling an API, filtering an array, etc.
   // For example, if `bib_entries` is an array of objects:
   console.debug('Filtering as you type');
-  console.debug(filters.value['BIBTEXTYPE'].value)
-  // bib_entries.value = entry_list.filter(entry => entry['BIBTEXTYPE'].includes(filters.value['BIBTEXTYPE'].value));
 
-  bib_entries.value = entry_list.filter(entry =>
-      entry['BIBTEXTYPE'].some(type => type.includes(filters.value['BIBTEXTYPE'].value))
-  );
+  if (entry_list.length === 0) {
+    console.debug('entry_list is empty');
+  } else if (filters.value[filterID].value === null) {
+    console.debug('No filter defined for ' + filterID);
+    bib_entries.value = entry_list;
+  } else if (isList) {
+    console.debug('Filtering list');
+    bib_entries.value = entry_list.filter(entry =>
+        entry[field].some(type => type.includes(filters.value[filterID].value))
+    );
+  } else {
+    console.debug('Filtering string');
+
+    console.debug(FilterService.filter(entry_list, filters.value[filterID].value, filters.value[filterID].matchMode));
+    bib_entries.value = entry_list.filter(entry => entry[field].includes(filters.value[filterID].value));
+  }
   console.debug(bib_entries.value);
 };
+
+const filterMultiSelectCallback = (key) => {
+  // Implement your custom filter logic here
+  // `value` is the current value of the filter input
+  console.debug('Filtering with value:', filters.value[key].value);
+  bib_entries.value = entry_list.filter(entry =>
+      entry[key].some(type => type.includes(filters.value[key].value))
+  );
+};
+
+const filters = ref({
+  'TEXT': {value: null, matchMode: FilterMatchMode.CONTAINS, callback: filterAsYouType},
+  'BIBTEXTYPE': {value: null, matchMode: FilterMatchMode.IN, callback: filterMultiSelectCallback}
+});
+
+//-------------------------------- Define sorting -----------------------------------
 
 const sortKey = ref();
 const sortOrder = ref();
@@ -53,21 +85,28 @@ const sortOptions = ref([
   {label: 'Latest', value: '!YEAR'},
   {label: 'Earliest', value: 'YEAR'},
 ]);
+// const sortKey = ref(sortOptions.value[0].value);
 const onSortChange = (event) => {
   console.debug("sorting")
-  // console.log("sorting")
-  const value = event.value.value;
   const sortValue = event.value;
-
-  if (value.indexOf('!') === 0) {
-    sortOrder.value = -1;
-    sortField.value = value.substring(1, value.length);
-    sortKey.value = sortValue;
+  if (sortValue === null) {
+    sortOrder.value = null;
+    sortField.value = null;
+    sortKey.value = null;
   } else {
-    sortOrder.value = 1;
-    sortField.value = value;
-    sortKey.value = sortValue;
+    const value = event.value.value;
+
+    if (value.indexOf('!') === 0) {
+      sortOrder.value = -1;
+      sortField.value = value.substring(1, value.length);
+      sortKey.value = sortValue;
+    } else {
+      sortOrder.value = 1;
+      sortField.value = value;
+      sortKey.value = sortValue;
+    }
   }
+
 };
 
 
@@ -79,10 +118,32 @@ const onSortChange = (event) => {
               paginator :rows="8"
               :sortOrder="sortOrder" :sortField="sortField">
       <template #header>
-        <!-- Add filter inputs for each field you want to filter -->
-        <InputText v-model="filters['BIBTEXTYPE'].value" placeholder="Filter by type" @input="filterAsYouType"/>
-        <Dropdown v-model="sortKey" :options="sortOptions" optionLabel="label" placeholder="Sort By Year"
-                  @change="onSortChange($event)"/>
+        <div class="flex md:flex-row sm:flex-column justify-content-between align-items-center gap-3">
+          <h2 class="text-2xl font-semibold text-900">Publications</h2>
+          <!-- Add filter inputs for each field you want to filter -->
+          <div class="flex flex-wrap gap-2 flex-grow-1 md:flex-grow-0">
+            <FloatLabel class="">
+              <Dropdown inputId="sortYear" v-model="sortKey"
+                        variant="filled" showClear placeholder="Sort By Year"
+                        :options="sortOptions" optionLabel="label"
+                        @change="onSortChange($event)"/>
+              <label for="sortYear">Sort By Year</label>
+            </FloatLabel>
+            <MultiSelect v-model="filters['BIBTEXTYPE'].value" display="chip"
+                         variant="filled" placeholder="Filter by type"
+                         :options="bib_types" optionLabel="label"
+                         @change="filters['BIBTEXTYPE'].callback('BIBTEXTYPE')"
+            />
+            <InputText v-model="filters['TEXT'].value"
+                       placeholder="Filter by title"
+                       @input="filters['TEXT'].callback('TEXT','TITLE',false)"/>
+          </div>
+          <!--          <div class="flex flex-row gap-4">-->
+          <!--            <Button icon="pi pi-file-pdf" label="Export to PDF" class="p-button-sm p-button-outlined"></Button>-->
+          <!--            <Button icon="pi pi-file-excel" label="Export to bib" class="p-button-sm p-button-outlined"></Button>-->
+          <!--          </div>-->
+        </div>
+
       </template>
       <template #empty> No publications found.</template>
 
