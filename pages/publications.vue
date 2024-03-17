@@ -31,49 +31,64 @@ for (let type of bib_types_set) {
 
 const bib_entries = ref(entry_list);
 //console.log(entry_list);
-//console.log(entry_list.length);
+console.log(entry_list.length);
 
 //-------------------------------- Define filters -----------------------------------
 
-
-// Define a method to filter as you type
-const filterAsYouType = (filterID, field, isList) => {
-  // Perform the filtering operation here
-  // This could involve calling an API, filtering an array, etc.
-  // For example, if `bib_entries` is an array of objects:
-  console.debug('Filtering as you type');
-
+function filterHelper(filterID) {
   if (entry_list.length === 0) {
     console.debug('entry_list is empty');
+    return false;
   } else if (filters.value[filterID].value === null) {
     console.debug('No filter defined for ' + filterID);
     bib_entries.value = entry_list;
-  } else if (isList) {
-    console.debug('Filtering list');
-    bib_entries.value = entry_list.filter(entry =>
-        entry[field].some(type => type.includes(filters.value[filterID].value))
-    );
-  } else {
-    console.debug('Filtering string');
-
-    console.debug(FilterService.filter(entry_list, filters.value[filterID].value, filters.value[filterID].matchMode));
-    bib_entries.value = entry_list.filter(entry => entry[field].includes(filters.value[filterID].value));
+    return false;
   }
-  console.debug(bib_entries.value);
+  return true;
+}
+
+// Define a method to filter as you type
+const customFilterCallback = (filterID, field) => {
+  // Perform the filtering operation here
+  // This could involve calling an API, filtering an array, etc.
+  // For example, if `bib_entries` is an array of objects:
+  console.debug('Filtering...');
+
+  if (filterHelper(filterID)) {
+    console.debug('Filtering ' + field + ' with value:', filters.value[filterID].value);
+    if (!Array.isArray(field)) {
+      field = [field];
+    }
+    bib_entries.value = FilterService.filter(entry_list, field, filters.value[filterID].value, filters.value[filterID].matchMode);
+    console.debug(bib_entries.value.length + ' entries found');
+  }
 };
 
-const filterMultiSelectCallback = (key) => {
-  // Implement your custom filter logic here
-  // `value` is the current value of the filter input
-  console.debug('Filtering with value:', filters.value[key].value);
-  bib_entries.value = entry_list.filter(entry =>
-      entry[key].some(type => type.includes(filters.value[key].value))
-  );
+const customFilterMultiSelectCallback = (filterID, field) => {
+  console.debug('\nOriginal filter values:', filters.value[filterID].value);
+  let filter_values = filters.value[filterID].value.map(item => item.value);
+  console.debug('Filtering ' + field + ' with values:', filter_values);
+  bib_entries.value = FilterService.filter(entry_list, [field], filter_values, filters.value[filterID].matchMode);
+
+  console.debug(bib_entries.value.length + ' entries found');
 };
+
+// custom filter for multi-select to check if any of the selected items are in an array
+FilterService.register('arrayItemsInArray', (arr, filter) => {
+  if (filter === undefined || filter === null || filter.length === 0) {
+    return true;
+  }
+
+  if (arr === undefined || arr === null || arr.length === 0) {
+    return false;
+  }
+
+  return arr.some(item => filter.includes(item));
+});
 
 const filters = ref({
-  'TEXT': {value: null, matchMode: FilterMatchMode.CONTAINS, callback: filterAsYouType},
-  'BIBTEXTYPE': {value: null, matchMode: FilterMatchMode.IN, callback: filterMultiSelectCallback}
+  'CONTAINS_TEXT': {value: null, matchMode: FilterMatchMode.CONTAINS, callback: customFilterCallback},
+  'MULTI_SELECT': {value: null, matchMode: 'arrayItemsInArray', callback: customFilterMultiSelectCallback}
 });
 
 //-------------------------------- Define sorting -----------------------------------
@@ -109,12 +124,11 @@ const onSortChange = (event) => {
 
 };
 
-
 </script>
 
 <template>
   <div class="card">
-    <DataView v-model:filters="filters" :value="bib_entries"
+    <DataView :value="bib_entries"
               paginator :rows="8"
               :sortOrder="sortOrder" :sortField="sortField">
       <template #header>
@@ -129,14 +143,14 @@ const onSortChange = (event) => {
                         @change="onSortChange($event)"/>
               <label for="sortYear">Sort By Year</label>
             </FloatLabel>
-            <MultiSelect v-model="filters['BIBTEXTYPE'].value" display="chip"
+            <MultiSelect v-model="filters['MULTI_SELECT'].value" display="chip"
                          variant="filled" placeholder="Filter by type"
                          :options="bib_types" optionLabel="label"
-                         @change="filters['BIBTEXTYPE'].callback('BIBTEXTYPE')"
+                         @change="filters['MULTI_SELECT'].callback('MULTI_SELECT', 'BIBTEXTYPE')"
             />
-            <InputText v-model="filters['TEXT'].value"
-                       placeholder="Filter by title"
-                       @input="filters['TEXT'].callback('TEXT','TITLE',false)"/>
+            <InputText v-model="filters['CONTAINS_TEXT'].value"
+                       placeholder="Search"
+                       @input="filters['CONTAINS_TEXT'].callback('CONTAINS_TEXT',['TITLE', 'AUTHOR', 'YEAR', 'BOOKTITLE', 'JOURNAL'])"/>
           </div>
           <!--          <div class="flex flex-row gap-4">-->
           <!--            <Button icon="pi pi-file-pdf" label="Export to PDF" class="p-button-sm p-button-outlined"></Button>-->

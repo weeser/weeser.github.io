@@ -1,11 +1,7 @@
 # IDEs
 .idea/
 
-# Hugo
-resources/
-public/
-ebug/
-jsconfig.json
+# js
 node_modules/
-go.sum
-.hugo_build.lock
+/.nuxt/
+/.vscode/
