@@ -11,7 +11,10 @@
 			<!-- Navigation Menu-->
 			<TopMenu />
 		</nav>
-		<slot />
+    <!-- Main Content -->
+    <div class="py-1 lg:px-8 md:px-6 sm:px-4">
+      <slot />
+    </div>
 		<AppFooter />
 	</div>
 </template>

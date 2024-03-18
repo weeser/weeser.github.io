@@ -15,6 +15,7 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "nuxt": "^3.7.3",
+    "nuxt-calendly": "^0.1.18",
     "nuxt-primevue": "^0.3.1",
     "primeicons": "^6.0.1",
     "raw-loader": "^4.0.2"
