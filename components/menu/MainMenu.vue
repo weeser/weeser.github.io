@@ -16,6 +16,21 @@ const items = ref([
     label: 'Publications',
     icon: 'pi pi-book',
     url: '/publications'
+  },
+  {
+    label: 'Calendar',
+    icon: 'pi pi-calendar',
+    url: '/calendar'
+  },
+  {
+    label: 'About',
+    icon: 'pi pi-info',
+    url: '/about'
+  },
+  {
+    label: 'Contact',
+    icon: 'pi pi-envelope',
+    url: '/contact'
   }
 ])
 
