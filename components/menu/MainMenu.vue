@@ -18,6 +18,11 @@ const items = ref([
     url: '/publications'
   },
   {
+    label: 'CV',
+    icon: 'pi pi-id-card',
+    url: '/cv'
+  },
+  {
     label: 'Calendar',
     icon: 'pi pi-calendar',
     url: '/calendar'

@@ -8,7 +8,7 @@ import { usePrimeVue } from 'primevue/config'
 const PrimeVue = usePrimeVue()
 
 // Theme reference
-const themeDark = ref('light-theme')
+let themeDark = ref('light-theme')
 
 /**
  * Get theme from local storage
@@ -33,9 +33,11 @@ const getMediaPreference = () => {
  * Set theme when component is mounted
  */
 onMounted(() => {
+	console.debug('-------------OnMounted theme toggle-------------')
 	themeDark.value = getTheme() || getMediaPreference()
 	updateTheme()
 })
+
 
 /**
  * Update theme on change
@@ -45,12 +47,12 @@ const updateTheme = () => {
 	if (themeDark.value === 'light-theme') {
 		PrimeVue.changeTheme('aura-dark-teal', 'aura-light-teal', 'theme-link', () => {
 			// localStorage.setItem('user-theme', themeDark.value)
-      console.debug('Theme changed to light');
+			console.debug('Theme changed to light');
 		})
 	} else {
 		PrimeVue.changeTheme('aura-light-teal', 'aura-dark-teal', 'theme-link', () => {
 			// localStorage.setItem('user-theme', themeDark.value)
-      console.debug('Theme changed to dark');
+			console.debug('Theme changed to dark');
 		})
 	}
 }
@@ -59,6 +61,7 @@ const updateTheme = () => {
  * Toggle theme value and trigger update
  */
 const toggleDarkMode = () => {
+	console.debug('Toggle theme')
 	if (themeDark.value === 'dark-theme') {
 		themeDark.value = 'light-theme'
 	} else {
@@ -66,6 +69,7 @@ const toggleDarkMode = () => {
 	}
 	updateTheme()
 }
+
 </script>
 
 <template>
