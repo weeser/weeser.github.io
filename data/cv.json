@@ -187,7 +187,7 @@
 			"years": "2008 - 2010"
 		}
 	],
-	"professional_service": [
+	"professionalService": [
 		{
 			"activity": "SIGCSE Associate Program Chair",
 			"year": "2021"
@@ -229,7 +229,7 @@
 			"years": "2016,2018"
 		}
 	],
-	"university_service":[
+	"universityService":[
 		{
 			"activity": "Academic Assessment Committee",
 			"years": "2017-present"
@@ -263,7 +263,7 @@
 			"years": "2017-present"
 		}
 	],
-	"courses_taught": [
+	"coursesTaught": [
 		{
 			"course_code": "CIS 115",
 			"course_title": "Introduction to Computing Technology",

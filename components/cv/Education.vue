@@ -15,18 +15,5 @@ defineProps(['education'])
 </script>
 
 <style scoped>
-h2 {
-	font-size: 24px;
-	font-weight: bold;
-}
 
-h3 {
-	font-size: 18px;
-	font-weight: bold;
-}
-
-p {
-	font-size: 16px;
-	margin-bottom: 8px;
-}
 </style>
