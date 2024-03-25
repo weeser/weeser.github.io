@@ -1,38 +1,31 @@
 {
-	"awards": [
-		{
-			"name": "Teaching Excellence Award",
-			"organization": "Department of Computer Science, Kansas State University",
-			"years": [
-				"2020",
-				"2021"
-			]
-		},
+	"awards": [		
 		{
 			"name": "Kevin and Jacquie Elmore - Carl and Mary Ice Teaching Scholar",
 			"organization": "Kansas State University",
-			"years": [
-				"2020-2025"
-			]
+			"years": "2020-2025"
+		},
+		{
+			"name": "Teaching Excellence Award",
+			"organization": "Department of Computer Science, Kansas State University",
+			"years": "2020-2023"
 		},
 		{
 			"name": "College of Engineering Team Award of Excellence",
 			"organization": "Kansas State University",
-			"years": [
-				"2021"
-			]
+			"years": "2021"
 		},
 		{
-			"name": "KSU Research and the State",
-			"organization": "STEM Education Group",
-			"placement": "1st place",
-			"year": "2016"
+			"name": "Research and the State",
+			"organization": "Kansas State University",
+			"placement": "1st place (STEM Education Group)",
+			"years": "2016"
 		},
 		{
 			"name": "Kansas State Research Forum",
 			"organization": "Engineering, Math, and Physical Sciences Poster Session",
 			"placement": "2nd place",
-			"year": "2014"
+			"years": "2014"
 		}
 	],
 	"education": [
@@ -40,14 +33,14 @@
 			"degree": "Ph.D. (Computer Science)",
 			"institution": "Kansas State University",
 			"location": "Manhattan, KS",
-			"dissertation": "Bringing Computational Thinking to K-12 and Higher Education",
+			"description": "Bringing Computational Thinking to K-12 and Higher Education",
 			"years": "2013-2017"
 		},
 		{
 			"degree": "M.S. (Computer Science)",
 			"institution": "Kansas State University",
 			"location": "Manhattan, KS",
-			"thesis": "A Convolutive Model for Polyphonic Instrument Identification and Pitch Detection using Combined Classification",
+			"description": "A Convolutive Model for Polyphonic Instrument Identification and Pitch Detection using Combined Classification",
 			"years": "2011-2013"
 		},
 		{
@@ -65,7 +58,14 @@
 		},
 		{
 			"organization": "Association for Computing Machinery",
-			"subgroup": "ACM-W, SIGCSE",
+			"years": "2016-present"
+		},
+		{
+			"organization": "Association for Computing Machinery - SIGCSE",
+			"years": "2016-present"
+		},
+		{
+			"organization": "Association for Computing Machinery - ACM-W",
 			"years": "2016-present"
 		},
 		{
@@ -74,11 +74,10 @@
 		},
 		{
 			"organization": "Kansas Partnership for Applied Computational Thinking",
-			"link": "http://kspact.org/",
 			"position": "Treasurer",
 			"institution": "Kansas State University",
 			"location": "Manhattan, KS",
-			"years": "2017-present"
+			"years": "2017-2023"
 		},
 		{
 			"organization": "Computer Science for All Consortium",
@@ -99,42 +98,30 @@
 			"position": "Teaching Assistant Professor",
 			"company": "Kansas State University",
 			"location": "Manhattan, KS",
-			"responsibilities": "Primary responsibilities include teaching and advising students, as well as service to the department/university, involvement with student organizations, outreach to the community, and research.",
-			"courses_taught": [
-				"CIS 115 - Introduction to Computing Science",
-				"CIS 300 - Data and Program Structures",
-				"CIS 308 - C Language Laboratory",
-				"CIS 560 - Database Systems Concepts",
-				"CIS 595 - IS Cooperative Internship",
-				"CIS 640 - Software Testing Techniques"
+			"responsibilities": [
+				"Primary responsibilities include teaching and advising students, as well as service to the department/university, involvement with student organizations, outreach to the community, and research.",
+				"Co-Director of the Advancing Learning and Teaching Computer Science (ALT+CS) Lab - Manage and conduct computer science education research, outreach to the Kansas community, and support students in pursuing computer science education."
 			],
-			"service": [
-				"Academic Assessment Committee",
-				"Advisor Committee",
-				"Curriculum Committee",
-				"Engineering Reinstatement Committee",
-				"ACM club advisor",
-				"Hack K-State club advisor",
-				"Web Development club advisor",
-				"High School Programming Contest organizer/judge"
-			],
-			"years": "(Instructor) Fall 2017 - Present"
+			"years": "Fall 2017 - Present"
 		},
 		{
 			"position": "Consultant",
-			"responsibilities": "Lead developer for the data science and visualization in the Data Explorer, a data analytics portal for physics assessments. Primary responsibilities include developing and maintaining a large Django web server and MongoDB database.",
-			"project": "AAPT's Physport Data Explorer",
+			"company": "Independent",
+			"location": "Manhattan, KS",
+			"responsibilities": [
+				"Lead developer for the data science and visualization in AAPT's Data Explorer, a data analytics portal for physics assessments. Primary responsibilities include developing and maintaining a large Django web server and MongoDB database and consulting on research including machine learning and data science."
+			],
 			"years": "2018 - Present"
 		},
 		{
 			"position": "Graduate Research Assistant",
 			"company": "Kansas State University",
 			"location": "Manhattan, KS",
-			"projects": [
-				"CSUSM subaward (2017)",
-				"Capability Inference based on Dynamic Topic Modeling and Text Information Extraction (2016 – 2017)",
-				"NSF WIDER (2013 – 2016)",
-				"Sandia National Lab (2012)"
+			"responsibilities": [
+				"CSUSM subaward (2017) – This subaward is to extend the Data Explorer on physport.org to allow educators to create and analyze custom assessments. This will provide an easy to use interface to let researchers to examine their experimental assessments and allow departments to input and share data about their classes.",
+				"Capability Inference based on Dynamic Topic Modeling and Text Information Extraction (2016 – 2017) – Co-system architect with responsibilities such as system design, data extraction, modeling, and integration, as well as training and supervising undergraduate researchers in machine learning and text analytics for a project funded through Lawrence Livermore National Laboratories.",
+				"NSF WIDER (2013 – 2016) – Lead developer and in charge of supervising and training undergraduate researchers for a web application known as the Data Explorer with the American Association for Physics Teachers (AAPT). The Data Explorer is an analytics portal that gives educators the ability to gain insights from assessment data, using online information retrieval and visualization through a federated display. This creates a streamlined process for users to upload assessment data to explore.  The overall objective of this project is to let educators from all levels (high school, undergraduate, graduate, etc.) to interact with their data and anonymous summaries of data from other instructors in a usable, efficient, and secure way that has previously been a tedious, and sometimes impossible, task.  The focus of this research is to facilitate importing, validating, integrating, and visualizing assessment data.  This will be expanded for custom assessments, as well as other academic areas, such as computer science, in the future.",
+				"Sandia National Lab (2012) – Worked closely with Dr. Mitch Neilsen to create cross platform installers for software created as a collaboration with Sandia National Labs."
 			],
 			"years": "2012 - 2017"
 		},
@@ -142,19 +129,17 @@
 			"position": "Insight GK12 Fellow",
 			"company": "Kansas State University",
 			"location": "Manhattan, KS",
-			"responsibilities": "Develop lesson plans and activities to bring technologies to rural, K-12 classrooms.",
+			"responsibilities": [
+				"Develop lesson plans and activities to bring technologies to rural, K-12 classrooms."
+			],
 			"years": "2013 - 2015"
 		},
 		{
 			"position": "Graduate Teaching Assistant",
 			"company": "Kansas State University",
 			"location": "Manhattan, KS",
-			"courses_taught": [
-				"CIS 415 – Ethics and Computing Technology (Fall 2016, GTA and Instructor)",
-				"CIS 200 – Programming fundamentals (2011-2014)",
-				"CIS 102 – Introduction to Spreadsheet Applications (2013-2014)",
-				"CIS 103 – Introduction to Database Applications (2013-2014)",
-				"CIS 104 – Introduction to Word Processing Applications (2013-2014)"
+			"responsibilities": [
+				"Primary responsibilities included holding office hours, grading, lecturing, and supervising laboratories.  Courses taught include: CIS 102-104 (spreadsheet, word, and database applications), CIS 200 (programming fundamentals), and CIS 415 (ethics and computing technology)."
 			],
 			"years": "2011-2014"
 		},
@@ -162,39 +147,47 @@
 			"position": "System Engineer Intern",
 			"company": "Cerner Corporation",
 			"location": "Kansas City, MO",
-			"responsibilities": "Assisted in the implementation and support of Cerner’s Enterprise Solutions, including system upgrades and overall system performance management.",
+			"responsibilities": [
+				"Assisted in the implementation and support of Cerner's Enterprise Solutions, including system upgrades and overall system performance management."
+			],
 			"years": "May 2011 - July 2011"
 		},
 		{
 			"position": "Writing Center Tutor",
 			"company": "Kansas State University",
 			"location": "Salina, KS",
-			"responsibilities": "Provided tutoring services to students in need of help with writing essays, research papers, cover letters, resumes, and other documents",
+			"responsibilities": [
+				"Provided tutoring services to students in need of help with writing essays, research papers, cover letters, resumes, and other documents"
+			],
 			"years": "2011"
 		},
 		{
 			"position": "IT Assistant",
 			"company": "Kasa Industrial Controls Inc",
 			"location": "Salina, KS",
-			"responsibilities": "Resolved Help Desk tickets and provide assistance/support for users. Assisted in researching and testing of process and equipment upgrades.",
+			"responsibilities": [
+				"Resolved Help Desk tickets and provide assistance/support for users. Assisted in researching and testing of process and equipment upgrades."
+			],
 			"years": "2010 - 2011"
 		},
 		{
 			"position": "Technology Intern",
 			"company": "Philips Lighting",
 			"location": "Salina, KS",
-			"responsibilities": "Worked as a computer intern in the CRCL (Corporate Regulatory Certification Laboratory). Deployed and developed a Microsoft Silverlight web application. Researched to improve software systems used by the CRCL.",
+			"responsibilities": [
+				"Worked as a computer intern in the CRCL (Corporate Regulatory Certification Laboratory). Deployed and developed a Microsoft Silverlight web application. Researched to improve software systems used by the CRCL."
+			],
 			"years": "2008 - 2010"
 		}
 	],
 	"professionalService": [
 		{
 			"activity": "SIGCSE Associate Program Chair",
-			"year": "2021"
+			"years": "2021"
 		},
 		{
 			"activity": "Kansas Computer Science Teacher Standards — Writer",
-			"year": "2021"
+			"years": "2021"
 		},
 		{
 			"activity": "Kansas Computer Science Model Standards — Developer, Writer, Ecosystem Lead",
@@ -214,22 +207,22 @@
 		},
 		{
 			"activity": "Reviewer for IJCCI",
-			"year": "2018"
+			"years": "2018"
 		},
 		{
 			"activity": "Reviewer for CSTA",
-			"year": "2018"
+			"years": "2018"
 		},
 		{
 			"activity": "Reviewer for ICLS",
-			"year": "2018"
+			"years": "2018"
 		},
 		{
 			"activity": "Reviewer for CSCL",
 			"years": "2016,2018"
 		}
 	],
-	"universityService":[
+	"universityService": [
 		{
 			"activity": "Academic Assessment Committee",
 			"years": "2017-present"

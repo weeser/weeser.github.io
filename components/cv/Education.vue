@@ -1,12 +1,18 @@
 <template>
 	<Panel header="Education" toggleable>
-		<ul>
-			<li v-for="(entry, index) in education" :key="index">
-				<h3>{{ entry.degree }}</h3>
-				<p>{{ entry.institution }}</p>
-				<p>{{ entry.year }}</p>
-			</li>
-		</ul>
+		<DataTable :value="education" class="px-4" size="small" tableStyle="min-width: 50rem" stripedRows>
+			<Column header="Degree">
+				<template #body="slotProps">
+					<h3>
+						<span >{{ slotProps.data.degree }}</span>
+					</h3>
+					<span class="font-italic">{{ slotProps.data.description }}</span>
+				</template>
+			</Column>
+			<Column field="institution" header="Institution"></Column>
+			<Column field="location" header="Location"></Column>
+			<Column field="years" header="Years"></Column>
+		</DataTable>
 	</Panel>
 </template>
 

@@ -1,13 +1,17 @@
 <template>
 	<Panel header="Teaching" toggleable>
-		<ul>
-			<li v-for="(entry, index) in coursesTaught" :key="index">
-				<h3>{{ entry.course_code }}</h3>
-				<p>{{ entry.course_title }}</p>
-				<p>{{ entry.description }}</p>
-				<p>{{ entry.years }}</p>
-			</li>
-		</ul>
+		<DataTable :value="coursesTaught" class="px-4" size="small" tableStyle="min-width: 50rem" stripedRows>
+			<Column header="Course">
+				<template #body="slotProps">
+					<h3>
+						<span v-if="slotProps.data.course_code">{{ slotProps.data.course_code }} - </span>
+						{{ slotProps.data.course_title }}
+					</h3>
+					<p>{{ slotProps.data.description }}</p>
+				</template>
+			</Column>
+			<Column field="years" header="Years"></Column>
+		</DataTable>
 	</Panel>
 </template>
 
@@ -15,6 +19,4 @@
 defineProps(['coursesTaught'])
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

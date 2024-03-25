@@ -17,25 +17,15 @@ const cv_data = ref(cv_data_parsed);
 <template>
 	<h2>Curriculum Vitae</h2>
 	<Education :education="cv_data.education" />
-	<WorkExperience :education="cv_data.workExperience" />
+	<WorkExperience :workExperience="cv_data.workExperience" />
 	<Teaching :coursesTaught="cv_data.coursesTaught" />
-	<Service :service="cv_data.professionalService" />
-	<Service :service="cv_data.universityService" />
+	<Service :service="cv_data.professionalService" serviceHeader="Professional Service"/>
+	<Service :service="cv_data.universityService" serviceHeader="University Service"/>
 	<Memberships :memberships="cv_data.memberships" />
 	<Awards :awards="cv_data.awards" />
 </template>
 
 <style scoped>
-h2 {
-	font-size: 24px;
-	font-weight: bold;
-}
-
-h3 {
-	font-size: 18px;
-	font-weight: bold;
-}
-
 p {
 	font-size: 16px;
 	margin-bottom: 8px;
