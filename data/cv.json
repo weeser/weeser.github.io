@@ -161,7 +161,7 @@
       "status": "Awarded",
       "startDate": "10/01/2022",
       "endDate": "09/30/2027",
-      "awardAmount": "$3,099,030.00",
+      "awardAmount": "$3,099,030",
 	  "role": "Co-PI",
 	  "abstract": "The Rural Education Center (REC) at Kansas State University, the College of Education at Kansas State University (KSU-COE), and the Computer Science Department at Kansas State University (KSU-CSD) are working collaboratively to develop a model to enrich computer science and STEM education for rural students in Kansas. The KSU-COE has a long history of supporting teachers and innovative educational initiatives. In partnership with the REC and KSU-CSD, and as part of K-State’s land grant mission, the KSU-COE has also worked continually to support rural education. The K-State Rural Innovation Academy for Teaching Enrichment (KRIATE) will prioritize innovative educational approaches, curricula, and school structures to develop new models of preparing students for degrees and careers in aerospace (AE), artificial intelligence (AI), biotechnology (BT), computer science (CS), data analysis (DA), and STEM education (SE) as part of the 39 Career and Technical Education Pathways in Kansas (KSDE, 2019). Project KRIATE (pronounced like 'create') is needed to address a compounding problem for many rural schools: teachers and resources to provide high-quality CS and applied STEM opportunities for their already underserved and underfunded rural students. We propose Project KRIATE primarily to address three specific problems within the STEM ecosystem in Kansas that are related to this larger problem: (1) shortages of qualified CS and STEM educators in rural schools; (2) lack of student interest and retention in CS and STEM university degree programs and careers; and (3) the mandate for rural schools to meet the new Kansas Computer Science standards (2022 legislation HB2466) by the 2023-24 school year. While suburban and urban schools in Kansas have the resources and facilities to provide educational opportunities for nearly all of the 39 pathways and meet the new computer science standards, only eighteen percent (18%) of rural schools in Kansas offer computer science and most are only able to offer a few pathways, which are wholly dependent on the district facilities and teacher expertise or training. To address this statewide problems, Project KRIATE would provide a model for enriching the computer science opportunities, overall STEM teaching, and career training available in rural schools by developing and delivering innovative approaches that utilize the assets of rural schools and communities."
     },
@@ -172,7 +172,7 @@
       "status": "Awarded",
       "startDate": "12/01/2022",
       "endDate": "06/30/2023",
-      "awardAmount": "$471,656.00",
+      "awardAmount": "$471,656",
 	  "role": "PI",
 	  "abstract": "Recognizing the increasing need for a diverse audience of students to engage in CS on multiple levels (both as professional computer scientists but also as professionals in other fields applying the tools of computation to the problems of their field) Kansas State University Department of Computer Science (KSUCS) has developed a series of high-quality computer science courses intended for a broad audience in its Computational Core Initiative (CCI). These courses are designed with flexibility and scalability in mind, utilizing an innovative online instruction platform providing on-demand video lectures, hands-on programming activities with automated grading and feedback, and a collaborative code editing environment that allows the teacher to remotely see and interact with the student and their program code. To expand opportunities for Kansas students in keeping with Kansas State University’s land grant mission, we launched the Cyber Pipeline Program (CPP), which is adapting the CCI courses for delivery in Kansas high schools and developing professional development materials to prepare Kansas high school teachers to deliver them. We have strived to provide this curriculum at little to no cost to schools (the only cost we must pass on is the hosting fees for the online programming environment used). The professional development associated with the program consists of a series of CCI and CS pedagogy courses developed as part of a Computer Science Education Certificate offered as a partnership between KSUCS and Kansas State University College of Education. It is our hope that this 16-credit hour certificate will serve as a potential basis for a future teacher certification within the state."
     },
@@ -181,9 +181,9 @@
       "institution": "Kansas State University",
       "title": "CS4KS: Continuing to Expand the K-State Cyber Pipeline",
       "status": "Awarded",
-      "startDate": "12/01/2022",
-      "endDate": "06/30/2023",
-      "awardAmount": "$748,000.00",
+      "startDate": "10/01/2023",
+      "endDate": "06/30/2024",
+      "awardAmount": "$748,000",
 	  "role": "PI",
 	  "abstract": "Kansas State University Department of Computer Science (KSUCS) has developed a series of high-quality computer science courses intended for a broad audience in its Computational Core Initiative (CCI). These courses are designed with flexibility and scalability in mind, utilizing an innovative online instruction platform providing on-demand video lectures, hands-on programming activities with automated grading and feedback, and a collaborative code editing environment that allows the teacher to remotely see and interact with the student and their program code. This project will continue to expand and improve our CCI offerings as well as continue support for a summer teacher training workshop and CSTA conference."
     }
