@@ -43,6 +43,11 @@ const setTheme = (theme) => {
  * Toggle theme value and trigger update
  */
 const toggleColorScheme = () => {
+	// if (theme === "dark-theme") {
+	// 	document.documentElement.classList.add(darkClass);
+	// } else {
+	// 	document.documentElement.classList.remove(darkClass);
+	// }
 	const element = document.querySelector('html');
 	element.classList.toggle(darkClass);
 }
