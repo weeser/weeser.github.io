@@ -130,7 +130,7 @@ const onSortChange = (event) => {
   <div class="card">
     <DataView :value="bib_entries"
               paginator :rows="8"
-              :sortOrder="sortOrder" :sortField="sortField">
+              :sortOrder=sortOrder :sortField="sortField">
       <template #header>
         <div class="flex md:flex-row sm:flex-col justify-between items-center gap-4">
           <h2 class="text-2xl font-semibold text-surface-900 dark:text-surface-0">Publications</h2>
