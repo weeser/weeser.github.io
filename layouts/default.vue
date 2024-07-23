@@ -12,7 +12,7 @@
 			<TopMenu />
 		</nav>
     <!-- Main Content -->
-    <div class="py-1 lg:px-20 md:px-12 sm:px-6">
+    <div class="py-1 lg:px-20 md:px-12 sm:px-12">
       <slot />
     </div>
 		<AppFooter />

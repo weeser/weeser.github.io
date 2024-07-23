@@ -128,31 +128,31 @@ const onSortChange = (event) => {
 
 <template>
   <div class="card">
-    <DataView :value="bib_entries"
+    <PrimeDataView :value="bib_entries"
               paginator :rows="8"
               :sortOrder=sortOrder :sortField="sortField">
       <template #header>
-        <div class="flex md:flex-row sm:flex-col justify-between items-center gap-4">
+        <div class="flex md:flex-row sm:flex-col justify-between items-center gap-6">
           <h2 class="text-2xl font-semibold text-surface-900 dark:text-surface-0">Publications</h2>
           <!-- Add filter inputs for each field you want to filter -->
           <div class="flex flex-wrap gap-2 grow md:grow-0">
-            <FloatLabel class="">
-              <Dropdown inputId="sortYear" v-model="sortKey"
+            <PrimeFloatLabel class="">
+              <PrimeDropdown inputId="sortYear" v-model="sortKey"
                         variant="filled" showClear placeholder="Sort By Year"
                         :options="sortOptions" optionLabel="label"
                         @change="onSortChange($event)"/>
               <label for="sortYear">Sort By Year</label>
-            </FloatLabel>
-            <MultiSelect v-model="filters['MULTI_SELECT'].value" display="chip"
+            </PrimeFloatLabel>
+            <PrimeMultiSelect v-model="filters['MULTI_SELECT'].value" display="chip"
                          variant="filled" placeholder="Filter by type"
                          :options="bib_types" optionLabel="label"
                          @change="filters['MULTI_SELECT'].callback('MULTI_SELECT', 'BIBTEXTYPE')"
             />
-            <InputText v-model="filters['CONTAINS_TEXT'].value"
+            <PrimeInputText v-model="filters['CONTAINS_TEXT'].value"
                        placeholder="Search"
                        @input="filters['CONTAINS_TEXT'].callback('CONTAINS_TEXT',['TITLE', 'AUTHOR', 'YEAR', 'BOOKTITLE', 'JOURNAL'])"/>
           </div>
-          <!--          <div class="flex flex-row gap-6">-->
+          <!--          <div class="flex flex-row gap-12">-->
           <!--            <Button icon="pi pi-file-pdf" label="Export to PDF" class="p-button-sm p-button-outlined"></Button>-->
           <!--            <Button icon="pi pi-file-excel" label="Export to bib" class="p-button-sm p-button-outlined"></Button>-->
           <!--          </div>-->
@@ -162,13 +162,13 @@ const onSortChange = (event) => {
       <template #empty> No publications found.</template>
 
       <template #list="slotProps">
-        <div class="grid grid-cols-12 gap-4 grid-nogutter">
+        <div class="grid grid-cols-12 gap-4 grid-cols-12 gap-6 grid-nogutter">
           <div v-for="(entry, index) in slotProps.items" :key="entry.BIBTEXKEY" class="col-span-12">
             <!-- citation-->
             <div class="p-2" :class="{ 'border-top-1 surface-border': index !== 0 }">
               <!--              <div class="p-2" :class="{ 'border-top-1 surface-border': index !== 0 }">-->
               <div class="row">
-                <div class="flex flex-col md:flex-row justify-between md:align-items-left flex-1 gap-6">
+                <div class="flex flex-col md:flex-row justify-between md:align-items-left flex-1 gap-12">
                   <div class="flex flex-row md:flex-col justify-between items-start gap-2">
                     <div class="citation-text">
                       <span v-if="entry.AUTHOR" class="author">{{ entry.AUTHOR }}&nbsp</span>
@@ -178,11 +178,11 @@ const onSortChange = (event) => {
                       <span v-if="entry.JOURNAL"><em><span class="journal">{{ entry.JOURNAL }}.&nbsp</span></em></span>
                     </div>
                   </div>
-                  <div class="flex flex-col md:items-end gap-8">
+                  <div class="flex flex-col md:items-end gap-20">
                     <!--                      <span class="text-xl font-semibold text-surface-900 dark:text-surface-0">{{ index }}</span>-->
                     <div class="flex flex-row-reverse md:flex-row gap-1">
-                      <Button icon="pi pi-bookmark" label=""
-                              class="flex-auto md:flex-initial whitespace-nowrap"></Button>
+                      <PrimeButton icon="pi pi-bookmark" label=""
+                              class="flex-auto md:flex-initial whitespace-nowrap"></PrimeButton>
                     </div>
                   </div>
                 </div>
@@ -190,7 +190,7 @@ const onSortChange = (event) => {
               <!--      tags        -->
               <div class="row mt-2">
                 <div class="flex flex-row flex-wrap align-items-left ">
-                  <Tag v-for="item in entry.BIBTEXTYPE" :key="index" :value="item" class="m-1"></Tag>
+                  <PrimeTag v-for="item in entry.BIBTEXTYPE" :key="index" :value="item" class="m-1"></PrimeTag>
                 </div>
               </div>
             </div>
@@ -198,7 +198,7 @@ const onSortChange = (event) => {
         </div>
       </template>
 
-    </DataView>
+    </PrimeDataView>
   </div>
 </template>
 

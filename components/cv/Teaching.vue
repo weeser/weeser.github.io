@@ -1,6 +1,6 @@
 <template>
 	<PrimePanel header="Teaching" toggleable>
-		<PrimeDataTable :value="coursesTaught" class="px-6" size="small" tableStyle="min-width: 50rem" stripedRows>
+		<PrimeDataTable :value="coursesTaught" class="px-12" size="small" tableStyle="min-width: 50rem" stripedRows>
 			<PrimeColumn header="Course">
 				<template #body="slotProps">
 					<h3>

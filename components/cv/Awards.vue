@@ -1,6 +1,6 @@
 <template>
 	<PrimePanel header="Awards" toggleable>
-		<PrimeDataTable :value="awards" class="px-6" size="small" tableStyle="min-width: 50rem" stripedRows>
+		<PrimeDataTable :value="awards" class="px-12" size="small" tableStyle="min-width: 50rem" stripedRows>
 			<PrimeColumn header="Position">
 				<template #body="slotProps">
 					<h3>

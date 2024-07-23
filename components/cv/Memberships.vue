@@ -1,6 +1,6 @@
 <template>
 	<PrimePanel header="Memberships" toggleable>
-		<PrimeDataTable :value="memberships" class="px-6" size="small" tableStyle="min-width: 50rem" stripedRows>
+		<PrimeDataTable :value="memberships" class="px-12" size="small" tableStyle="min-width: 50rem" stripedRows>
 			<PrimeColumn header="Organization">
 				<template #body="slotProps">
 					<h3 v-if="slotProps.data.organization">

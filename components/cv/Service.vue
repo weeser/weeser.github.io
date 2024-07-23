@@ -1,6 +1,6 @@
 <template>
 	<PrimePanel :header="serviceHeader" toggleable>
-		<PrimeDataTable :value="service" class="px-6" tableStyle="min-width: 50rem" size="small" stripedRows>
+		<PrimeDataTable :value="service" class="px-12" tableStyle="min-width: 50rem" size="small" stripedRows>
             <PrimeColumn field="activity" header="Description"></PrimeColumn>
             <PrimeColumn field="years" header="Years"></PrimeColumn>
         </PrimeDataTable>		
