@@ -2,7 +2,7 @@
 // Libraries
 import {ref} from 'vue'
 import {BibtexParser} from 'assets/js/bibtex_js';
-import {FilterMatchMode, FilterService} from 'primevue/api';
+import {FilterMatchMode, FilterService} from '@primevue/core/api';
 
 //read the bibtex file
 // let bib_file = fs.readFileSync('data/publications.bib', 'utf8');
