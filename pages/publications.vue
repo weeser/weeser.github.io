@@ -132,10 +132,10 @@ const onSortChange = (event) => {
               paginator :rows="8"
               :sortOrder="sortOrder" :sortField="sortField">
       <template #header>
-        <div class="flex md:flex-row sm:flex-column justify-content-between align-items-center gap-3">
-          <h2 class="text-2xl font-semibold text-900">Publications</h2>
+        <div class="flex md:flex-row sm:flex-col justify-between items-center gap-4">
+          <h2 class="text-2xl font-semibold text-surface-900 dark:text-surface-0">Publications</h2>
           <!-- Add filter inputs for each field you want to filter -->
-          <div class="flex flex-wrap gap-2 flex-grow-1 md:flex-grow-0">
+          <div class="flex flex-wrap gap-2 grow md:grow-0">
             <FloatLabel class="">
               <Dropdown inputId="sortYear" v-model="sortKey"
                         variant="filled" showClear placeholder="Sort By Year"
@@ -152,7 +152,7 @@ const onSortChange = (event) => {
                        placeholder="Search"
                        @input="filters['CONTAINS_TEXT'].callback('CONTAINS_TEXT',['TITLE', 'AUTHOR', 'YEAR', 'BOOKTITLE', 'JOURNAL'])"/>
           </div>
-          <!--          <div class="flex flex-row gap-4">-->
+          <!--          <div class="flex flex-row gap-6">-->
           <!--            <Button icon="pi pi-file-pdf" label="Export to PDF" class="p-button-sm p-button-outlined"></Button>-->
           <!--            <Button icon="pi pi-file-excel" label="Export to bib" class="p-button-sm p-button-outlined"></Button>-->
           <!--          </div>-->
@@ -162,14 +162,14 @@ const onSortChange = (event) => {
       <template #empty> No publications found.</template>
 
       <template #list="slotProps">
-        <div class="grid grid-nogutter">
-          <div v-for="(entry, index) in slotProps.items" :key="entry.BIBTEXKEY" class="col-12">
+        <div class="grid grid-cols-12 gap-4 grid-nogutter">
+          <div v-for="(entry, index) in slotProps.items" :key="entry.BIBTEXKEY" class="col-span-12">
             <!-- citation-->
             <div class="p-2" :class="{ 'border-top-1 surface-border': index !== 0 }">
               <!--              <div class="p-2" :class="{ 'border-top-1 surface-border': index !== 0 }">-->
               <div class="row">
-                <div class="flex flex-column md:flex-row justify-content-between md:align-items-left flex-1 gap-4">
-                  <div class="flex flex-row md:flex-column justify-content-between align-items-start gap-2">
+                <div class="flex flex-col md:flex-row justify-between md:align-items-left flex-1 gap-6">
+                  <div class="flex flex-row md:flex-col justify-between items-start gap-2">
                     <div class="citation-text">
                       <span v-if="entry.AUTHOR" class="author">{{ entry.AUTHOR }}&nbsp</span>
                       <span v-if="entry.YEAR"><span class="year">({{ entry.YEAR }}).&nbsp</span></span>
@@ -178,11 +178,11 @@ const onSortChange = (event) => {
                       <span v-if="entry.JOURNAL"><em><span class="journal">{{ entry.JOURNAL }}.&nbsp</span></em></span>
                     </div>
                   </div>
-                  <div class="flex flex-column md:align-items-end gap-5">
-                    <!--                      <span class="text-xl font-semibold text-900">{{ index }}</span>-->
+                  <div class="flex flex-col md:items-end gap-8">
+                    <!--                      <span class="text-xl font-semibold text-surface-900 dark:text-surface-0">{{ index }}</span>-->
                     <div class="flex flex-row-reverse md:flex-row gap-1">
                       <Button icon="pi pi-bookmark" label=""
-                              class="flex-auto md:flex-initial white-space-nowrap"></Button>
+                              class="flex-auto md:flex-initial whitespace-nowrap"></Button>
                     </div>
                   </div>
                 </div>

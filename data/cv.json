@@ -1,350 +1,397 @@
 {
-	"awards": [		
-		{
-			"name": "Kevin and Jacquie Elmore - Carl and Mary Ice Teaching Scholar",
-			"organization": "Kansas State University",
-			"years": "2020-2025"
-		},
-		{
-			"name": "Teaching Excellence Award",
-			"organization": "Department of Computer Science, Kansas State University",
-			"years": "2020-2023"
-		},
-		{
-			"name": "College of Engineering Team Award of Excellence",
-			"organization": "Kansas State University",
-			"years": "2021"
-		},
-		{
-			"name": "Research and the State",
-			"organization": "Kansas State University",
-			"placement": "1st place (STEM Education Group)",
-			"years": "2016"
-		},
-		{
-			"name": "Kansas State Research Forum",
-			"organization": "Engineering, Math, and Physical Sciences Poster Session",
-			"placement": "2nd place",
-			"years": "2014"
-		}
-	],
-	"education": [
-		{
-			"degree": "Ph.D. (Computer Science)",
-			"institution": "Kansas State University",
-			"location": "Manhattan, KS",
-			"description": "Bringing Computational Thinking to K-12 and Higher Education",
-			"years": "2013-2017"
-		},
-		{
-			"degree": "M.S. (Computer Science)",
-			"institution": "Kansas State University",
-			"location": "Manhattan, KS",
-			"description": "A Convolutive Model for Polyphonic Instrument Identification and Pitch Detection using Combined Classification",
-			"years": "2011-2013"
-		},
-		{
-			"degree": "B.S. (Computer Systems Technology)",
-			"institution": "Kansas State University",
-			"location": "Salina, KS",
-			"years": "2007-2011"
-		}
-	],
-	"memberships": [
-		{
-			"organization": "Computer Science Teachers Association",
-			"chapter": "Kansas Chapter",
-			"years": "2020-present"
-		},
-		{
-			"organization": "Association for Computing Machinery",
-			"years": "2016-present"
-		},
-		{
-			"organization": "Association for Computing Machinery - SIGCSE",
-			"years": "2016-present"
-		},
-		{
-			"organization": "Association for Computing Machinery - ACM-W",
-			"years": "2016-present"
-		},
-		{
-			"organization": "American Society for Engineering Education",
-			"years": "2016-present"
-		},
-		{
-			"organization": "Kansas Partnership for Applied Computational Thinking",
-			"position": "Treasurer",
-			"institution": "Kansas State University",
-			"location": "Manhattan, KS",
-			"years": "2017-2023"
-		},
-		{
-			"organization": "Computer Science for All Consortium",
-			"link": "https://www.csforall.org/researchers/",
-			"position": "Research Member",
-			"years": "2016-present"
-		},
-		{
-			"organization": "Laboratory for Knowledge Discovery in Databases",
-			"institution": "Kansas State University",
-			"location": "Manhattan, KS",
-			"link": "http://www.kddresearch.org/",
-			"years": "2011-2017"
-		}
-	],
-	"workExperience": [
-		{
-			"position": "Teaching Assistant Professor",
-			"company": "Kansas State University",
-			"location": "Manhattan, KS",
-			"responsibilities": [
-				"Primary responsibilities include teaching and advising students, as well as service to the department/university, involvement with student organizations, outreach to the community, and research.",
-				"Co-Director of the Advancing Learning and Teaching Computer Science (ALT+CS) Lab - Manage and conduct computer science education research, outreach to the Kansas community, and support students in pursuing computer science education."
-			],
-			"years": "Fall 2017 - Present"
-		},
-		{
-			"position": "Consultant",
-			"company": "Independent",
-			"location": "Manhattan, KS",
-			"responsibilities": [
-				"Lead developer for the data science and visualization in AAPT's Data Explorer, a data analytics portal for physics assessments. Primary responsibilities include developing and maintaining a large Django web server and MongoDB database and consulting on research including machine learning and data science."
-			],
-			"years": "2018 - Present"
-		},
-		{
-			"position": "Graduate Research Assistant",
-			"company": "Kansas State University",
-			"location": "Manhattan, KS",
-			"responsibilities": [
-				"CSUSM subaward (2017) – This subaward is to extend the Data Explorer on physport.org to allow educators to create and analyze custom assessments. This will provide an easy to use interface to let researchers to examine their experimental assessments and allow departments to input and share data about their classes.",
-				"Capability Inference based on Dynamic Topic Modeling and Text Information Extraction (2016 – 2017) – Co-system architect with responsibilities such as system design, data extraction, modeling, and integration, as well as training and supervising undergraduate researchers in machine learning and text analytics for a project funded through Lawrence Livermore National Laboratories.",
-				"NSF WIDER (2013 – 2016) – Lead developer and in charge of supervising and training undergraduate researchers for a web application known as the Data Explorer with the American Association for Physics Teachers (AAPT). The Data Explorer is an analytics portal that gives educators the ability to gain insights from assessment data, using online information retrieval and visualization through a federated display. This creates a streamlined process for users to upload assessment data to explore.  The overall objective of this project is to let educators from all levels (high school, undergraduate, graduate, etc.) to interact with their data and anonymous summaries of data from other instructors in a usable, efficient, and secure way that has previously been a tedious, and sometimes impossible, task.  The focus of this research is to facilitate importing, validating, integrating, and visualizing assessment data.  This will be expanded for custom assessments, as well as other academic areas, such as computer science, in the future.",
-				"Sandia National Lab (2012) – Worked closely with Dr. Mitch Neilsen to create cross platform installers for software created as a collaboration with Sandia National Labs."
-			],
-			"years": "2012 - 2017"
-		},
-		{
-			"position": "Insight GK12 Fellow",
-			"company": "Kansas State University",
-			"location": "Manhattan, KS",
-			"responsibilities": [
-				"Develop lesson plans and activities to bring technologies to rural, K-12 classrooms."
-			],
-			"years": "2013 - 2015"
-		},
-		{
-			"position": "Graduate Teaching Assistant",
-			"company": "Kansas State University",
-			"location": "Manhattan, KS",
-			"responsibilities": [
-				"Primary responsibilities included holding office hours, grading, lecturing, and supervising laboratories.  Courses taught include: CIS 102-104 (spreadsheet, word, and database applications), CIS 200 (programming fundamentals), and CIS 415 (ethics and computing technology)."
-			],
-			"years": "2011-2014"
-		},
-		{
-			"position": "System Engineer Intern",
-			"company": "Cerner Corporation",
-			"location": "Kansas City, MO",
-			"responsibilities": [
-				"Assisted in the implementation and support of Cerner's Enterprise Solutions, including system upgrades and overall system performance management."
-			],
-			"years": "May 2011 - July 2011"
-		},
-		{
-			"position": "Writing Center Tutor",
-			"company": "Kansas State University",
-			"location": "Salina, KS",
-			"responsibilities": [
-				"Provided tutoring services to students in need of help with writing essays, research papers, cover letters, resumes, and other documents"
-			],
-			"years": "2011"
-		},
-		{
-			"position": "IT Assistant",
-			"company": "Kasa Industrial Controls Inc",
-			"location": "Salina, KS",
-			"responsibilities": [
-				"Resolved Help Desk tickets and provide assistance/support for users. Assisted in researching and testing of process and equipment upgrades."
-			],
-			"years": "2010 - 2011"
-		},
-		{
-			"position": "Technology Intern",
-			"company": "Philips Lighting",
-			"location": "Salina, KS",
-			"responsibilities": [
-				"Worked as a computer intern in the CRCL (Corporate Regulatory Certification Laboratory). Deployed and developed a Microsoft Silverlight web application. Researched to improve software systems used by the CRCL."
-			],
-			"years": "2008 - 2010"
-		}
-	],
-	"professionalService": [
-		{
-			"activity": "SIGCSE Associate Program Chair",
-			"years": "2021"
-		},
-		{
-			"activity": "Kansas Computer Science Teacher Standards — Writer",
-			"years": "2021"
-		},
-		{
-			"activity": "Kansas Computer Science Model Standards — Developer, Writer, Ecosystem Lead",
-			"years": "2018-2020"
-		},
-		{
-			"activity": "Reviewer for SIGCSE",
-			"years": "2017-2021"
-		},
-		{
-			"activity": "Reviewer for ITiCSE",
-			"years": "2017-2021"
-		},
-		{
-			"activity": "Reviewer for ASEE",
-			"years": "2016-2022"
-		},
-		{
-			"activity": "Reviewer for IJCCI",
-			"years": "2018"
-		},
-		{
-			"activity": "Reviewer for CSTA",
-			"years": "2018"
-		},
-		{
-			"activity": "Reviewer for ICLS",
-			"years": "2018"
-		},
-		{
-			"activity": "Reviewer for CSCL",
-			"years": "2016,2018"
-		}
-	],
-	"universityService": [
-		{
-			"activity": "Academic Assessment Committee",
-			"years": "2017-present"
-		},
-		{
-			"activity": "Advisor Committee",
-			"years": "2017-present"
-		},
-		{
-			"activity": "Curriculum Committee",
-			"years": "2017-present"
-		},
-		{
-			"activity": "Engineering Reinstatement Committee",
-			"years": "2017-present"
-		},
-		{
-			"activity": "ACM club advisor",
-			"years": "2017-present"
-		},
-		{
-			"activity": "Hack K-State club advisor",
-			"years": "2017-present"
-		},
-		{
-			"activity": "Web Development club advisor",
-			"years": "2017-present"
-		},
-		{
-			"activity": "High School Programming Contest organizer/judge",
-			"years": "2017-present"
-		}
-	],
-	"coursesTaught": [
-		{
-			"course_code": "CIS 115",
-			"course_title": "Introduction to Computing Technology",
-			"description": "A survey of the discipline of Computing Science and its interaction with other disciplines, incorporating historical development, theories, and tools of Computing Science (algorithm design and programming). Topics include: mechanical computers, digital computers, big data, AI, robotics, security, scientific computing, simulation, and web technologies.  Students also learn Python as part of this course to reinforce the previously mentioned topics.",
-			"years": "Fall 2017-present"
-		},
-		{
-			"course_code": "CIS 300",
-			"course_title": "Data and Program Structures",
-			"description": "A study of common data and program structures together with associated algorithms. Topics include interfaces, design patterns, arrays, stacks, queues, lists, trees, hash tables, recursion, binary search, and tree traversals. Experience with both use and implementation of these structures and algorithms using a modern programming language. Discussion of trade-offs involving performance and software maintainability.  Currently, this course is taught in C#.",
-			"years": "Fall 2017-present"
-		},
-		{
-			"course_code": "CIS 308",
-			"course_title": "C Programming Laboratory",
-			"description": "A lab-based course focused on teaching the C programming language.  Topics include arrays, pointers, dynamic memory, structs, and other fundamental concepts of the C language.",
-			"years": "Spring 2019"
-		},
-		{
-			"course_code": "CIS 560",
-			"course_title": "Database System Concepts",
-			"description": "Concepts, approaches, and techniques in database management. Representation of information as data, data storage techniques, foundations of logical data models, data retrieval, database design, transaction management, integrity and security.",
-			"years": "Spring 2020-2022"
-		},
-		{
-			"course_code": "CC 520",
-			"course_title": "Database fundamentals",
-			"description": "Introduction to SQL databases for non-cs majors. Concepts, approaches, and techniques in database management. Representation of information as data, data storage techniques, foundations of logical data models, data retrieval, database design, transaction management, integrity and security.",
-			"years": "Spring 2022-present"
-		},
-		{
-			"course_code": "CIS 595",
-			"course_title": "IS Cooperative Internship",
-			"description": "The intern works in a professional capacity in various areas of Information Systems such as web development, programming, application development, or information technology. Student is supervised by a professional and a faculty member. Written documentation and oral presentation of project goals, experiences, and accomplishments.",
-			"years": "Fall 2017-2019"
-		},
-		{
-			"course_code": "CIS 640",
-			"course_title": "Software Testing Techniques",
-			"description": "Survey of software testing methodologies; evaluation of software testing strategies; experience in a variety of software testing practices.",
-			"years": "Spring 2018-2022"
-		},
-		{
-			"course_title": "Starbase",
-			"description": "Planned and taught an hour introduction to programming lesson to 4th-6th grade students from the Manhattan Kansas Starbase program.  In a pair programming exercise, students translated the sheet music of the song Ode to Joy using the Scratch programming language.",
-			"years": "2013-2019"
-		},
-		{
-			"course_title": "STEM Summer Institute",
-			"description": "Planned and taught programming courses to 5th-9th grade students.  These courses range in theme, including introduction to Scratch programming, artificial intelligence, game design, and micro controllers.  Lesson are aimed to give young students an introduction to programming and other technology, as well as get them interested in pursuing a STEM- field.",
-			"years": "Summer 2014-present"
-		},
-		{
-			"course_title": "Boy Scouts of America",
-			"description": "Planned and taught a half day workshop for the Boy Scouts robotics badge.  Scouts learned robotic fundamentals, including safety, design, programming, and applications.",
-			"years": "2018-2019"
-		},
-		{
-			"course_title": "Girl Scouts of the USA",
-			"description": "Created and planned a three-hour workshop for junior girl scouts to learn about artificial intelligence.  Scouts learned the basics in translating simple human intelligence into computer controlled sprite, how artificial neural networks operate, and how supercomputing clusters operate.  This workshop relied heavily on the Scratch programming language and CS unplugged activities.",
-			"years": "Spring 2016, 2017"
-		},
-		{
-			"course_title": "GROW and EXCITE",
-			"description": "Participated in outreach programs designed to engage young women in 6th-12th grade in STEM.  As part of these programs, I taught lessons in storytelling, music, and artificial intelligence in the Scratch programming language.",
-			"years": "2015, 2017"
-		},
-		{
-			"course_title": "K-State Codes – Introduction to Python",
-			"description": "Develop and instruct an accelerated course on Python programming.  This course is a free, non-credit course open to all students and faculty of K-State. This course aims to teach fundamental programming concepts and syntax in the Python language.",
-			"years": "Fall 2016 - 2017"
-		},
-		{
-			"course_code": "CIS 415",
-			"course_title": "Ethics and Computing Technology",
-			"description": "Ethics and Computing Technology covers ethical and moral issues that involve computing technologies and their impact on society.  This class is given in two eight-week sections, leveraging a flipped classroom model and covering topics including basic ethical principles and theories, software engineering and ACM codes of ethics, privacy, cyber security, safety-critical software, and computing technologies in society.  Served as a graduate teaching assistant for the first section, and am currently serving as an instructor for the second.",
-			"years": "Fall 2016"
-		},
-		{
-			"course_title": "Insight GK12",
-			"description": "Develop and deliver technology and engineering lessons at the K-12 level. Lessons include, but are not limited to sensors, Lego NXT robots, Scratch programming, Wii remotes, and Kinect sensors. A goal of this program is to expose students, particularly from rural areas, to engineering and various technologies.",
-			"years": "2013-2015"
-		},
-		{
-			"course_code": "CIS 200",
-			"course_title": "Programming Fundamentals",
-			"description": "Programming Fundamentals is an introduction to Java programming with a small focus on C#.  Students focus on learning how to program in Java as well as general programming practices and methodology.  Responsibilities included teaching multiple lab sections, proctoring exams, grading, and holding regular office ours.",
-			"years": "2011-2014"
-		}
-	]
+  "awards": [
+    {
+      "name": "Kevin and Jacquie Elmore - Carl and Mary Ice Teaching Scholar",
+      "organization": "Kansas State University",
+      "years": "2020-2025"
+    },
+    {
+      "name": "Teaching Excellence Award",
+      "organization": "Department of Computer Science, Kansas State University",
+      "years": "2020-2023"
+    },
+    {
+      "name": "College of Engineering Team Award of Excellence",
+      "organization": "Kansas State University",
+      "years": "2021"
+    },
+    {
+      "name": "Research and the State",
+      "organization": "Kansas State University",
+      "placement": "1st place (STEM Education Group)",
+      "years": "2016"
+    },
+    {
+      "name": "Kansas State Research Forum",
+      "organization": "Engineering, Math, and Physical Sciences Poster Session",
+      "placement": "2nd place",
+      "years": "2014"
+    }
+  ],
+  "coursesTaught": [
+    {
+      "course_code": "CIS 115",
+      "course_title": "Introduction to Computing Technology",
+      "description": "A survey of the discipline of Computing Science and its interaction with other disciplines, incorporating historical development, theories, and tools of Computing Science (algorithm design and programming). Topics include: mechanical computers, digital computers, big data, AI, robotics, security, scientific computing, simulation, and web technologies.  Students also learn Python as part of this course to reinforce the previously mentioned topics.",
+      "years": "Fall 2017-present"
+    },
+    {
+      "course_code": "CIS 300",
+      "course_title": "Data and Program Structures",
+      "description": "A study of common data and program structures together with associated algorithms. Topics include interfaces, design patterns, arrays, stacks, queues, lists, trees, hash tables, recursion, binary search, and tree traversals. Experience with both use and implementation of these structures and algorithms using a modern programming language. Discussion of trade-offs involving performance and software maintainability.  Currently, this course is taught in C#.",
+      "years": "Fall 2017-present"
+    },
+    {
+      "course_code": "CIS 308",
+      "course_title": "C Programming Laboratory",
+      "description": "A lab-based course focused on teaching the C programming language.  Topics include arrays, pointers, dynamic memory, structs, and other fundamental concepts of the C language.",
+      "years": "Spring 2019"
+    },
+    {
+      "course_code": "CIS 560",
+      "course_title": "Database System Concepts",
+      "description": "Concepts, approaches, and techniques in database management. Representation of information as data, data storage techniques, foundations of logical data models, data retrieval, database design, transaction management, integrity and security.",
+      "years": "Spring 2020-2022"
+    },
+    {
+      "course_code": "CC 520",
+      "course_title": "Database fundamentals",
+      "description": "Introduction to SQL databases for non-cs majors. Concepts, approaches, and techniques in database management. Representation of information as data, data storage techniques, foundations of logical data models, data retrieval, database design, transaction management, integrity and security.",
+      "years": "Spring 2022-present"
+    },
+    {
+      "course_code": "CIS 595",
+      "course_title": "IS Cooperative Internship",
+      "description": "The intern works in a professional capacity in various areas of Information Systems such as web development, programming, application development, or information technology. Student is supervised by a professional and a faculty member. Written documentation and oral presentation of project goals, experiences, and accomplishments.",
+      "years": "Fall 2017-2019"
+    },
+    {
+      "course_code": "CIS 640",
+      "course_title": "Software Testing Techniques",
+      "description": "Survey of software testing methodologies; evaluation of software testing strategies; experience in a variety of software testing practices.",
+      "years": "Spring 2018-2022"
+    },
+    {
+      "course_title": "Starbase",
+      "description": "Planned and taught an hour introduction to programming lesson to 4th-6th grade students from the Manhattan Kansas Starbase program.  In a pair programming exercise, students translated the sheet music of the song Ode to Joy using the Scratch programming language.",
+      "years": "2013-2019"
+    },
+    {
+      "course_title": "STEM Summer Institute",
+      "description": "Planned and taught programming courses to 5th-9th grade students.  These courses range in theme, including introduction to Scratch programming, artificial intelligence, game design, and micro controllers.  Lesson are aimed to give young students an introduction to programming and other technology, as well as get them interested in pursuing a STEM- field.",
+      "years": "Summer 2014-present"
+    },
+    {
+      "course_title": "Boy Scouts of America",
+      "description": "Planned and taught a half day workshop for the Boy Scouts robotics badge.  Scouts learned robotic fundamentals, including safety, design, programming, and applications.",
+      "years": "2018-2019"
+    },
+    {
+      "course_title": "Girl Scouts of the USA",
+      "description": "Created and planned a three-hour workshop for junior girl scouts to learn about artificial intelligence.  Scouts learned the basics in translating simple human intelligence into computer controlled sprite, how artificial neural networks operate, and how supercomputing clusters operate.  This workshop relied heavily on the Scratch programming language and CS unplugged activities.",
+      "years": "Spring 2016, 2017"
+    },
+    {
+      "course_title": "GROW and EXCITE",
+      "description": "Participated in outreach programs designed to engage young women in 6th-12th grade in STEM.  As part of these programs, I taught lessons in storytelling, music, and artificial intelligence in the Scratch programming language.",
+      "years": "2015, 2017"
+    },
+    {
+      "course_title": "K-State Codes – Introduction to Python",
+      "description": "Develop and instruct an accelerated course on Python programming.  This course is a free, non-credit course open to all students and faculty of K-State. This course aims to teach fundamental programming concepts and syntax in the Python language.",
+      "years": "Fall 2016 - 2017"
+    },
+    {
+      "course_code": "CIS 415",
+      "course_title": "Ethics and Computing Technology",
+      "description": "Ethics and Computing Technology covers ethical and moral issues that involve computing technologies and their impact on society.  This class is given in two eight-week sections, leveraging a flipped classroom model and covering topics including basic ethical principles and theories, software engineering and ACM codes of ethics, privacy, cyber security, safety-critical software, and computing technologies in society.  Served as a graduate teaching assistant for the first section, and am currently serving as an instructor for the second.",
+      "years": "Fall 2016"
+    },
+    {
+      "course_title": "Insight GK12",
+      "description": "Develop and deliver technology and engineering lessons at the K-12 level. Lessons include, but are not limited to sensors, Lego NXT robots, Scratch programming, Wii remotes, and Kinect sensors. A goal of this program is to expose students, particularly from rural areas, to engineering and various technologies.",
+      "years": "2013-2015"
+    },
+    {
+      "course_code": "CIS 200",
+      "course_title": "Programming Fundamentals",
+      "description": "Programming Fundamentals is an introduction to Java programming with a small focus on C#.  Students focus on learning how to program in Java as well as general programming practices and methodology.  Responsibilities included teaching multiple lab sections, proctoring exams, grading, and holding regular office ours.",
+      "years": "2011-2014"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Ph.D. (Computer Science)",
+      "institution": "Kansas State University",
+      "location": "Manhattan, KS",
+      "description": "Bringing Computational Thinking to K-12 and Higher Education",
+      "years": "2013-2017"
+    },
+    {
+      "degree": "M.S. (Computer Science)",
+      "institution": "Kansas State University",
+      "location": "Manhattan, KS",
+      "description": "A Convolutive Model for Polyphonic Instrument Identification and Pitch Detection using Combined Classification",
+      "years": "2011-2013"
+    },
+    {
+      "degree": "B.S. (Computer Systems Technology)",
+      "institution": "Kansas State University",
+      "location": "Salina, KS",
+      "years": "2007-2011"
+    }
+  ],
+  "grants": [
+    {
+      "agency": "National Science Foundation",
+      "awardNumber": "2216625",
+      "institution": "Kansas State University",
+      "title": "BPC-DP: Broadening Participation of Underrepresented Groups Through the Computational Core Initiative",
+      "status": "Awarded",
+      "startDate": "10/01/2022",
+      "endDate": "09/30/2025",
+      "awardAmount": "$299,998",
+	  "role": "Co-PI",
+	  "abstract": "This project aims to understand factors contributing to low interest in STEM fields, particularly computer science, in Kansas (especially among rural and/or underrepresented minority populations), and to test remediation methods to increase interest and comfort with computer science at the high school level. We will assist high schools by providing curriculum, training, and support leveraging KSU's Computational Core Initiative (CCI), embedding CCI courses in 40 partner schools (with at least 30 in rural areas). The Situative Expectancy-Value Theory (SEVT) will guide intervention and evaluation, using surveys, interviews, and essays to assess attitudes toward STEM and computer science education and careers. Despite the grant's two-year duration, we anticipate four data collection events, measuring changes in students' aspirations and tracking their progress through CCI and beyond high school."
+    },
+    {
+      "agency": "Patterson Family Foundation",
+      "institution": "Kansas State University",
+      "title": "K-State Rural Innovation Academy for Teaching Enrichment (KRIATE)",
+      "status": "Awarded",
+      "startDate": "10/01/2022",
+      "endDate": "09/30/2027",
+      "awardAmount": "$3,099,030",
+	  "role": "Co-PI",
+	  "abstract": "The Rural Education Center (REC) at Kansas State University, the College of Education at Kansas State University (KSU-COE), and the Computer Science Department at Kansas State University (KSU-CSD) are working collaboratively to develop a model to enrich computer science and STEM education for rural students in Kansas. The KSU-COE has a long history of supporting teachers and innovative educational initiatives. In partnership with the REC and KSU-CSD, and as part of K-State’s land grant mission, the KSU-COE has also worked continually to support rural education. The K-State Rural Innovation Academy for Teaching Enrichment (KRIATE) will prioritize innovative educational approaches, curricula, and school structures to develop new models of preparing students for degrees and careers in aerospace (AE), artificial intelligence (AI), biotechnology (BT), computer science (CS), data analysis (DA), and STEM education (SE) as part of the 39 Career and Technical Education Pathways in Kansas (KSDE, 2019). Project KRIATE (pronounced like 'create') is needed to address a compounding problem for many rural schools: teachers and resources to provide high-quality CS and applied STEM opportunities for their already underserved and underfunded rural students. We propose Project KRIATE primarily to address three specific problems within the STEM ecosystem in Kansas that are related to this larger problem: (1) shortages of qualified CS and STEM educators in rural schools; (2) lack of student interest and retention in CS and STEM university degree programs and careers; and (3) the mandate for rural schools to meet the new Kansas Computer Science standards (2022 legislation HB2466) by the 2023-24 school year. While suburban and urban schools in Kansas have the resources and facilities to provide educational opportunities for nearly all of the 39 pathways and meet the new computer science standards, only eighteen percent (18%) of rural schools in Kansas offer computer science and most are only able to offer a few pathways, which are wholly dependent on the district facilities and teacher expertise or training. To address this statewide problems, Project KRIATE would provide a model for enriching the computer science opportunities, overall STEM teaching, and career training available in rural schools by developing and delivering innovative approaches that utilize the assets of rural schools and communities."
+    },
+    {
+      "agency": "Kansas Department of Education",
+      "institution": "Kansas State University",
+      "title": "CS4KS: Expanding the Cyber Pipeline Program",
+      "status": "Awarded",
+      "startDate": "12/01/2022",
+      "endDate": "06/30/2023",
+      "awardAmount": "$471,656",
+	  "role": "PI",
+	  "abstract": "Recognizing the increasing need for a diverse audience of students to engage in CS on multiple levels (both as professional computer scientists but also as professionals in other fields applying the tools of computation to the problems of their field) Kansas State University Department of Computer Science (KSUCS) has developed a series of high-quality computer science courses intended for a broad audience in its Computational Core Initiative (CCI). These courses are designed with flexibility and scalability in mind, utilizing an innovative online instruction platform providing on-demand video lectures, hands-on programming activities with automated grading and feedback, and a collaborative code editing environment that allows the teacher to remotely see and interact with the student and their program code. To expand opportunities for Kansas students in keeping with Kansas State University’s land grant mission, we launched the Cyber Pipeline Program (CPP), which is adapting the CCI courses for delivery in Kansas high schools and developing professional development materials to prepare Kansas high school teachers to deliver them. We have strived to provide this curriculum at little to no cost to schools (the only cost we must pass on is the hosting fees for the online programming environment used). The professional development associated with the program consists of a series of CCI and CS pedagogy courses developed as part of a Computer Science Education Certificate offered as a partnership between KSUCS and Kansas State University College of Education. It is our hope that this 16-credit hour certificate will serve as a potential basis for a future teacher certification within the state."
+    },
+    {
+      "agency": "Kansas Department of Education",
+      "institution": "Kansas State University",
+      "title": "CS4KS: Continuing to Expand the K-State Cyber Pipeline",
+      "status": "Awarded",
+      "startDate": "10/01/2023",
+      "endDate": "06/30/2024",
+      "awardAmount": "$748,000",
+	  "role": "PI",
+	  "abstract": "Kansas State University Department of Computer Science (KSUCS) has developed a series of high-quality computer science courses intended for a broad audience in its Computational Core Initiative (CCI). These courses are designed with flexibility and scalability in mind, utilizing an innovative online instruction platform providing on-demand video lectures, hands-on programming activities with automated grading and feedback, and a collaborative code editing environment that allows the teacher to remotely see and interact with the student and their program code. This project will continue to expand and improve our CCI offerings as well as continue support for a summer teacher training workshop and CSTA conference."
+    }
+  ],
+  "memberships": [
+    {
+      "organization": "Computer Science Teachers Association",
+      "chapter": "Kansas Chapter",
+      "years": "2020-present"
+    },
+    {
+      "organization": "Association for Computing Machinery",
+      "years": "2016-present"
+    },
+    {
+      "organization": "Association for Computing Machinery - SIGCSE",
+      "years": "2016-present"
+    },
+    {
+      "organization": "Association for Computing Machinery - ACM-W",
+      "years": "2016-present"
+    },
+    {
+      "organization": "American Society for Engineering Education",
+      "years": "2016-present"
+    },
+    {
+      "organization": "Kansas Partnership for Applied Computational Thinking",
+      "position": "Treasurer",
+      "institution": "Kansas State University",
+      "location": "Manhattan, KS",
+      "years": "2017-2023"
+    },
+    {
+      "organization": "Computer Science for All Consortium",
+      "link": "https://www.csforall.org/researchers/",
+      "position": "Research Member",
+      "years": "2016-present"
+    },
+    {
+      "organization": "Laboratory for Knowledge Discovery in Databases",
+      "institution": "Kansas State University",
+      "location": "Manhattan, KS",
+      "link": "http://www.kddresearch.org/",
+      "years": "2011-2017"
+    }
+  ],
+  "professionalService": [
+    {
+      "activity": "SIGCSE Associate Program Chair",
+      "years": "2021"
+    },
+    {
+      "activity": "Kansas Computer Science Teacher Standards — Writer",
+      "years": "2021"
+    },
+    {
+      "activity": "Kansas Computer Science Model Standards — Developer, Writer, Ecosystem Lead",
+      "years": "2018-2020"
+    },
+    {
+      "activity": "Reviewer for SIGCSE",
+      "years": "2017-2021"
+    },
+    {
+      "activity": "Reviewer for ITiCSE",
+      "years": "2017-2021"
+    },
+    {
+      "activity": "Reviewer for ASEE",
+      "years": "2016-2022"
+    },
+    {
+      "activity": "Reviewer for IJCCI",
+      "years": "2018"
+    },
+    {
+      "activity": "Reviewer for CSTA",
+      "years": "2018"
+    },
+    {
+      "activity": "Reviewer for ICLS",
+      "years": "2018"
+    },
+    {
+      "activity": "Reviewer for CSCL",
+      "years": "2016,2018"
+    }
+  ],
+  "universityService": [
+    {
+      "activity": "Academic Assessment Committee",
+      "years": "2017-present"
+    },
+    {
+      "activity": "Advisor Committee",
+      "years": "2017-present"
+    },
+    {
+      "activity": "Curriculum Committee",
+      "years": "2017-present"
+    },
+    {
+      "activity": "Engineering Reinstatement Committee",
+      "years": "2017-present"
+    },
+    {
+      "activity": "ACM club advisor",
+      "years": "2017-present"
+    },
+    {
+      "activity": "Hack K-State club advisor",
+      "years": "2017-present"
+    },
+    {
+      "activity": "Web Development club advisor",
+      "years": "2017-present"
+    },
+    {
+      "activity": "High School Programming Contest organizer/judge",
+      "years": "2017-present"
+    }
+  ],
+  "workExperience": [
+    {
+      "position": "Teaching Assistant Professor",
+      "company": "Kansas State University",
+      "location": "Manhattan, KS",
+      "responsibilities": [
+        "Primary responsibilities include teaching and advising students, as well as service to the department/university, involvement with student organizations, outreach to the community, and research.",
+        "Co-Director of the Advancing Learning and Teaching Computer Science (ALT+CS) Lab - Manage and conduct computer science education research, outreach to the Kansas community, and support students in pursuing computer science education."
+      ],
+      "years": "Fall 2017 - Present"
+    },
+    {
+      "position": "Consultant",
+      "company": "Independent",
+      "location": "Manhattan, KS",
+      "responsibilities": [
+        "Lead developer for the data science and visualization in AAPT's Data Explorer, a data analytics portal for physics assessments. Primary responsibilities include developing and maintaining a large Django web server and MongoDB database and consulting on research including machine learning and data science."
+      ],
+      "years": "2018 - Present"
+    },
+    {
+      "position": "Graduate Research Assistant",
+      "company": "Kansas State University",
+      "location": "Manhattan, KS",
+      "responsibilities": [
+        "CSUSM subaward (2017) – This subaward is to extend the Data Explorer on physport.org to allow educators to create and analyze custom assessments. This will provide an easy to use interface to let researchers to examine their experimental assessments and allow departments to input and share data about their classes.",
+        "Capability Inference based on Dynamic Topic Modeling and Text Information Extraction (2016 – 2017) – Co-system architect with responsibilities such as system design, data extraction, modeling, and integration, as well as training and supervising undergraduate researchers in machine learning and text analytics for a project funded through Lawrence Livermore National Laboratories.",
+        "NSF WIDER (2013 – 2016) – Lead developer and in charge of supervising and training undergraduate researchers for a web application known as the Data Explorer with the American Association for Physics Teachers (AAPT). The Data Explorer is an analytics portal that gives educators the ability to gain insights from assessment data, using online information retrieval and visualization through a federated display. This creates a streamlined process for users to upload assessment data to explore.  The overall objective of this project is to let educators from all levels (high school, undergraduate, graduate, etc.) to interact with their data and anonymous summaries of data from other instructors in a usable, efficient, and secure way that has previously been a tedious, and sometimes impossible, task.  The focus of this research is to facilitate importing, validating, integrating, and visualizing assessment data.  This will be expanded for custom assessments, as well as other academic areas, such as computer science, in the future.",
+        "Sandia National Lab (2012) – Worked closely with Dr. Mitch Neilsen to create cross platform installers for software created as a collaboration with Sandia National Labs."
+      ],
+      "years": "2012 - 2017"
+    },
+    {
+      "position": "Insight GK12 Fellow",
+      "company": "Kansas State University",
+      "location": "Manhattan, KS",
+      "responsibilities": [
+        "Develop lesson plans and activities to bring technologies to rural, K-12 classrooms."
+      ],
+      "years": "2013 - 2015"
+    },
+    {
+      "position": "Graduate Teaching Assistant",
+      "company": "Kansas State University",
+      "location": "Manhattan, KS",
+      "responsibilities": [
+        "Primary responsibilities included holding office hours, grading, lecturing, and supervising laboratories.  Courses taught include: CIS 102-104 (spreadsheet, word, and database applications), CIS 200 (programming fundamentals), and CIS 415 (ethics and computing technology)."
+      ],
+      "years": "2011-2014"
+    },
+    {
+      "position": "System Engineer Intern",
+      "company": "Cerner Corporation",
+      "location": "Kansas City, MO",
+      "responsibilities": [
+        "Assisted in the implementation and support of Cerner's Enterprise Solutions, including system upgrades and overall system performance management."
+      ],
+      "years": "May 2011 - July 2011"
+    },
+    {
+      "position": "Writing Center Tutor",
+      "company": "Kansas State University",
+      "location": "Salina, KS",
+      "responsibilities": [
+        "Provided tutoring services to students in need of help with writing essays, research papers, cover letters, resumes, and other documents"
+      ],
+      "years": "2011"
+    },
+    {
+      "position": "IT Assistant",
+      "company": "Kasa Industrial Controls Inc",
+      "location": "Salina, KS",
+      "responsibilities": [
+        "Resolved Help Desk tickets and provide assistance/support for users. Assisted in researching and testing of process and equipment upgrades."
+      ],
+      "years": "2010 - 2011"
+    },
+    {
+      "position": "Technology Intern",
+      "company": "Philips Lighting",
+      "location": "Salina, KS",
+      "responsibilities": [
+        "Worked as a computer intern in the CRCL (Corporate Regulatory Certification Laboratory). Deployed and developed a Microsoft Silverlight web application. Researched to improve software systems used by the CRCL."
+      ],
+      "years": "2008 - 2010"
+    }
+  ]
 }

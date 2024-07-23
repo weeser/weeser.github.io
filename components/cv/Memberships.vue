@@ -1,7 +1,7 @@
 <template>
-	<Panel header="Memberships" toggleable>
-		<DataTable :value="memberships" class="px-4" size="small" tableStyle="min-width: 50rem" stripedRows>
-			<Column header="Organization">
+	<PrimePanel header="Memberships" toggleable>
+		<PrimeDataTable :value="memberships" class="px-6" size="small" tableStyle="min-width: 50rem" stripedRows>
+			<PrimeColumn header="Organization">
 				<template #body="slotProps">
 					<h3 v-if="slotProps.data.organization">
 						<a v-if="slotProps.data.link" :href="slotProps.data.link" target="_blank">
@@ -18,10 +18,10 @@
 						<span v-if="slotProps.data.location">{{ slotProps.data.location }}</span>
 					</p>
 				</template>
-			</Column>
-			<Column field="years" header="Years"></Column>
-		</DataTable>
-	</Panel>
+			</PrimeColumn>
+			<PrimeColumn field="years" header="Years"></PrimeColumn>
+		</PrimeDataTable>
+	</PrimePanel>
 </template>
 
 <script setup>

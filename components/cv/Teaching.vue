@@ -1,7 +1,7 @@
 <template>
-	<Panel header="Teaching" toggleable>
-		<DataTable :value="coursesTaught" class="px-4" size="small" tableStyle="min-width: 50rem" stripedRows>
-			<Column header="Course">
+	<PrimePanel header="Teaching" toggleable>
+		<PrimeDataTable :value="coursesTaught" class="px-6" size="small" tableStyle="min-width: 50rem" stripedRows>
+			<PrimeColumn header="Course">
 				<template #body="slotProps">
 					<h3>
 						<span v-if="slotProps.data.course_code">{{ slotProps.data.course_code }} - </span>
@@ -9,10 +9,10 @@
 					</h3>
 					<p>{{ slotProps.data.description }}</p>
 				</template>
-			</Column>
-			<Column field="years" header="Years"></Column>
-		</DataTable>
-	</Panel>
+			</PrimeColumn>
+			<PrimeColumn field="years" header="Years"></PrimeColumn>
+		</PrimeDataTable>
+	</PrimePanel>
 </template>
 
 <script setup>

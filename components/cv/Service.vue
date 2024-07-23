@@ -1,10 +1,10 @@
 <template>
-	<Panel :header="serviceHeader" toggleable>
-		<DataTable :value="service" class="px-4" tableStyle="min-width: 50rem" size="small" stripedRows>
-            <Column field="activity" header="Description"></Column>
-            <Column field="years" header="Years"></Column>
-        </DataTable>		
-	</Panel>
+	<PrimePanel :header="serviceHeader" toggleable>
+		<PrimeDataTable :value="service" class="px-6" tableStyle="min-width: 50rem" size="small" stripedRows>
+            <PrimeColumn field="activity" header="Description"></PrimeColumn>
+            <PrimeColumn field="years" header="Years"></PrimeColumn>
+        </PrimeDataTable>		
+	</PrimePanel>
 </template>
 
 <script setup>

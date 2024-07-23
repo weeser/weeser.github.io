@@ -1,8 +1,9 @@
 export default defineNuxtConfig({
+    compatibilityDate: '2024-07-23',
     modules: [
-        'nuxt-primevue',
         '@nuxt/content',
-        "nuxt-calendly"
+        'nuxt-calendly',
+        '@primevue/nuxt-module'
     ],
     build: {
         // Extend webpack config
@@ -22,32 +23,20 @@ export default defineNuxtConfig({
     },
     primevue: {
         /* Options */
+        components: {
+            prefix: 'Prime'
+        },
         options: {
             ripple: true,
-            usePrimeVue: true
+            inputVariant: 'filled',         
         },
-        components: {
-            include: '*',
-            exclude: ['Galleria', 'Carousel']
-        }
+        usePrimeVue: true,  
+        importTheme: { from: '@/themes/site-theme.js' }, 
     },
     css: [
-        // TODO: Come back to this later when primevue is updated
-        // 'primevue/resources/themes/aura-light-teal/theme.css',
-        // 'primevue/resources/themes/aura-dark-teal/theme.css',
         "primeicons/primeicons.css",
-        "primeflex/primeflex.css"
     ],
     app: {
-        head: {
-            link: [
-                {
-                    id: 'theme-link',
-                    rel: 'stylesheet',
-                    href: '/themes/aura-light-teal/theme.css'
-                }
-            ]
-        }
     },
     calendly: {
         /**

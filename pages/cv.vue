@@ -8,6 +8,7 @@ import Awards from '@/components/cv/Awards.vue';
 import Memberships from '@/components/cv/Memberships.vue';
 import Service from '@/components/cv/Service.vue';
 import Teaching from '@/components/cv/Teaching.vue';
+import Grants from '@/components/cv/Grants.vue';
 
 let cv_data_raw = (await import(`../data/cv.json?raw`)).default;
 let cv_data_parsed = JSON.parse(cv_data_raw);
@@ -23,6 +24,7 @@ const cv_data = ref(cv_data_parsed);
 	<Service :service="cv_data.universityService" serviceHeader="University Service"/>
 	<Memberships :memberships="cv_data.memberships" />
 	<Awards :awards="cv_data.awards" />
+	<Grants :grants="cv_data.grants" />
 </template>
 
 <style scoped>
