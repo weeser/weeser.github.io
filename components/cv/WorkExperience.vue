@@ -1,7 +1,7 @@
 <template>
-	<Panel header="Work Experience" toggleable>
-		<DataTable :value="workExperience" class="px-4" size="small" tableStyle="min-width: 50rem" stripedRows>
-			<Column header="Position">
+	<PrimePanel header="Work Experience" toggleable>
+		<PrimeDataTable :value="workExperience" class="px-6" size="small" tableStyle="min-width: 50rem" stripedRows>
+			<PrimeColumn header="Position">
 				<template #body="slotProps">
 					<h3>
 						<span>{{ slotProps.data.position }}</span>
@@ -14,12 +14,12 @@
 						</li>
 					</ul>
 				</template>
-			</Column>
-			<Column field="company" header="Company"></Column>
-			<Column field="location" header="Location"></Column>
-			<Column field="years" header="Years"></Column>
-		</DataTable>
-	</Panel>
+			</PrimeColumn>
+			<PrimeColumn field="company" header="Company"></PrimeColumn>
+			<PrimeColumn field="location" header="Location"></PrimeColumn>
+			<PrimeColumn field="years" header="Years"></PrimeColumn>
+		</PrimeDataTable>
+	</PrimePanel>
 </template>
 
 <script setup>

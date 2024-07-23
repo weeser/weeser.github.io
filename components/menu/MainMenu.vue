@@ -42,15 +42,15 @@ const items = ref([
 </script>
 
 <template>
-	<Menubar :model="items">
+	<PrimeMenubar :model="items">
 		<template #start>
 		</template>
 		<template #end>
-			<div class="flex align-items-center gap-2">
+			<div class="flex items-center gap-2">
 				<ThemeToggle />
 			</div>
 		</template>
-	</Menubar>
+	</PrimeMenubar>
 </template>
 
 <style scoped></style>

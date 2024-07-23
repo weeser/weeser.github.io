@@ -3,27 +3,57 @@
 // https://primevue.org/theming/#switchthemes
 
 // Libraries
-import { usePrimeVue } from 'primevue/config'
-const PrimeVue = usePrimeVue()
+import { onMounted, ref } from 'vue';
 
+const darkClass = 'my-app-dark'
+const checked = ref(false);
+const currentTheme = ref(null);
+const getTheme = () => {
+	return localStorage.getItem('user-theme')
+}
+
+onMounted(() => {
+	let initUserTheme = getTheme() || getMediaPreference();
+    setTheme(initUserTheme);
+});
+
+const getMediaPreference = () => {
+	const hasDarkPreference = window.matchMedia(
+		"(prefers-color-scheme: dark)"
+	).matches;
+	if (hasDarkPreference) {
+		return "dark-theme";
+	} else {
+		return "light-theme";
+	}
+}
+
+
+const setTheme = (theme) => {
+	localStorage.setItem("user-theme", theme);
+	currentTheme.value = theme;
+	if (theme === "dark-theme") {
+		document.documentElement.classList.add(darkClass);
+	} else {
+		document.documentElement.classList.remove(darkClass);
+	}
+}
 
 /**
  * Toggle theme value and trigger update
  */
 const toggleColorScheme = () => {
-	document.body.classList.toggle("my-app-dark");
+	const element = document.querySelector('html');
+	element.classList.toggle(darkClass);
 }
 
 </script>
 
 <template>
 	<div class="p-menuitem">
-		<div class="p-menuitem-content">
-			<a class="p-menuitem-link" @click="toggleColorScheme()">
-				<span v-if="themeDark == 'light-theme'" class="pi pi-moon" v-tooltip.bottom="'Toggle Dark Mode'" />
-				<span v-else class="pi pi-sun" v-tooltip.bottom="'Toggle Light Mode'" />
-			</a>
-		</div>
+		<PrimeToggleButton v-model="checked" @change="toggleColorScheme" onIcon="pi pi-moon" onLabel=" " offLabel=" "
+			offIcon="pi pi-sun" class="w-36" aria-label="Toggle Dark Mode" v-tooltip.bottom="'Toggle Dark Mode'" />
+
 	</div>
 </template>
 
