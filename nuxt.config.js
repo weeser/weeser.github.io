@@ -3,7 +3,8 @@ export default defineNuxtConfig({
     modules: [
         '@nuxt/content',
         'nuxt-calendly',
-        '@primevue/nuxt-module'
+        '@primevue/nuxt-module',
+        "@nuxtjs/tailwindcss"
     ],
     build: {
         // Extend webpack config

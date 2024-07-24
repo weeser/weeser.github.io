@@ -10,6 +10,7 @@
     "@nuxt/content": "latest",
     "@primevue/themes": "latest",
     "primevue": "latest",
+    "tailwindcss-primeui": "^0.3.4",
     "vue": "latest"
   },
   "devDependencies": {

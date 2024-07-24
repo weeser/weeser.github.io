@@ -1,6 +1,6 @@
 <template>
 	<PrimePanel header="Grants" toggleable>
-		<PrimeDataTable :value="grants" sortField="endDate" sortOrder="-1" class="px-12" size="small" tableStyle="min-width: 50rem" stripedRows>
+		<PrimeDataTable :value="grants" sortField="endDate" :sortOrder="-1" class="px-12" size="small" tableStyle="min-width: 50rem" stripedRows>
 			<PrimeColumn header="Title">
 				<template #body="slotProps">
 					<PrimePanel :header="slotProps.data.title" toggleable collapsed>

@@ -137,7 +137,7 @@ const onSortChange = (event) => {
           <!-- Add filter inputs for each field you want to filter -->
           <div class="flex flex-wrap gap-2 grow md:grow-0">
             <PrimeFloatLabel class="">
-              <PrimeDropdown inputId="sortYear" v-model="sortKey"
+              <PrimeSelect inputId="sortYear" v-model="sortKey"
                         variant="filled" showClear placeholder="Sort By Year"
                         :options="sortOptions" optionLabel="label"
                         @change="onSortChange($event)"/>
