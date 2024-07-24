@@ -1,8 +1,8 @@
 <script setup>
 // Libraries
-import {ref} from 'vue'
-import {BibtexParser} from 'assets/js/bibtex_js';
-import {FilterMatchMode, FilterService} from '@primevue/core/api';
+import { ref } from 'vue'
+import { BibtexParser } from 'assets/js/bibtex_js';
+import { FilterMatchMode, FilterService } from '@primevue/core/api';
 
 //read the bibtex file
 // let bib_file = fs.readFileSync('data/publications.bib', 'utf8');
@@ -26,7 +26,7 @@ for (let key in entry_dict) {
 }
 let bib_types = [];
 for (let type of bib_types_set) {
-  bib_types.push({label: type, value: type});
+  bib_types.push({ label: type, value: type });
 }
 
 const bib_entries = ref(entry_list);
@@ -87,18 +87,19 @@ FilterService.register('arrayItemsInArray', (arr, filter) => {
 });
 
 const filters = ref({
-  'CONTAINS_TEXT': {value: null, matchMode: FilterMatchMode.CONTAINS, callback: customFilterCallback},
-  'MULTI_SELECT': {value: null, matchMode: 'arrayItemsInArray', callback: customFilterMultiSelectCallback}
+  'CONTAINS_TEXT': { value: null, matchMode: FilterMatchMode.CONTAINS, callback: customFilterCallback },
+  'MULTI_SELECT': { value: null, matchMode: 'arrayItemsInArray', callback: customFilterMultiSelectCallback }
 });
 
 //-------------------------------- Define sorting -----------------------------------
 
-const sortKey = ref();
+// default sort
+const sortKey = ref({ label: 'Earliest', value: 'YEAR' });
 const sortOrder = ref();
 const sortField = ref();
 const sortOptions = ref([
-  {label: 'Latest', value: '!YEAR'},
-  {label: 'Earliest', value: 'YEAR'},
+  { label: 'Latest', value: '!YEAR' },
+  { label: 'Earliest', value: 'YEAR' },
 ]);
 // const sortKey = ref(sortOptions.value[0].value);
 const onSortChange = (event) => {
@@ -128,41 +129,45 @@ const onSortChange = (event) => {
 
 <template>
   <div class="card">
-    <PrimeDataView :value="bib_entries"
-              paginator :rows="8"
-              :sortOrder=sortOrder :sortField="sortField">
+    <PrimeDataView :value="bib_entries" paginator :rows="8" :sortOrder=sortOrder :sortField="sortField">
       <template #header>
-        <div class="flex md:flex-row sm:flex-col justify-between items-center gap-6">
+        <div class="flex md:flex-row sm:flex-col justify-between items-center gap-6 mt-3">
           <h2 class="text-2xl font-semibold text-surface-900 dark:text-surface-0">Publications</h2>
           <!-- Add filter inputs for each field you want to filter -->
-          <div class="flex flex-wrap gap-2 grow md:grow-0">
+          <div class="flex flex-wrap gap-2 grow md:grow-0 justify-end">
             <PrimeFloatLabel class="">
-              <PrimeSelect inputId="sortYear" v-model="sortKey"
-                        variant="filled" showClear placeholder="Sort By Year"
-                        :options="sortOptions" optionLabel="label"
-                        @change="onSortChange($event)"/>
+              <PrimeSelect inputId="sortYear" v-model="sortKey" variant="filled" showClear placeholder="Sort By Year"
+                :options="sortOptions" optionLabel="label" @change="onSortChange($event)" />
               <label for="sortYear">Sort By Year</label>
             </PrimeFloatLabel>
-            <PrimeMultiSelect v-model="filters['MULTI_SELECT'].value" display="chip"
-                         variant="filled" placeholder="Filter by type"
-                         :options="bib_types" optionLabel="label"
-                         @change="filters['MULTI_SELECT'].callback('MULTI_SELECT', 'BIBTEXTYPE')"
-            />
-            <PrimeInputText v-model="filters['CONTAINS_TEXT'].value"
-                       placeholder="Search"
-                       @input="filters['CONTAINS_TEXT'].callback('CONTAINS_TEXT',['TITLE', 'AUTHOR', 'YEAR', 'BOOKTITLE', 'JOURNAL'])"/>
+            <PrimeFloatLabel class="">
+              <PrimeMultiSelect id="pubType" v-model="filters['MULTI_SELECT'].value" display="chip" variant="filled"
+                placeholder="Filter by type" :options="bib_types" optionLabel="label"
+                @change="filters['MULTI_SELECT'].callback('MULTI_SELECT', 'BIBTEXTYPE')" />
+              <label for="pubType">Filter by type</label>
+            </PrimeFloatLabel>
+            <PrimeFloatLabel class="">
+              <PrimeInputText id="search" v-model="filters['CONTAINS_TEXT'].value" placeholder="Search"
+                @input="filters['CONTAINS_TEXT'].callback('CONTAINS_TEXT', ['TITLE', 'AUTHOR', 'YEAR', 'BOOKTITLE', 'JOURNAL'])" />
+              <label for="search">Search</label>
+            </PrimeFloatLabel>
           </div>
-          <!--          <div class="flex flex-row gap-12">-->
-          <!--            <Button icon="pi pi-file-pdf" label="Export to PDF" class="p-button-sm p-button-outlined"></Button>-->
-          <!--            <Button icon="pi pi-file-excel" label="Export to bib" class="p-button-sm p-button-outlined"></Button>-->
-          <!--          </div>-->
+
+          <div class="flex flex-row gap-1">
+            <PrimeButton id="exportPDF" icon="pi pi-file-pdf" v-tooltip.bottom="'Export to PDF'"
+              class="p-button-sm p-button-outlined">
+            </PrimeButton>
+            <PrimeButton id="exportBIB" icon="pi pi-file-excel" v-tooltip.bottom="'Export to bib'"
+              class="p-button-sm p-button-outlined">
+            </PrimeButton>
+          </div>
         </div>
 
       </template>
       <template #empty> No publications found.</template>
 
       <template #list="slotProps">
-        <div class="grid grid-cols-12 gap-4 grid-cols-12 gap-6 grid-nogutter">
+        <div class="grid gap-4 grid-cols-12 grid-nogutter">
           <div v-for="(entry, index) in slotProps.items" :key="entry.BIBTEXKEY" class="col-span-12">
             <!-- citation-->
             <div class="p-2" :class="{ 'border-top-1 surface-border': index !== 0 }">
@@ -173,7 +178,11 @@ const onSortChange = (event) => {
                     <div class="citation-text">
                       <span v-if="entry.AUTHOR" class="author">{{ entry.AUTHOR }}&nbsp</span>
                       <span v-if="entry.YEAR"><span class="year">({{ entry.YEAR }}).&nbsp</span></span>
-                      <span v-if="entry.TITLE" class="title">{{ entry.TITLE }}.&nbsp</span>
+                      <span v-if="entry.TITLE" class="title">
+                        <NuxtLink class="p-primary-color" v-if="entry.DOI" :to="entry.DOI">
+                          {{ entry.TITLE }}.&nbsp
+                        </NuxtLink>
+                      </span>
                       <span v-if="entry.BOOKTITLE" class="book_title">{{ entry.BOOKTITLE }}.&nbsp</span>
                       <span v-if="entry.JOURNAL"><em><span class="journal">{{ entry.JOURNAL }}.&nbsp</span></em></span>
                     </div>
@@ -181,8 +190,8 @@ const onSortChange = (event) => {
                   <div class="flex flex-col md:items-end gap-20">
                     <!--                      <span class="text-xl font-semibold text-surface-900 dark:text-surface-0">{{ index }}</span>-->
                     <div class="flex flex-row-reverse md:flex-row gap-1">
-                      <PrimeButton icon="pi pi-bookmark" label=""
-                              class="flex-auto md:flex-initial whitespace-nowrap"></PrimeButton>
+                      <PrimeButton icon="pi pi-bookmark" label="" class="flex-auto md:flex-initial whitespace-nowrap">
+                      </PrimeButton>
                     </div>
                   </div>
                 </div>
@@ -203,7 +212,8 @@ const onSortChange = (event) => {
 </template>
 
 <style scoped>
-.author, .year {
+.author,
+.year {
   font-weight: bold;
 }
 

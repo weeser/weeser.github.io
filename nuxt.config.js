@@ -1,3 +1,5 @@
+// import Aura from '@primevue/themes/aura';
+
 export default defineNuxtConfig({
     compatibilityDate: '2024-07-23',
     modules: [
@@ -29,7 +31,10 @@ export default defineNuxtConfig({
         },
         options: {
             ripple: true,
-            inputVariant: 'filled',         
+            inputVariant: 'filled',   
+            // theme: {
+            //     preset: Aura
+            // }      
         },
         usePrimeVue: true,  
         importTheme: { from: '@/themes/site-theme.js' }, 
