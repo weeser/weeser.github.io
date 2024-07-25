@@ -5,7 +5,7 @@
 // Libraries
 import { onMounted, ref } from 'vue';
 
-const darkClass = 'my-app-dark'
+const darkClass = 'dark'
 const checked = ref(false);
 const currentTheme = ref(null);
 const getTheme = () => {

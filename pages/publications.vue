@@ -94,13 +94,14 @@ const filters = ref({
 //-------------------------------- Define sorting -----------------------------------
 
 // default sort
-const sortKey = ref({ label: 'Earliest', value: 'YEAR' });
-const sortOrder = ref();
-const sortField = ref();
+const sortKey = ref({ label: 'Latest', value: '!YEAR' });
+const sortOrder = ref(-1);
+const sortField = ref('YEAR');
 const sortOptions = ref([
   { label: 'Latest', value: '!YEAR' },
   { label: 'Earliest', value: 'YEAR' },
 ]);
+
 // const sortKey = ref(sortOptions.value[0].value);
 const onSortChange = (event) => {
   console.debug("sorting")
@@ -122,6 +123,7 @@ const onSortChange = (event) => {
       sortKey.value = sortValue;
     }
   }
+  console.debug(sortOrder);
 
 };
 
@@ -179,7 +181,8 @@ const onSortChange = (event) => {
                       <span v-if="entry.AUTHOR" class="author">{{ entry.AUTHOR }}&nbsp</span>
                       <span v-if="entry.YEAR"><span class="year">({{ entry.YEAR }}).&nbsp</span></span>
                       <span v-if="entry.TITLE" class="title">
-                        <NuxtLink class="p-primary-color" v-if="entry.DOI" :to="entry.DOI">
+                        <NuxtLink class="text-primary-800 dark:text-primary-emphasis hover:underline" v-if="entry.DOI"
+                          :to="'https://doi.org/' + entry.DOI" target="_blank">
                           {{ entry.TITLE }}.&nbsp
                         </NuxtLink>
                       </span>
