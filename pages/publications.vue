@@ -166,32 +166,29 @@ const onSortChange = (event) => {
         </div>
 
       </template>
-      <template #empty> No publications found.</template>
+      <template #empty>No publications found.</template>
 
       <template #list="slotProps">
         <div class="grid gap-4 grid-cols-12 grid-nogutter">
           <div v-for="(entry, index) in slotProps.items" :key="entry.BIBTEXKEY" class="col-span-12">
             <!-- citation-->
             <div class="p-2" :class="{ 'border-top-1 surface-border': index !== 0 }">
-              <!--              <div class="p-2" :class="{ 'border-top-1 surface-border': index !== 0 }">-->
               <div class="row">
                 <div class="flex flex-col md:flex-row justify-between md:align-items-left flex-1 gap-12">
                   <div class="flex flex-row md:flex-col justify-between items-start gap-2">
                     <div class="citation-text">
-                      <span v-if="entry.AUTHOR" class="author">{{ entry.AUTHOR }}&nbsp</span>
-                      <span v-if="entry.YEAR"><span class="year">({{ entry.YEAR }}).&nbsp</span></span>
+                      <span v-if="entry.AUTHOR" class="author">{{ entry.AUTHOR }}.&nbsp</span>
+                      <span v-if="entry.YEAR" class="year">{{ entry.YEAR }}.&nbsp</span>
                       <span v-if="entry.TITLE" class="title">
                         <NuxtLink class="text-primary-800 dark:text-primary-emphasis hover:underline" v-if="entry.DOI"
-                          :to="'https://doi.org/' + entry.DOI" target="_blank">
-                          {{ entry.TITLE }}.&nbsp
-                        </NuxtLink>
+                          :to="'https://doi.org/' + entry.DOI" target="_blank">{{ entry.TITLE }}</NuxtLink>.&nbsp
                       </span>
-                      <span v-if="entry.BOOKTITLE" class="book_title">{{ entry.BOOKTITLE }}.&nbsp</span>
-                      <span v-if="entry.JOURNAL"><em><span class="journal">{{ entry.JOURNAL }}.&nbsp</span></em></span>
+                      <span v-if="entry.BOOKTITLE" class="book_title">{{ entry.BOOKTITLE }}<span v-if="entry.SERIES" class="series">&nbsp({{ entry.SERIES }})</span>.&nbsp</span>
+                      <span v-if="entry.JOURNAL" class="journal"><em>{{ entry.JOURNAL }}.&nbsp</em></span>
+                      <span v-if="entry.PUBLISHER" class="publisher">{{ entry.PUBLISHER }}.&nbsp</span>
                     </div>
                   </div>
                   <div class="flex flex-col md:items-end gap-20">
-                    <!--                      <span class="text-xl font-semibold text-surface-900 dark:text-surface-0">{{ index }}</span>-->
                     <div class="flex flex-row-reverse md:flex-row gap-1">
                       <PrimeButton icon="pi pi-bookmark" label="" class="flex-auto md:flex-initial whitespace-nowrap">
                       </PrimeButton>
