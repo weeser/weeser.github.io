@@ -181,7 +181,8 @@ const onSortChange = (event) => {
                       <span v-if="entry.YEAR" class="year">{{ entry.YEAR }}.&nbsp</span>
                       <span v-if="entry.TITLE" class="title">
                         <NuxtLink class="text-primary-800 dark:text-primary-emphasis hover:underline" v-if="entry.DOI"
-                          :to="'https://doi.org/' + entry.DOI" target="_blank">{{ entry.TITLE }}</NuxtLink>.&nbsp
+                          :to="'https://doi.org/' + entry.DOI" target="_blank">{{ entry.TITLE }}</NuxtLink>
+                          <span v-else>{{ entry.TITLE }}</span>.&nbsp
                       </span>
                       <span v-if="entry.BOOKTITLE" class="book_title">{{ entry.BOOKTITLE }}<span v-if="entry.SERIES" class="series">&nbsp({{ entry.SERIES }})</span>.&nbsp</span>
                       <span v-if="entry.JOURNAL" class="journal"><em>{{ entry.JOURNAL }}.&nbsp</em></span>
