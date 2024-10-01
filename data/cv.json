@@ -6,9 +6,19 @@
       "years": "2020-2025"
     },
     {
+      "name": "Multicultural Engineering Program Faculty Engagement Award",
+      "organization": "Kansas State University",
+      "years": "2023-2024"
+    },
+    {
       "name": "Teaching Excellence Award",
       "organization": "Department of Computer Science, Kansas State University",
       "years": "2020-2023"
+    },
+    {
+      "name": "University Honors Program (UHP) Affiliated Faculty",
+      "organization": "Kansas State University",
+      "years": "2021-present"
     },
     {
       "name": "College of Engineering Team Award of Excellence",
@@ -234,7 +244,7 @@
   "professionalService": [
     {
       "activity": "SIGCSE Associate Program Chair",
-      "years": "2021"
+      "years": "2021, 2024"
     },
     {
       "activity": "Kansas Computer Science Teacher Standards — Writer",
@@ -275,31 +285,35 @@
   ],
   "universityService": [
     {
-      "activity": "Academic Assessment Committee",
-      "years": "2017-present"
+      "activity": "CS Academic Assessment Committee",
+      "years": "2017-2022"
     },
     {
-      "activity": "Advisor Committee",
-      "years": "2017-present"
+      "activity": "CS Advisor Committee",
+      "years": "2017-2020"
     },
     {
-      "activity": "Curriculum Committee",
-      "years": "2017-present"
+      "activity": "CS Curriculum Committee",
+      "years": "2022-present"
     },
     {
       "activity": "Engineering Reinstatement Committee",
       "years": "2017-present"
     },
     {
-      "activity": "ACM club advisor",
+      "activity": "Tau Beta Pi Advisor",
       "years": "2017-present"
     },
     {
-      "activity": "Hack K-State club advisor",
+      "activity": "ACM Club Advisor",
       "years": "2017-present"
     },
     {
-      "activity": "Web Development club advisor",
+      "activity": "Hack K-State Club Advisor",
+      "years": "2017-present"
+    },
+    {
+      "activity": "Web Development Club Advisor",
       "years": "2017-present"
     },
     {
