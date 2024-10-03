@@ -1,0 +1,460 @@
+[
+    {
+        "students": ["Ian Cline", "Jake Kenslow", "Alex Whipple"],
+        "term": "Fall 2024 - Spring 2025",
+        "project": "Game Jam/Hack App"
+    },
+    {
+        "students": ["Jacob Prather"],
+        "term": "Fall 2024",
+        "project": "Python Web Chat Bot"
+    },
+    {
+        "students": ["Kael Pavllik"],
+        "term": "Fall 2024",
+        "project": "Transfer Equivalency App"
+    },
+    {
+        "students": ["Ethan Coleman"],
+        "term": "Fall 2024",
+        "project": "Weather Mental Health App"
+    },
+    {
+        "students": ["Jackson Huffman", "Logan Newsom"],
+        "term": "Spring 2024",
+        "project": "Small Business IOS App"
+    },
+    {
+        "students": ["Nick Leskovac"],
+        "term": "Spring 2024",
+        "project": "Letterboxed for Music"
+    },
+    {
+        "students": ["Nathan Lee"],
+        "term": "Spring 2024",
+        "project": "Desktop Ereader Management App"
+    },
+    {
+        "students": ["Jonathan Partridge"],
+        "term": "Spring 2024",
+        "project": "DND Campaign Website"
+    },
+    {
+        "students": ["Hursen Adjovi"],
+        "term": "Fall 2023",
+        "project": "Simple Calendar"
+    },
+    {
+        "students": ["Andrew Varguez"],
+        "term": "Fall 2023",
+        "project": "Engineering Ambassador Scheduler"
+    },
+    {
+        "students": ["Mitchel Hutchinson"],
+        "term": "Fall 2023",
+        "project": "Flood Watch"
+    },
+    {
+        "students": ["Trent Powell", "Devin Richards", "Casey Ring"],
+        "term": "Fall 2023 - Spring 2024",
+        "project": "High School Programming Contest"
+    },
+    {
+        "students": ["Cody Murphy"],
+        "term": "Spring 2023",
+        "project": "IOS Travel App"
+    },
+    {
+        "students": ["Kaden O'Hare"],
+        "term": "Spring 2023",
+        "project": "Spotify/Location Web App"
+    },
+    {
+        "students": ["Alisha Crow"],
+        "term": "Spring 2023",
+        "project": "Voice Controlled Computer"
+    },
+    {
+        "students": ["Micah Roening"],
+        "term": "Spring 2023",
+        "project": "Dungeon Swing"
+    },
+    {
+        "students": ["Katia Coleman"],
+        "term": "Fall 2022",
+        "project": "Cat Fostering app"
+    },
+    {
+        "students": ["Ahren Gann"],
+        "term": "Fall 2022",
+        "project": "Django Notion app with Canvas LTI"
+    },
+    {
+        "students": ["Kirkland Akins"],
+        "term": "Fall 2022",
+        "project": "C# Markdown editor"
+    },
+    {
+        "students": ["Zhouer Ding"],
+        "term": "Fall 2022",
+        "project": "C# WPF Gobang Game with AI"
+    },
+    {
+        "students": ["Steven Avila"],
+        "term": "Fall 2022",
+        "project": "Diabetes Management C# App"
+    },
+    {
+        "students": ["Caleb Hefty", "Jordan Austin", "Samuel Woolery"],
+        "term": "Fall 2022 - Spring 2023",
+        "project": "CS for KS"
+    },
+    {
+        "students": ["AJ Wilber", "Kit Hawkins", "Logan Peppers"],
+        "term": "Fall 2022 - Spring 2023",
+        "project": "Code Workouts"
+    },
+    {
+        "students": ["Abraham Kays", "Austin Novelly", "Riley Mueller"],
+        "term": "Fall 2022 - Spring 2023",
+        "project": "High School Programming Contest"
+    },
+    {
+        "students": ["Christian Moran", "Matthew Schwartz", "Teegan Swanson"],
+        "term": "Fall 2022 - Spring 2023",
+        "project": "Apollon"
+    },
+    {
+        "students": ["Easton Bolinger"],
+        "term": "Spring 2022",
+        "project": "Web API"
+    },
+    {
+        "students": ["Kendal Price"],
+        "term": "Spring 2022",
+        "project": "Magic the Gathering Data Web App"
+    },
+    {
+        "students": ["Zach Hazen"],
+        "term": "Spring 2022",
+        "project": "Reminder/List Web App"
+    },
+    {
+        "students": ["Joshua Porter"],
+        "term": "Spring 2022",
+        "project": "Dark Souls Wiki Web App"
+    },
+    {
+        "students": ["Ethan Nguyen", "Matthew Smith", "Michael Brinkman"],
+        "term": "Fall 2020 - Spring 2021",
+        "project": "CS for KS"
+    },
+    {
+        "students": ["Maxine Teixeira De Magalhaes"],
+        "term": "Fall 2021",
+        "project": "Internshare"
+    },
+    {
+        "students": ["Chintan Patel"],
+        "term": "Fall 2021",
+        "project": "Stocks and Social Media"
+    },
+    {
+        "students": ["Connor Garcia"],
+        "term": "Fall 2021",
+        "project": "VR Reaction Time"
+    },
+    {
+        "students": ["Kasey Dixon"],
+        "term": "Fall 2021",
+        "project": "College Recruiter App"
+    },
+    {
+        "students": ["Jonathan Ochampaugh", "Matthew Schwartz", "Brandon Bednar", "Breanna Reynoso"],
+        "term": "Fall 2021",
+        "project": "Engineering Flowcharts"
+    },
+    {
+        "students": ["Sam Hoggat", "Cole Griem", "Alex Moffet", "Jose Lopez"],
+        "term": "Fall 2021",
+        "project": "CS for KS"
+    },
+    {
+        "students": ["Taylor Stoppel", "Jonathan Welch", "Jacob Beck", "Cody Reeves"],
+        "term": "Fall 2021 - Spring 2022",
+        "project": "High School Programming Contest"
+    },
+    {
+        "students": ["Jordan Greene"],
+        "term": "Summer 2021",
+        "project": "Glass/Mirror app"
+    },
+    {
+        "students": ["Ethan Kingrey", "Damon Jones", "Siddharth Yadav"],
+        "term": "Spring 2021",
+        "project": "Engineering Flowcharts"
+    },
+    {
+        "students": ["Karijanna Miller", "May Phyo"],
+        "term": "Spring 2021",
+        "project": "High School Programming Contest"
+    },
+    {
+        "students": ["Alex Varenhorst"],
+        "term": "Spring 2021",
+        "project": "Video Skip Heat Map Plugin"
+    },
+    {
+        "students": ["Nick Appino"],
+        "term": "Spring 2021",
+        "project": "Jogging Mobile App"
+    },
+    {
+        "students": ["Adela Rahman"],
+        "term": "Spring 2021",
+        "project": "Candice McField Fitness"
+    },
+    {
+        "students": ["Mohamed Khalil"],
+        "term": "Spring 2021",
+        "project": "BMO"
+    },
+    {
+        "students": ["Caleb Logan"],
+        "term": "Fall 2020",
+        "project": "HSPC Web App"
+    },
+    {
+        "students": ["Austin Gray"],
+        "term": "Fall 2020",
+        "project": "Stop Gerry App"
+    },
+    {
+        "students": ["Donovan West"],
+        "term": "Fall 2020",
+        "project": "Everything's Connected Spotify API"
+    },
+    {
+        "students": ["Jarod DeWeese"],
+        "term": "Fall 2020",
+        "project": "Python Django Healthcare App"
+    },
+    {
+        "students": ["Jazz Loffredo"],
+        "term": "Fall 2020",
+        "project": "MotoNetwork.US Motorcycle Web App"
+    },
+    {
+        "students": ["Kevin Merwin"],
+        "term": "Fall 2020",
+        "project": "Fitness Web App"
+    },
+    {
+        "students": ["Mike Ruckert"],
+        "term": "Fall 2020",
+        "project": "Delayed Auditory App"
+    },
+    {
+        "students": ["Steven Blair"],
+        "term": "Fall 2020",
+        "project": "HSPC Judging"
+    },
+    {
+        "students": ["Natalie Laughlin"],
+        "term": "Summer 2020",
+        "project": "HSPC Web App"
+    },
+    {
+        "students": ["Emma Johnson"],
+        "term": "Summer 2020",
+        "project": "Athletic Trainer Website"
+    },
+    {
+        "students": ["Nathan McClain"],
+        "term": "Spring 2020",
+        "project": "Seven Degree’s of Kevin Bacon"
+    },
+    {
+        "students": ["Reese Barrens"],
+        "term": "Spring 2020",
+        "project": "Hackathon Chat Service"
+    },
+    {
+        "students": ["William Carter"],
+        "term": "Spring 2020",
+        "project": "Political Dashboard"
+    },
+    {
+        "students": ["Jeremy Morris"],
+        "term": "Spring 2020",
+        "project": "Household Budget"
+    },
+    {
+        "students": ["Mitchell Balzer", "Rita Ahmed"],
+        "term": "Spring 2020",
+        "project": "Electronic Fuel Injection"
+    },
+    {
+        "students": ["Joseph Medina"],
+        "term": "Fall 2019",
+        "project": "Study scheduler web app"
+    },
+    {
+        "students": ["Trey Moddelmog"],
+        "term": "Fall 2019",
+        "project": "HS programming contest judging app"
+    },
+    {
+        "students": ["Victor Ramos Aguirre"],
+        "term": "Fall 2019",
+        "project": "Cheers POS data transfer app"
+    },
+    {
+        "students": ["Grace Earnhardt"],
+        "term": "Fall 2019",
+        "project": "Full stack web development"
+    },
+    {
+        "students": ["Jordan Mryyan", "Dane Rigby", "Cole Robertson"],
+        "term": "Fall 2019",
+        "project": "C# software visualization tool"
+    },
+    {
+        "students": ["Yoav Bittan"],
+        "term": "Fall 2019",
+        "project": "Drawing correlations with big data and db",
+        "type": "Undergraduate Research"
+    },
+    {
+        "students": ["Jackson McQuality", "Kassidy Zeiler", "Kennedy Griffin", "Matthew James", "Stephen Forbes", "Tanner Bayless"],
+        "term": "Fall 2019 - Spring 2020",
+        "project": "CS for KS"
+    },
+    {
+        "students": ["Rena Hofmeister", "Samuael Seidl", "Trenton Kempker", "Tyler Trammell"],
+        "term": "Fall 2019 - Spring 2020",
+        "project": "High School Programming Contest"
+    },
+    {
+        "students": ["Laurel Thomson"],
+        "term": "Summer 2019",
+        "project": "TA Scheduler Application"
+    },
+    {
+        "students": ["Austin Fuller"],
+        "term": "Spring 2019",
+        "project": "Hitchpin Unit Testing"
+    },
+    {
+        "students": ["Elizabeth Hall", "Austin Metcalf"],
+        "term": "Spring 2019",
+        "project": "CBA IT Inventory Database Update"
+    },
+    {
+        "students": ["John Riforgiate"],
+        "term": "Spring 2019",
+        "project": "smsh - SMS in the Shell"
+    },
+    {
+        "students": ["Natalie Schmidt"],
+        "term": "Spring 2019",
+        "project": "Drawing Webpage"
+    },
+    {
+        "students": ["Dalton Schnieders"],
+        "term": "Spring 2019",
+        "project": "Employee Report System"
+    },
+    {
+        "students": ["Mary Siebert"],
+        "term": "Spring 2019",
+        "project": "Hack K-State Mobile App"
+    },
+    {
+        "students": ["Dayton Taylor"],
+        "term": "Spring 2019",
+        "project": "Teaching Assistant Helper Web App"
+    },
+    {
+        "students": ["Abbey Kramer"],
+        "term": "Fall 2018",
+        "project": "CBA IT Master Data Inventory System"
+    },
+    {
+        "students": ["Jordan Martin"],
+        "term": "Fall 2018",
+        "project": "iOS Corporate Recruiting App"
+    },
+    {
+        "students": ["Daniel Bell", "Joseph Webster", "Kyle Fairfax"],
+        "term": "Fall 2018 - Spring 2019",
+        "project": "High School Programming Contest"
+    },
+    {
+        "students": ["MaryGrace Blair"],
+        "term": "Spring 2018",
+        "project": "Food Waste Tracker"
+    },
+    {
+        "students": ["Luis Bobadilla", "Dias"],
+        "term": "Spring 2018",
+        "project": "Chatbot Web App"
+    },
+    {
+        "students": ["Kyle Eisenbarger"],
+        "term": "Spring 2018",
+        "project": "HS Programming Contest Judging System"
+    },
+    {
+        "students": ["Levi Mann"],
+        "term": "Spring 2018",
+        "project": "Citation Analysis"
+    },
+    {
+        "students": ["Paula Mendez", "Sanchez"],
+        "term": "Spring 2018",
+        "project": "Internet Usage Analytics Web App"
+    },
+    {
+        "students": ["Maria De La Torre Romo"],
+        "term": "Spring 2018",
+        "project": "Deep Learning App"
+    },
+    {
+        "students": ["Riley Toombs"],
+        "term": "Spring 2018",
+        "project": "Google Calendar Web App"
+    },
+    {
+        "students": ["Alex Todd"],
+        "term": "Fall 2017",
+        "project": "Hackathon Management Tool - Web"
+    },
+    {
+        "students": ["Joshua Durban"],
+        "term": "Fall 2017",
+        "project": "System Monitoring and Configuration Management"
+    },
+    {
+        "students": ["Ethan Haley"],
+        "term": "Fall 2017",
+        "project": "RunDnD Web App"
+    },
+    {
+        "students": ["Jacob Moldrop"],
+        "term": "Fall 2017",
+        "project": "GE RAT"
+    },
+    {
+        "students": ["David Hwang"],
+        "term": "Fall 2017",
+        "project": "Starbase (ERGP funded REU $1200)",
+        "type": "Undergraduate Research"
+    },
+    {
+        "students": ["Jordan Voss"],
+        "term": "Fall 2017",
+        "project": "Starbase (ERGP funded REU $1200)",
+        "type": "Undergraduate Research"
+    }
+]
