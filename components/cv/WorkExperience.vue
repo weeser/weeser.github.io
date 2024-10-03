@@ -1,6 +1,6 @@
 <template>
 	<PrimePanel header="Work Experience" toggleable>
-		<PrimeDataTable :value="workExperience" class="px-12" size="small" tableStyle="min-width: 50rem" stripedRows>
+		<PrimeDataTable :value="workExperience" class="px-12" size="small" tableStyle="min-width: 25rem" stripedRows>
 			<PrimeColumn header="Position">
 				<template #body="slotProps">
 					<h3>

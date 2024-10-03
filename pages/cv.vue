@@ -22,6 +22,7 @@ const cv_data = ref(cv_data_parsed);
 	<Teaching :coursesTaught="cv_data.coursesTaught" />
 	<Service :service="cv_data.professionalService" serviceHeader="Professional Service"/>
 	<Service :service="cv_data.universityService" serviceHeader="University Service"/>
+	<Service :service="cv_data.publicService" serviceHeader="Public Service"/>
 	<Memberships :memberships="cv_data.memberships" />
 	<Awards :awards="cv_data.awards" />
 	<Grants :grants="cv_data.grants" />

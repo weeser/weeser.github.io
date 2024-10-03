@@ -404,29 +404,35 @@
             "years": "2017-2020"
         }
     ],
-    "publicBasedProfessionalService": [
+    "publicService": [
         {
             "activity": "Kansas PreK-12 Model Computer Science Standards Committee",
+            "years": "2018-2019",
             "description": "I served a leading role on this committee organized by the Kansas State Department of Education that developed the state's educational standards for computer science, which were adopted on April 16, 2019."
         },
         {
             "activity": "Kansas Computer Science Teacher Standards",
+            "years": "2021",
             "description": "I served a leading role on this committee organized by the Kansas State Department of Education that developed the state's educational standards for a teaching endorsement for computer science in 2021. These standards reached the public comment stage; however, they are currently stuck in political limbo."
         },
         {
             "activity": "CS Textbooks hosting platform and publishing pipeline",
+            "years": "2020-present",
             "description": "CS Faculty Russell Feldhausen, Nathan Bean, and myself have collaborated on developing a continuous integration pipeline and hosting platform for online textbooks. This approach allows us to quickly author and deploy new textbooks and update them seamlessly even during the semester. Currently we host and maintain 20 individual, open access, creative-common licensed textbooks used throughout the Computer Science and Computing Core curriculum at Kansas State, and also by Kansas high schools involved in the Cyber Pipeline."
         },
         {
             "activity": "K-12 Focused Education Conference Presentations",
-            "description": "In promoting the Cyber Pipeline I have presented at a number of K-12 educator-focused conferences. These presentations covered the science and pedagogy of teaching CS, explored the State of Kansas' current CS standards and teaching requirements, and introduced the Cyber Pipeline. These talks can be found in section V."
+            "years": "2018-present",
+            "description": "In promoting the Cyber Pipeline I have presented at a number of K-12 educator-focused conferences. These presentations covered the science and pedagogy of teaching CS, explored the State of Kansas' current CS standards and teaching requirements, and introduced the Cyber Pipeline. These talks can be found below."
         },
         {
             "activity": "Outreach",
+            "years": "2017-present",
             "description": "I have been significantly involved in outreach to our community and across Kansas. Many of these events occur yearly or every semester. These include USD 383 Summer STEM Camp, Kansas Starbase, Girl Scouts, Boy Scouts, 4-H, KAWSE, Marlatt Elementary STEAM night, Retro Game Night with Flint Hills Discovery Center, K-State Open House, Code.org Hour Of Code, and others. Through these events, we have exposed thousands of young learners (as well as adults) to computer science as well as what we do at K-State."
         },
         {
             "activity": "Advisory Board Committees",
+            "years": "2021-present",
             "description": "I serve on a variety of advisory boards related to computer science education. These include USD 229 CS Pathways, USD 383 Information Technology, and USD 437 CS advisory boards."
         }
     ],

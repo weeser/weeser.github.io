@@ -9,12 +9,15 @@ import Publications from '@/components/cv/Publications.vue';
 
 let pubs = (await import(`../data/publications.bib?raw`)).default;
 let theses = (await import(`../data/advisedTheses.bib?raw`)).default;
+let servedCom = (await import(`../data/gradCommitteesServed.bib?raw`)).default;
 </script>
 
 <template>
 	<Publications :bibFile="pubs" title="Publications"/>
   <Divider />
 	<Publications :bibFile="theses" title="Advised Theses"/>
+  <Divider />
+	<Publications :bibFile="servedCom" title="Theses of Served Graduate Committees"/>
 </template>
 
 <style scoped>

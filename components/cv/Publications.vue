@@ -193,6 +193,8 @@ defineProps(['title'])
                           class="series">&nbsp({{ entry.SERIES }})</span>.&nbsp</span>
                       <span v-if="entry.JOURNAL" class="journal"><em>{{ entry.JOURNAL }}.&nbsp</em></span>
                       <span v-if="entry.PUBLISHER" class="publisher">{{ entry.PUBLISHER }}.&nbsp</span>
+                      <span v-else-if="entry.SCHOOL" class="publisher">{{ entry.SCHOOL }}.&nbsp</span>
+
                     </div>
                   </div>
                   <div class="flex flex-col md:items-end gap-20">
