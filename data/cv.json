@@ -162,7 +162,7 @@
             "amountAssigned": 229968,
             "startDate": "8/1/2018",
             "endDate": "8/1/2021",
-            "projectTitle": "Changing the culture: A guide to implementation of effective practices for improvement, assessment and review of undergraduate physics programs",
+            "title": "Changing the culture: A guide to implementation of effective practices for improvement, assessment and review of undergraduate physics programs",
             "competitiveness": "N",
             "role": "Senior Personnel",
             "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1821372",
@@ -175,7 +175,8 @@
             "Josh Weese",
             "Russell Feldhausen"
           ],
-          "fundingAgency": "Kansas State University",
+          "agency": "Kansas State University",
+          "institution": "Kansas State University",
           "awardAmount": "$45,500",
           "percentBudgetAssigned": 25,
           "amountAssigned": 11375,
@@ -199,9 +200,11 @@
           "amountAssigned": 30525,
           "startDate": "6/1/2024",
           "endDate": "6/1/2026",
-          "projectTitle": "Undergraduate Certificate in CS Education",
+          "title": "Undergraduate Certificate in CS Education",
           "competitiveness": "K",
-          "abstract": ""
+          "abstract": "",
+          "institution": "Kansas State University",
+          "role": "Co-PI"
         },
         {
             "agency": "National Science Foundation",
