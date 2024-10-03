@@ -9,23 +9,34 @@ import Memberships from '@/components/cv/Memberships.vue';
 import Service from '@/components/cv/Service.vue';
 import Teaching from '@/components/cv/Teaching.vue';
 import Grants from '@/components/cv/Grants.vue';
+import StudentProjects from '@/components/cv/StudentProjects.vue';
+import Publications from './publications.vue';
 
-let cv_data_raw = (await import(`../data/cv.json?raw`)).default;
-let cv_data_parsed = JSON.parse(cv_data_raw);
-const cv_data = ref(cv_data_parsed);
+let cvDataRaw = (await import(`../data/cv.json?raw`)).default;
+let ugProjRaw = (await import(`../data/undergraduateProjects.json?raw`)).default;
+let cvDataParsed = JSON.parse(cvDataRaw);
+let ugProjParsed = JSON.parse(ugProjRaw);
+for(let i = 0; i < ugProjParsed.length; i++) {
+	ugProjParsed[i].students = ugProjParsed[i].students.join(', ');
+}
+const cvData = ref(cvDataParsed);
 </script>
 
 <template>
 	<h2>Curriculum Vitae</h2>
-	<Education :education="cv_data.education" />
-	<WorkExperience :workExperience="cv_data.workExperience" />
-	<Teaching :coursesTaught="cv_data.coursesTaught" />
-	<Service :service="cv_data.professionalService" serviceHeader="Professional Service"/>
-	<Service :service="cv_data.universityService" serviceHeader="University Service"/>
-	<Service :service="cv_data.publicService" serviceHeader="Public Service"/>
-	<Memberships :memberships="cv_data.memberships" />
-	<Awards :awards="cv_data.awards" />
-	<Grants :grants="cv_data.grants" />
+	<Education :education="cvData.education" />
+	<WorkExperience :workExperience="cvData.workExperience" />
+	<Teaching :coursesTaught="cvData.coursesTaught" />
+	<Service :service="cvData.professionalService" serviceHeader="Professional Service" />
+	<Service :service="cvData.universityService" serviceHeader="University Service" />
+	<Service :service="cvData.publicService" serviceHeader="Public Service" />
+	<Memberships :memberships="cvData.memberships" />
+	<Awards :awards="cvData.awards" />
+	<Grants :grants="cvData.grants" />
+	<PrimePanel header="Publications" toggleable>
+		<Publications />
+	</PrimePanel>
+	<StudentProjects :ugProjects="ugProjParsed" />
 </template>
 
 <style scoped>
