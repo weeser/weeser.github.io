@@ -459,6 +459,11 @@
             "description": "I served a leading role on this committee organized by the Kansas State Department of Education that developed the state's educational standards for a teaching endorsement for computer science in 2021. These standards reached the public comment stage; however, they are currently stuck in political limbo."
         },
         {
+            "activity": "Kansas AI Education Policy Recommendations",
+            "years": "2024",
+            "description": "I served on this committee organized by the Kansas State Department of Education that developed recommendations for handling artificial intelligence in K-12 schools. A version of this was approved by the board of education."
+        },
+        {
             "activity": "CS Textbooks hosting platform and publishing pipeline",
             "years": "2020-present",
             "description": "CS Faculty Russell Feldhausen, Nathan Bean, and myself have collaborated on developing a continuous integration pipeline and hosting platform for online textbooks. This approach allows us to quickly author and deploy new textbooks and update them seamlessly even during the semester. Currently we host and maintain 20 individual, open access, creative-common licensed textbooks used throughout the Computer Science and Computing Core curriculum at Kansas State, and also by Kansas high schools involved in the Cyber Pipeline."
