@@ -17,9 +17,9 @@ let servedCom = (await import(`../data/gradCommitteesServed.bib?raw`)).default;
   <Divider />
 	<Publications :bibFile="theses" title="Talks, Panels, and Workshops"/>
   <Divider />
-	<Publications :bibFile="theses" title="Advised Theses"/>
+	<Publications :bibFile="theses" title="Dissertations And Theses Completed Under My Supervision"/>
   <Divider />
-	<Publications :bibFile="servedCom" title="Theses of Served Graduate Committees"/>
+	<Publications :bibFile="servedCom" title="Served Graduate Committees"/>
 </template>
 
 <style scoped>

@@ -8,7 +8,7 @@
 					</h3>
 
 					<p v-if="slotProps.data.responsibilities.length === 1">{{ slotProps.data.responsibilities[0] }}</p>
-					<ul v-else>
+					<ul v-else class="list-disc">
 						<li v-for="(responsibility, index) in slotProps.data.responsibilities" :key="index">
 							{{ responsibility }}
 						</li>

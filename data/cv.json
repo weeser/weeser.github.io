@@ -475,7 +475,7 @@
         },
         {
             "activity": "Outreach",
-            "years": "2017-present",
+            "years": "2013-present",
             "description": "I have been significantly involved in outreach to our community and across Kansas. Many of these events occur yearly or every semester. These include USD 383 Summer STEM Camp, Kansas Starbase, Girl Scouts, Boy Scouts, 4-H, KAWSE, Marlatt Elementary STEAM night, Retro Game Night with Flint Hills Discovery Center, K-State Open House, Code.org Hour Of Code, and others. Through these events, we have exposed thousands of young learners (as well as adults) to computer science as well as what we do at K-State."
         },
         {
@@ -486,12 +486,20 @@
     ],
     "workExperience": [
         {
-            "position": "Teaching Assistant Professor",
+            "position": "Undergraduate Program Director",
             "company": "Kansas State University",
             "location": "Manhattan, KS",
             "responsibilities": [
-                "Primary responsibilities include teaching and advising students, as well as service to the department/university, involvement with student organizations, outreach to the community, and research.",
-                "Co-Director of the Advancing Learning and Teaching Computer Science (ALT+CS) Lab - Manage and conduct computer science education research, outreach to the Kansas community, and support students in pursuing computer science education."
+                "Lead and direct all undergraduate programs in the department of computer science.  This includes overseeing the curriculum, ABET accreditation, advising, and student success."
+            ],
+            "years": "Fall 2024 - Present"
+        },
+        {
+            "position": "Co-Director of the Advancing Learning and Teaching Computer Science (ALT+CS) Lab",
+            "company": "Kansas State University",
+            "location": "Manhattan, KS",
+            "responsibilities": [
+                "Manage and conduct computer science education research, outreach to the Kansas community, and support students in pursuing computer science education."
             ],
             "years": "Spring 2022 - Present"
         },
@@ -500,8 +508,7 @@
             "company": "Kansas State University",
             "location": "Manhattan, KS",
             "responsibilities": [
-                "Primary responsibilities include teaching and advising students, as well as service to the department/university, involvement with student organizations, outreach to the community, and research.",
-                "Co-Director of the Advancing Learning and Teaching Computer Science (ALT+CS) Lab - Manage and conduct computer science education research, outreach to the Kansas community, and support students in pursuing computer science education."
+                "Primary responsibilities include teaching and advising students, as well as service to the department/university, involvement with student organizations, outreach to the community, and research."
             ],
             "years": "Fall 2017 - Present"
         },
