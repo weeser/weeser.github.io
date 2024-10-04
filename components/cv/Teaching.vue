@@ -3,7 +3,7 @@
 		<PrimeDataTable :value="coursesTaught" class="px-12" size="small" tableStyle="min-width: 25rem" stripedRows>
 			<PrimeColumn header="Course">
 				<template #body="slotProps">
-					<h3>
+					<h3 class="font-bold">
 						<span v-if="slotProps.data.course_code">{{ slotProps.data.course_code }} - </span>
 						{{ slotProps.data.course_title }}
 					</h3>

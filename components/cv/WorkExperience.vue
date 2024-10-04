@@ -3,7 +3,7 @@
 		<PrimeDataTable :value="workExperience" class="px-12" size="small" tableStyle="min-width: 25rem" stripedRows>
 			<PrimeColumn header="Position">
 				<template #body="slotProps">
-					<h3>
+					<h3 class="font-bold">
 						<span>{{ slotProps.data.position }}</span>
 					</h3>
 

@@ -41,9 +41,15 @@
     "coursesTaught": [
         {
             "course_code": "CIS 115",
-            "course_title": "Introduction to Computing Technology",
-            "description": "A survey of the discipline of Computing Science and its interaction with other disciplines, incorporating historical development, theories, and tools of Computing Science (algorithm design and programming). Topics include: mechanical computers, digital computers, big data, AI, robotics, security, scientific computing, simulation, and web technologies.  Students also learn Python as part of this course to reinforce the previously mentioned topics.",
+            "course_title": "Introduction to Computing Science",
+            "description": "A survey of the discipline of Computing Science and its interaction with other disciplines, incorporating historical development, theories, and tools of Computing Science (algorithm design and programming). Topics include: mechanical and digital computers, computational thinking, security, simulation, data science, web technologies, and more. Students will be able to explore real-world problems within computer science and research current topics.",
             "years": "Fall 2017-present"
+        },
+        {
+            "course_code": "CIS 116",
+            "course_title": "Introduction to Programming",
+            "description": "An introduction to programming by exploring core concepts such as variables, conditionals, iteration, basic data structures,  functions, and classes. Hands-on activities to learn and apply concepts to real-world problems and ideas. Students will gain a solid foundation in programming, setting the stage for further study and professional use.",
+            "years": "Fall 2024"
         },
         {
             "course_code": "CIS 300",
@@ -80,6 +86,42 @@
             "course_title": "Software Testing Techniques",
             "description": "Survey of software testing methodologies; evaluation of software testing strategies; experience in a variety of software testing practices.",
             "years": "Spring 2018-2022"
+        },
+        {
+            "course_code": "CC 710",
+            "course_title": "Introduction to Computing for Educators",
+            "description": "This course is a first step in preparing educators to teach computer science topics at the PreK-12 level. It provides content area knowledge including the historical context in which computing developed, an overview of the modern field of computing and its impacts on society. It also explores theories of computational thinking and learning, computer science education research, and the Kansas PreK-12 computer science standards.",
+            "years": "Spring 2023-present"
+        },
+        {
+            "course_code": "CC 711",
+            "course_title": "Computer Education Programming Fundamentals",
+            "description": "This course introduces PreK-12 educators to the “Big ideas” of programming - concept knowledge that is critical for developing and teaching programming skills. Students will learn to read simple program code, write short programs, and explore basic programming constructs such as conditional statements and iteration. Students will also explore basic programming concepts related to a particular discipline.",
+            "years": "Spring 2023-present"
+        },
+        {
+            "course_code": "CC 730",
+            "course_title": "Computer Programming for Educators",
+            "description": "The course introduces PreK-12 educators to computer programming using one of several programming languages. Interactive lessons and engaging projects reinforce new skills and concepts while exploring pedagogical strategies for teaching programming. This course covers the basic concepts of programming, from variables and control flow to functions, objects, and simple algorithms.",
+            "years": "Summer 2023-present"
+        },
+        {
+            "course_code": "CC 750",
+            "course_title": "Data Structures and Algorithms for Educators I",
+            "description": "This course provides PreK-12 educators the content knowledge necessary for teaching simple data structures such as sets, lists, stacks, queues, and maps. Students learn how to create data structures and the algorithms to work with them. Students are introduced to algorithm analysis to determine the efficiency of algorithms. It also addresses strategies for teaching these concepts to a diverse audience.",
+            "years": "Spring 2023-present"
+        },
+        {
+            "course_code": "CC 755",
+            "course_title": "Data Structures and Algorithms for Educators II",
+            "description": "This course provides PreK-12 educators the content knowledge necessary for teaching advanced data structures, such as trees, graphs, and heaps, along with pedagogical approaches for teaching the associated concepts and skills. Several new algorithms using these data structures are covered. Students also learn software development methods and software engineering fundamentals and use those skills to develop projects of increasing size and scope effectively.",
+            "years": "Fall 2023-present"
+        },
+        {
+            "course_code": "CC 760",
+            "course_title": "Advanced Computing for Educators",
+            "description": "This course helps PreK-12 educators gain experience writing programs using a variety of advanced programming techniques including object-oriented programming, inheritance, and events. It also introduces software development methodologies, processes, and design patterns, along with pedagogical strategies to teach them. It also emphasizes collaboration skills and tools used by professional programmers.",
+            "years": "Spring 2024-present"
         },
         {
             "course_title": "Starbase",
@@ -169,42 +211,42 @@
             "abstract": "In recent years, accountability in higher education has grown, prompting accrediting agencies to emphasize performance measurements based on established learning goals and robust assessment processes; most physics departments undergo program reviews every five to seven years, and this project aims to create a guide for the assessment, review, and improvement of undergraduate physics programs, helping faculty utilize documented effective practices aligned with their context and requirements for accreditation as an opportunity for enhancing educational practices, collecting relevant literature and effective practices distilled by experts, which will aid faculty in designing or improving program components, prepare departments for accreditation, and promote evidence-based practices, ultimately impacting college and university physics departments in the U.S. and potentially serving as a model for other STEM disciplines, in collaboration with the American Physical Society and the American Association of Physics Teachers, with investigators from Millersville University of Pennsylvania, Oregon State University, the University of Maryland at College Park, and the University of Colorado at Boulder; the guide will offer compact, practical advice without requiring prior expert knowledge, recognizing that effective practices depend on local context, are informed by the best available information, are driven by users' goals, and are descriptive rather than prescriptive; after its development, the project will host workshops and online communities to engage program leaders and reviewers, implement a sustainability plan for regular updates, and conduct research studies to explore the guide's impact on culture and practices in physics programs, contributing to a better understanding of promoting institutional changes that enhance undergraduate education."
         },
         {
-          "investigators": [
-            "David Allen",
-            "Nathan Bean",
-            "Josh Weese",
-            "Russell Feldhausen"
-          ],
-          "agency": "Kansas State University",
-          "institution": "Kansas State University",
-          "awardAmount": "$45,500",
-          "percentBudgetAssigned": 25,
-          "amountAssigned": 11375,
-          "startDate": "6/1/2023",
-          "endDate": "6/1/2024",
-          "title": "CS Courses for Educators",
-          "competitiveness": "K",
-          "role": "Co-PI",
-          "abstract": ""
+            "investigators": [
+                "David Allen",
+                "Nathan Bean",
+                "Josh Weese",
+                "Russell Feldhausen"
+            ],
+            "agency": "Kansas State University",
+            "institution": "Kansas State University",
+            "awardAmount": "$45,500",
+            "percentBudgetAssigned": 25,
+            "amountAssigned": 11375,
+            "startDate": "6/1/2023",
+            "endDate": "6/1/2024",
+            "title": "CS Courses for Educators",
+            "competitiveness": "K",
+            "role": "Co-PI",
+            "abstract": ""
         },
         {
-          "investigators": [
-            "David Allen",
-            "Nathan Bean",
-            "Josh Weese",
-            "Russell Feldhausen"
-          ],
-          "agency": "Kansas State University",
-          "awardAmount": "$122,100",
-          "percentBudgetAssigned": 25,
-          "amountAssigned": 30525,
-          "startDate": "6/1/2024",
-          "endDate": "6/1/2026",
-          "title": "Undergraduate Certificate in CS Education",
-          "competitiveness": "K",
-          "abstract": "",
-          "institution": "Kansas State University",
-          "role": "Co-PI"
+            "investigators": [
+                "David Allen",
+                "Nathan Bean",
+                "Josh Weese",
+                "Russell Feldhausen"
+            ],
+            "agency": "Kansas State University",
+            "awardAmount": "$122,100",
+            "percentBudgetAssigned": 25,
+            "amountAssigned": 30525,
+            "startDate": "6/1/2024",
+            "endDate": "6/1/2026",
+            "title": "Undergraduate Certificate in CS Education",
+            "competitiveness": "K",
+            "abstract": "",
+            "institution": "Kansas State University",
+            "role": "Co-PI"
         },
         {
             "agency": "National Science Foundation",
@@ -309,7 +351,8 @@
     "professionalService": [
         {
             "activity": "University Liaison for Kansas CSTA Chapter",
-            "description": "This state chapter of the national Computer Science Teacher's Association provides support for Kansas K-12 teachers who incorporate computer science into their instructional efforts. Although the chapter is meant to be led by K-12 teachers, the K-State faculty liaisons (myself, Nathan Bean, and Russell Feldhausen) have stepped into a more direct leadership role when the current president left his post for industry. We have also arranged for the hosting of the annual chapter conference at K-State for three years running."
+            "description": "This state chapter of the national Computer Science Teacher's Association provides support for Kansas K-12 teachers who incorporate computer science into their instructional efforts. Although the chapter is meant to be led by K-12 teachers, the K-State faculty liaisons (myself, Nathan Bean, and Russell Feldhausen) have stepped into a more direct leadership role when the current president left his post for industry. We have also arranged for the hosting of the annual chapter conference at K-State for three years running.",
+            "years": "2020-present"
         },
         {
             "activity": "Associate Program Chair (APC) for ACM SIGCSE Technical Symposium",
@@ -437,6 +480,16 @@
         }
     ],
     "workExperience": [
+        {
+            "position": "Teaching Assistant Professor",
+            "company": "Kansas State University",
+            "location": "Manhattan, KS",
+            "responsibilities": [
+                "Primary responsibilities include teaching and advising students, as well as service to the department/university, involvement with student organizations, outreach to the community, and research.",
+                "Co-Director of the Advancing Learning and Teaching Computer Science (ALT+CS) Lab - Manage and conduct computer science education research, outreach to the Kansas community, and support students in pursuing computer science education."
+            ],
+            "years": "Spring 2022 - Present"
+        },
         {
             "position": "Teaching Assistant Professor",
             "company": "Kansas State University",

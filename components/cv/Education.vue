@@ -3,7 +3,7 @@
 		<PrimeDataTable :value="education" class="px-12" size="small" tableStyle="min-width: 25rem" stripedRows>
 			<PrimeColumn header="Degree">
 				<template #body="slotProps">
-					<h3>
+					<h3 class="font-bold">
 						<span >{{ slotProps.data.degree }}</span>
 					</h3>
 					<span class="italic">{{ slotProps.data.description }}</span>
