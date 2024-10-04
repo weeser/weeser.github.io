@@ -1,14 +1,14 @@
 <template>
 	<PrimePanel header="Work Experience" toggleable>
 		<PrimeDataTable :value="workExperience" class="px-12" size="small" tableStyle="min-width: 25rem" stripedRows>
-			<PrimeColumn header="Position">
+			<PrimeColumn header="Position" style="width: 60%">
 				<template #body="slotProps">
 					<h3 class="font-bold">
 						<span>{{ slotProps.data.position }}</span>
 					</h3>
 
-					<p v-if="slotProps.data.responsibilities.length === 1">{{ slotProps.data.responsibilities[0] }}</p>
-					<ul v-else class="list-disc">
+					<p class="pl-5" v-if="slotProps.data.responsibilities.length === 1">{{ slotProps.data.responsibilities[0] }}</p>
+					<ul v-else class="pl-5 list-disc">
 						<li v-for="(responsibility, index) in slotProps.data.responsibilities" :key="index">
 							{{ responsibility }}
 						</li>

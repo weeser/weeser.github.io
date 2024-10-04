@@ -1,7 +1,7 @@
 <template>
 	<PrimePanel header="Education" toggleable>
 		<PrimeDataTable :value="education" class="px-12" size="small" tableStyle="min-width: 25rem" stripedRows>
-			<PrimeColumn header="Degree">
+			<PrimeColumn header="Degree" style="width: 60%">
 				<template #body="slotProps">
 					<h3 class="font-bold">
 						<span >{{ slotProps.data.degree }}</span>
