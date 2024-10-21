@@ -10,32 +10,32 @@ const items = ref([
   {
     label: 'Home',
     icon: 'pi pi-home',
-    url: '/'
+    route: '/'
   },
   {
     label: 'Publications',
     icon: 'pi pi-book',
-    url: '/publications'
+    route: '/publications'
   },
   {
     label: 'CV',
     icon: 'pi pi-id-card',
-    url: '/cv'
+    route: '/cv'
   },
   {
     label: 'Calendar',
     icon: 'pi pi-calendar',
-    url: '/calendar'
+    route: '/calendar'
   },
   {
     label: 'About',
     icon: 'pi pi-info',
-    url: '/about'
+    route: '/about'
   },
   {
     label: 'Contact',
     icon: 'pi pi-envelope',
-    url: '/contact'
+    route: '/contact'
   }
 ])
 
