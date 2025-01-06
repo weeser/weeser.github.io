@@ -24,10 +24,10 @@ export default {
   options: {
     prefix: "p",
     darkModeSelector: ".dark",
-    cssLayer: false
-    // cssLayer: {
-    //   name: "primevue",
-    //   order: "tailwind-base, primevue, tailwind-utilities",
-    // },
+    // cssLayer: false
+    cssLayer: {
+      name: "primevue",
+      order: "tailwind-base, primevue, tailwind-utilities",
+    },
   },
 };
