@@ -39,7 +39,9 @@ export default defineNuxtConfig({
         usePrimeVue: true,  
         importTheme: { from: '@/themes/site-theme.js' }, 
     },
-    
+    css: [
+        "primeicons/primeicons.css"
+    ],
     app: {
     },
     calendly: {

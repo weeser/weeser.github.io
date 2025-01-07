@@ -9,22 +9,22 @@ import ThemeToggle from '@/components/menu/ToggleTheme.vue'
 const items = ref([
   {
     label: 'Home',
-    icon: 'pi pi-home',
+    icon: 'pi pi-home m-1',
     route: '/'
   },
   {
     label: 'Publications',
-    icon: 'pi pi-book',
+    icon: 'pi pi-book m-1',
     route: '/publications'
   },
   {
     label: 'CV',
-    icon: 'pi pi-id-card',
+    icon: 'pi pi-id-card m-1',
     route: '/cv'
   },
   {
     label: 'Calendar',
-    icon: 'pi pi-calendar',
+    icon: 'pi pi-calendar m-1',
     route: '/calendar'
   },
   {
@@ -34,7 +34,7 @@ const items = ref([
   },
   {
     label: 'Contact',
-    icon: 'pi pi-envelope',
+    icon: 'pi pi-envelope m-1',
     route: '/contact'
   }
 ])
@@ -46,7 +46,7 @@ const items = ref([
     <template #start>
     </template>
     <template #item="{ item, props, hasSubmenu, root }">
-      <NuxtLink :to="item.route">
+      <NuxtLink :to="item.route" class="font-bold">
         <span v-if="item.icon" :class="item.icon" />
         <span>{{ item.label }}</span>
       </NuxtLink>
