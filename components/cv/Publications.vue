@@ -158,9 +158,6 @@ defineProps(['title'])
           </div>
 
           <div class="flex flex-row gap-1">
-            <PrimeButton id="exportPDF" icon="pi pi-file-pdf" v-tooltip.bottom="'Export to PDF'"
-              class="p-button-sm p-button-outlined">
-            </PrimeButton>
             <PrimeButton id="exportBIB" icon="pi pi-file-excel" v-tooltip.bottom="'Export to bib'"
               class="p-button-sm p-button-outlined">
             </PrimeButton>
