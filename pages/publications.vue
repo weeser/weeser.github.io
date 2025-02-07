@@ -8,6 +8,7 @@ import Divider from 'primevue/divider';
 import Publications from '@/components/cv/Publications.vue';
 
 let pubs = (await import(`../data/publications.bib?raw`)).default;
+let talks = (await import(`../data/talksPanelsWorkshops.bib?raw`)).default;
 let theses = (await import(`../data/advisedTheses.bib?raw`)).default;
 let servedCom = (await import(`../data/gradCommitteesServed.bib?raw`)).default;
 </script>
@@ -15,7 +16,7 @@ let servedCom = (await import(`../data/gradCommitteesServed.bib?raw`)).default;
 <template>
 	<Publications :bibFile="pubs" title="Publications"/>
   <Divider />
-	<Publications :bibFile="theses" title="Talks, Panels, and Workshops"/>
+	<Publications :bibFile="talks" title="Talks, Panels, and Workshops"/>
   <Divider />
 	<Publications :bibFile="theses" title="Dissertations And Theses Completed Under My Supervision"/>
   <Divider />
