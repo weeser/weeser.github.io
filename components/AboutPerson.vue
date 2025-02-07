@@ -1,9 +1,6 @@
 <template>
 	<section>
 		<h1 class="text-3xl font-semibold">{{ title }}</h1>
-
-
-
 		<PrimeCard class="mt-2" v-for="(card, index) in cards" :key="index">
 			<template #title>
 				<h2>{{ card.title }}</h2>
@@ -11,12 +8,12 @@
 			<template #content>
 				<div :class="{ 'flex flex-row': card.image }">
 					<div class="card flex m-5" v-if="card.image">
-						<PrimeImage :src="card.image.file" :alt="card.image.altText" />
+						<PrimeImage :src="card.image.file" :alt="card.image.altText" imageClass="rounded-xl" />
 					</div>
 					<p v-for="(text, index) in card.content" :key="index" :class="{ 'mt-3': index !== 0 }">
 						{{ text }}
 					</p>
-					
+
 				</div>
 			</template>
 			<template #footer v-if="card.tags.length > 0">
