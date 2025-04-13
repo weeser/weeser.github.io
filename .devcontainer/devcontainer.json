@@ -1,0 +1,27 @@
+{
+	"name": "Weeser GitHub Pages Dev Container",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu", // Base image
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "22" // Install Node.js 22
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"esbenp.prettier-vscode",
+				"dbaeumer.vscode-eslint",
+				"Vue.volar",
+				"bradlc.vscode-tailwindcss",
+				"Nuxt.mdc",
+				"yzhang.markdown-all-in-one",
+				"GitHub.copilot",
+				"streetsidesoftware.code-spell-checker",
+				"MichaelCurrin.auto-commit-msg"
+			]
+		}
+	},
+	"postCreateCommand": "npm install", // Install dependencies after container creation
+	"forwardPorts": [3000], // Forward port 3000 for local development
+	"remoteUser": "vscode" // Default user
+}

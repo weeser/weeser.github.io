@@ -8,14 +8,15 @@
   },
   "dependencies": {
     "@nuxt/content": "latest",
+    "@primevue/forms": "latest",
     "@primevue/themes": "latest",
     "primevue": "latest",
-    "tailwindcss-primeui": "^0.3.4",
+    "tailwindcss-primeui": "latest",
     "vue": "latest"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxt/image": "^1.7.0",
+    "@nuxt/image": "latest",
     "@nuxtjs/tailwindcss": "latest",
     "@primevue/nuxt-module": "latest",
     "nuxt": "latest",

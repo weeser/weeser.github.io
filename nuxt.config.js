@@ -38,6 +38,7 @@ export default defineNuxtConfig({
         },
         usePrimeVue: true,  
         importTheme: { from: '@/themes/site-theme.js' }, 
+        autoImport: true,
     },
     css: [
         "primeicons/primeicons.css"
