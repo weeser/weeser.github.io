@@ -1,5 +1,15 @@
 [
     {
+        "students": ["Sam Wilson"],
+        "term": "Spring 2025",
+        "project": "Garage Mate"
+    },
+    {
+        "students": ["Vinny Sun"],
+        "term": "Spring 2025",
+        "project": "Sim Trade"
+    },
+    {
         "students": ["Ian Cline", "Jake Kenslow", "Alex Whipple"],
         "term": "Fall 2024 - Spring 2025",
         "project": "Game Jam/Hack App"

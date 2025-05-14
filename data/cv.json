@@ -1,6 +1,11 @@
 {
     "awards": [
         {
+            "name": "Outstanding APC Award",
+            "organization": "Association for Computing Machinery - SIGCSE",
+            "years": "2025"
+        },        
+        {
             "name": "Kevin and Jacquie Elmore - Carl and Mary Ice Teaching Scholar",
             "organization": "Kansas State University",
             "years": "2020-2025"
@@ -390,7 +395,6 @@
     "universityService": [
         {
             "activity": "Undergraduate Program Director",
-            "status": "in-training",
             "years": "2024-present"
         },
         {
@@ -486,6 +490,15 @@
     ],
     "workExperience": [
         {
+            "position": "Teaching Associate Professor",
+            "company": "Kansas State University",
+            "location": "Manhattan, KS",
+            "responsibilities": [
+                "Primary responsibilities include teaching and advising students, as well as service to the department/university, involvement with student organizations, outreach to the community, and research."
+            ],
+            "years": "Spring 2025 - Present"
+        },
+        {
             "position": "Undergraduate Program Director",
             "company": "Kansas State University",
             "location": "Manhattan, KS",
@@ -510,7 +523,7 @@
             "responsibilities": [
                 "Primary responsibilities include teaching and advising students, as well as service to the department/university, involvement with student organizations, outreach to the community, and research."
             ],
-            "years": "Fall 2017 - Present"
+            "years": "Fall 2017 - Spring 2025"
         },
         {
             "position": "Consultant",
