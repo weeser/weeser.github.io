@@ -1,5 +1,5 @@
 <template>
 	<footer>
-		<p>© 2025</p>
+		<p>Josh Weese © 2026</p>
 	</footer>
 </template>
