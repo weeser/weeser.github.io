@@ -12,7 +12,8 @@
     "@primevue/themes": "latest",
     "primevue": "latest",
     "tailwindcss-primeui": "latest",
-    "vue": "latest"
+    "vue": "latest",
+    "better-sqlite3": "latest"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
