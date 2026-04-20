@@ -3,7 +3,7 @@
 	"image": "mcr.microsoft.com/devcontainers/base:ubuntu", // Base image
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {
-			"version": "22" // Install Node.js 22
+			"version": "24" // Install Node.js 24
 		}
 	},
 	"customizations": {
