@@ -14,6 +14,7 @@ declare module 'vue' {
     PrimeColumn: typeof import('primevue/column')['default']
     PrimeDataTable: typeof import('primevue/datatable')['default']
     PrimeDataView: typeof import('primevue/dataview')['default']
+    PrimeDivider: typeof import('primevue/divider')['default']
     PrimeFloatLabel: typeof import('primevue/floatlabel')['default']
     PrimeImage: typeof import('primevue/image')['default']
     PrimeInputText: typeof import('primevue/inputtext')['default']

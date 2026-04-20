@@ -22,6 +22,6 @@
 		}
 	},
 	"postCreateCommand": "npm install", // Install dependencies after container creation
-	"forwardPorts": [3000], // Forward port 3000 for local development
+	"forwardPorts": [3000, "24678:24678"], // Forward port 3000 for local development
 	"remoteUser": "vscode" // Default user
 }

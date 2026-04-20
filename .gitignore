@@ -1,7 +1,41 @@
-# IDEs
+# ---- Editors / IDEs ----
 .idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# js
+# ---- Nuxt ----
+.nuxt/
+.output/
+.nitro/
+.cache/
+dist/
+
+# ---- Node ----
 node_modules/
-/.nuxt/
-/.vscode/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# ---- Environment / Secrets ----
+.env
+.env.*
+!.env.example
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Logs ----
+logs/
+*.log
+
+# ---- Build artifacts ----
+*.tsbuildinfo
+

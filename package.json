@@ -18,7 +18,7 @@
     "@nuxt/devtools": "latest",
     "@nuxt/image": "latest",
     "@nuxtjs/tailwindcss": "latest",
-    "@primevue/nuxt-module": "latest",
+    "@primevue/nuxt-module": "^4.5.5",
     "nuxt": "latest",
     "nuxt-calendly": "latest",
     "primeicons": "latest",

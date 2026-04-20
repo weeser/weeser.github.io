@@ -128,6 +128,58 @@ const onSortChange = (event) => {
 
 };
 
+function copyBibtex(entry) {
+  if (entry.BIBTEXRAW) {
+    navigator.clipboard.writeText(entry.BIBTEXRAW)
+      .then(() => alert('BibTeX entry copied!'))
+      .catch(() => alert('Failed to copy BibTeX entry.'));
+  } else {
+    alert('No BibTeX entry found.');
+  }
+}
+
+function copyRawCitation(event) {
+  const publicationRow = event?.currentTarget?.closest('.row');
+  const citationElement = publicationRow?.querySelector('.citation-text');
+  const citationText = citationElement?.innerText?.replace(/\s+/g, ' ').trim();
+
+  if (!citationText) {
+    alert('No citation text found.');
+    return;
+  }
+
+  navigator.clipboard.writeText(citationText)
+    .then(() => alert('Raw citation copied!'))
+    .catch(() => alert('Failed to copy citation.'));
+}
+
+function exportFilteredBib() {
+  if (bib_entries.value.length === 0) {
+    alert('No entries to export.');
+    return;
+  }
+
+  // Combine filtered BIBTEXRAW entries
+  const bibContent = bib_entries.value
+    .filter(entry => entry.BIBTEXRAW)
+    .map(entry => entry.BIBTEXRAW)
+    .join('\n\n');
+
+  if (!bibContent) {
+    alert('No BibTeX data found.');
+    return;
+  }
+
+  // Create blob and trigger download
+  const blob = new Blob([bibContent], { type: 'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'publications.bib';
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
 defineProps(['title'])
 </script>
 
@@ -159,7 +211,7 @@ defineProps(['title'])
 
           <div class="flex flex-row gap-1">
             <PrimeButton id="exportBIB" icon="pi pi-file-excel" v-tooltip.bottom="'Export to bib'"
-              class="p-button-sm p-button-outlined">
+              class="p-button-sm p-button-outlined" @click="exportFilteredBib">
             </PrimeButton>
           </div>
         </div>
@@ -196,8 +248,19 @@ defineProps(['title'])
                   </div>
                   <div class="flex flex-col md:items-end gap-20">
                     <div class="flex flex-row-reverse md:flex-row gap-1">
-                      <PrimeButton icon="pi pi-bookmark" label="" class="flex-auto md:flex-initial whitespace-nowrap">
-                      </PrimeButton>
+                      <PrimeButton
+                        icon="pi pi-copy"
+                        label=""
+                        class="flex-auto md:flex-initial whitespace-nowrap"
+                        v-tooltip.bottom="'Copy BibTeX entry'"
+                        @click="copyBibtex(entry)"
+                      />
+                      <PrimeButton
+                        icon="pi pi-book"
+                        class="flex-auto md:flex-initial whitespace-nowrap"
+                        v-tooltip.bottom="'Copy raw citation'"
+                        @click="copyRawCitation($event)"
+                      />
                     </div>
                   </div>
                 </div>
