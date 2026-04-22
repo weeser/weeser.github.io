@@ -188,7 +188,7 @@ defineProps(['title'])
     <PrimeDataView :value="bib_entries" paginator :rows="8" :sortOrder=sortOrder :sortField="sortField">
       <template #header>
         <div class="flex md:flex-row sm:flex-col justify-between items-center gap-6 mt-3">
-          <h2 class="text-2xl font-semibold text-surface-900 dark:text-surface-0">{{title}}</h2>
+          <h2 class="text-2xl font-semibold text-surface-900 dark:text-surface-0">{{ title }} ({{ bib_entries.length }})</h2>
           <!-- Add filter inputs for each field you want to filter -->
           <div class="flex flex-wrap gap-2 grow md:grow-0 justify-end">
             <PrimeFloatLabel class="">

@@ -21,7 +21,7 @@
 			]
 		}
 	},
-	"postCreateCommand": "npm install", // Install dependencies after container creation
+	"postCreateCommand": "npm install && npm rebuild better-sqlite3", // Install dependencies after container creation
 	"forwardPorts": [3000, "24678:24678"], // Forward port 3000 for local development
 	"remoteUser": "vscode" // Default user
 }

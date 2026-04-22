@@ -1,0 +1,6 @@
+# services:
+#   app:
+#     image: mcr.microsoft.com/devcontainers/base:ubuntu
+#     volumes:
+#       - ..:/workspaces/weeser.github.io:cached
+#     command: sleep infinity
