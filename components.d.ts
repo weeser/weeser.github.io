@@ -22,6 +22,7 @@ declare module 'vue' {
     PrimeMessage: typeof import('primevue/message')['default']
     PrimeMultiSelect: typeof import('primevue/multiselect')['default']
     PrimePanel: typeof import('primevue/panel')['default']
+    PrimeScrollTop: typeof import('primevue/scrolltop')['default']
     PrimeSelect: typeof import('primevue/select')['default']
     PrimeTag: typeof import('primevue/tag')['default']
     PrimeTextarea: typeof import('primevue/textarea')['default']
