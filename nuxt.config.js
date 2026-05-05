@@ -64,8 +64,10 @@ export default defineNuxtConfig({
         optimizeDeps: {
             include: ["@vue/devtools-core", "@vue/devtools-kit"],
         },
-        watch: {
-            usePolling: true,
+        server: {
+            watch: {
+                usePolling: true,
+            },
         },
     },
 });

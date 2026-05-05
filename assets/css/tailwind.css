@@ -1,10 +1,89 @@
 @layer tailwind-base, primevue, tailwind-utilities;
 
+:root {
+    --site-bg: #f5f7f4;
+    --site-bg-soft: #eaf2ee;
+    --site-surface: rgba(255, 255, 255, 0.82);
+    --site-surface-strong: #ffffff;
+    --site-ink: #143325;
+    --site-ink-muted: #365849;
+    --site-border: #c7d6ce;
+    --site-accent: #0f766e;
+    --site-accent-hover: #0b5f59;
+    --site-highlight: #dff2e6;
+    --site-glow-a: #e3efe8;
+    --site-glow-b: #dceee7;
+    --site-shadow: 0 14px 32px -26px rgba(20, 51, 37, 0.7);
+}
+
+.dark {
+    --site-bg: #0c1714;
+    --site-bg-soft: #12231d;
+    --site-surface: rgba(16, 33, 27, 0.78);
+    --site-surface-strong: #163129;
+    --site-ink: #e4f0ea;
+    --site-ink-muted: #b8d0c5;
+    --site-border: #2c4a3f;
+    --site-accent: #3fd4c4;
+    --site-accent-hover: #89e6dc;
+    --site-highlight: #204338;
+    --site-glow-a: #153228;
+    --site-glow-b: #102820;
+    --site-shadow: 0 14px 32px -24px rgba(0, 0, 0, 0.85);
+}
+
+html,
+body,
+#__nuxt {
+    min-height: 100%;
+}
+
+body {
+    background: radial-gradient(circle at 10% -10%, var(--site-glow-a) 0%, transparent 38%),
+        radial-gradient(circle at 95% -20%, var(--site-glow-b) 0%, transparent 42%), var(--site-bg);
+    color: var(--site-ink);
+    font-family: Verdana, Tahoma, sans-serif;
+    transition: background 220ms ease, color 220ms ease;
+}
+
 @layer tailwind-base {
     @tailwind base;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        letter-spacing: -0.01em;
+        color: var(--site-ink);
+    }
+
+    p {
+        line-height: 1.75;
+        color: var(--site-ink-muted);
+    }
+
+    a {
+        color: var(--site-accent);
+    }
+
+    a:hover {
+        color: var(--site-accent-hover);
+    }
 }
 
 @layer tailwind-utilities {
     @tailwind components;
     @tailwind utilities;
+
+    .surface-panel {
+        border: 1px solid var(--site-border);
+        background: linear-gradient(145deg, color-mix(in srgb, var(--site-surface-strong) 88%, transparent), color-mix(in srgb, var(--site-bg-soft) 84%, transparent));
+        box-shadow: var(--site-shadow);
+        border-radius: 1rem;
+    }
+
+    .section-title {
+        @apply text-3xl md:text-4xl font-semibold tracking-tight;
+    }
 }

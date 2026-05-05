@@ -1,24 +1,41 @@
 <template>
-	<section>
-		<h1 class="text-3xl font-semibold">{{ title }}</h1>
-		<PrimeCard class="mt-2" v-for="(card, index) in cards" :key="index">
+	<section class="space-y-4">
+		<h1 class="section-title">{{ title }}</h1>
+		<PrimeCard
+			class="surface-panel overflow-hidden border-0"
+			v-for="(card, index) in cards"
+			:key="index"
+		>
 			<template #title>
-				<h2>{{ card.title }}</h2>
+				<div class="flex items-center gap-3">
+					<span class="h-8 w-1.5 rounded-full bg-[color:var(--site-accent)]" />
+					<h2 class="text-2xl font-semibold">{{ card.title }}</h2>
+				</div>
 			</template>
 			<template #content>
-				<div :class="{ 'flex flex-row': card.image }">
-					<div class="card flex m-5" v-if="card.image">
-						<PrimeImage :src="card.image.file" :alt="card.image.altText" imageClass="rounded-xl" />
+				<div class="grid gap-6" :class="card.image ? 'md:grid-cols-[220px_1fr] md:items-start' : ''">
+					<div class="card" v-if="card.image">
+						<PrimeImage
+							:src="card.image.file"
+							:alt="card.image.altText"
+							imageClass="w-full rounded-2xl border border-[color:var(--site-border)] shadow-md"
+						/>
 					</div>
-					<p v-for="(text, index) in card.content" :key="index" :class="{ 'mt-3': index !== 0 }">
-						{{ text }}
-					</p>
-
+					<div class="w-full">
+						<p v-for="(text, index) in card.content" :key="index" :class="{ 'mt-4': index !== 0 }">
+							{{ text }}
+						</p>
+					</div>
 				</div>
 			</template>
 			<template #footer v-if="card.tags.length > 0">
-				<div class="flex flex-row flex-wrap gap-4 mt-1">
-					<PrimeChip v-for="(text, index) in card.tags" :key="index" :label="text" />
+				<div class="mt-2 flex flex-row flex-wrap gap-3 border-t border-[color:var(--site-border)] pt-4">
+					<PrimeChip
+						v-for="(text, index) in card.tags"
+						:key="index"
+						:label="text"
+						class="border border-[color:var(--site-border)] bg-[color:var(--site-highlight)] text-[color:var(--site-ink)]"
+					/>
 				</div>
 			</template>
 		</PrimeCard>
