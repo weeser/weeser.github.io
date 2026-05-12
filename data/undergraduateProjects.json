@@ -1,13 +1,57 @@
 [
     {
+        "students": ["Jake May"],
+        "term": "Spring 2026",
+        "project": "RideCircle",
+        "description": "RideCircle is web application that reimagines rideshare services like Uber and Lyft aimed at smaller communities and organizations rather than the general public. Users can create or join private groups and rides can only be requested from and fulfilled by members of that same group."
+    },
+    {
+        "students": ["Recip-EZ"],
+        "term": "Spring 2026",
+        "project": "Caden Swanson",
+        "description": "Recip-EZ is a web application that helps users track kitchen inventory and curate recipes based on available ingredients, labeling recipes as ready to cook, almost ready, or not really possible."
+    },
+    {
+        "students": ["Corbin Hoppas"],
+        "term": "Spring 2026",
+        "project": "WeedNav",
+        "description": "WeedNav is an autonomous robot system adapted from a mechanical engineering senior design project that maps a yard, plans a path, and targets weeds for spraying."
+    },
+    {
+        "students": ["Hasan Hanafieh"],
+        "term": "Spring 2026",
+        "project": "AiFitnessTracker",
+        "description": "AiFitnessTracker is a web-based fitness tracking system where users log meals, workouts, and goals, get dashboard insights and weekly fitness scores, and interact with an AI trainer for feedback."
+    },
+    {
+        "students": ["Johnny Hug"],
+        "term": "Spring 2026",
+        "project": "Ascend: An RPG-Based Fitness Tracking Application",
+        "description": "Ascend is a .NET MAUI mobile app that combines workout tracking with RPG mechanics, including character progression tied to real activity, workout history, and gamified motivation features."
+    },
+    {
+        "students": ["Carson Toews"],
+        "term": "Fall 2025",
+        "project": "BeefBase",
+        "description": "BeefBase is a full-stack cattle management and analytics platform built to centralize ranch data operations, including inventory, health records, feed schedules, lineage, and producer analytics."
+    },
+    {
+        "students": ["Wyatt Morris"],
+        "term": "Fall 2025",
+        "project": "Verba",
+        "description": "Verba is a lightweight media-to-text system that cleans and equalizes audio, detects speech, and produces structured transcripts with high accuracy on everyday hardware."
+    },
+    {
         "students": ["Sam Wilson"],
         "term": "Spring 2025",
-        "project": "Garage Mate"
+        "project": "Garage Mate",
+        "description": "GarageMate is a web application for vehicle owners that centralizes service records and maintenance planning, with schedule optimization to minimize cost and time."
     },
     {
         "students": ["Vinny Sun"],
         "term": "Spring 2025",
-        "project": "Sim Trade"
+        "project": "Sim Trade",
+        "description": "SimTrade is a full-stack virtual stock trading and algorithm backtesting web app with real-time and historical data for learning and strategy evaluation."
     },
     {
         "students": ["Ian Cline", "Jake Kenslow", "Alex Whipple"],
@@ -17,7 +61,8 @@
     {
         "students": ["Jacob Prather"],
         "term": "Fall 2024",
-        "project": "Python Web Chat Bot"
+        "project": "Python Web Chat Bot",
+        "description": "Scoobot is a dynamic chatbot for university information built with Python, Flask, Rasa, PostgreSQL, and NLP to answer questions about departments, faculty, courses, and events."
     },
     {
         "students": ["Kael Pavllik"],
@@ -27,42 +72,50 @@
     {
         "students": ["Ethan Coleman"],
         "term": "Fall 2024",
-        "project": "Weather Mental Health App"
+        "project": "Weather Mental Health App",
+        "description": "Cirrene is a Flask-powered website for tracking mood and wellbeing against weather trends, helping users discover personal patterns and strategies for weather-related stress."
     },
     {
         "students": ["Jackson Huffman", "Logan Newsom"],
         "term": "Spring 2024",
-        "project": "Small Business IOS App"
+        "project": "Small Business IOS App",
+        "description": "SmallBiz Management Studio (SmallBiz MS) is a hybrid mobile app for small businesses that streamlines employee and inventory management with scheduling and analytics features."
     },
     {
         "students": ["Nick Leskovac"],
         "term": "Spring 2024",
-        "project": "Letterboxed for Music"
+        "project": "Letterboxed for Music",
+        "description": "Milkcrate is a social music cataloging web app where users share ratings, connect Spotify accounts, view listening history, and get album recommendations."
     },
     {
         "students": ["Nathan Lee"],
         "term": "Spring 2024",
-        "project": "Desktop Ereader Management App"
+        "project": "Desktop Ereader Management App",
+        "description": "Librus is a desktop e-book management app for importing EPUB and PDF files, editing metadata, exporting to e-readers, and receiving recommendation support."
     },
     {
         "students": ["Jonathan Partridge"],
         "term": "Spring 2024",
-        "project": "DND Campaign Website"
+        "project": "DND Campaign Website",
+        "description": "The Sanctum TTRPG Character Sheet Web App provides real-time synchronized online character sheets with account-based access and cloud-backed persistence."
     },
     {
         "students": ["Hursen Adjovi"],
         "term": "Fall 2023",
-        "project": "Simple Calendar"
+        "project": "Simple Calendar",
+        "description": "Simple Calendar is a web app for planning with drag-and-drop time blocks, combining task management and a weekly calendar for improved time management."
     },
     {
         "students": ["Andrew Varguez"],
         "term": "Fall 2023",
-        "project": "Engineering Ambassador Scheduler"
+        "project": "Engineering Ambassador Scheduler",
+        "description": "Ambassador Toolkit is a web application for Engineering Ambassadors that streamlines schedule creation and helps members learn about current and past participants."
     },
     {
         "students": ["Mitchel Hutchinson"],
         "term": "Fall 2023",
-        "project": "Flood Watch"
+        "project": "Flood Watch",
+        "description": "Flood Watch is a disaster management tool that uses Google Earth Engine and Sentinel-2 imagery with a custom water detection algorithm to determine flood conditions."
     },
     {
         "students": ["Trent Powell", "Devin Richards", "Casey Ring"],
@@ -72,47 +125,56 @@
     {
         "students": ["Cody Murphy"],
         "term": "Spring 2023",
-        "project": "IOS Travel App"
+        "project": "IOS Travel App",
+        "description": "Improviso is an iOS travel planning app focused on flexible exploration, using recommendation logic with proximity and interest data to suggest destination options."
     },
     {
         "students": ["Kaden O'Hare"],
         "term": "Spring 2023",
-        "project": "Spotify/Location Web App"
+        "project": "Spotify/Location Web App",
+        "description": "GeoPlay is a website that creates Spotify playlists based on what users have listened to recently and their location data."
     },
     {
         "students": ["Alisha Crow"],
         "term": "Spring 2023",
-        "project": "Voice Controlled Computer"
+        "project": "Voice Controlled Computer",
+        "description": "The Resurrection of A Project of Voice is a Python speech-to-text accessibility program for controlling computer actions like opening apps, switching windows, and typing."
     },
     {
         "students": ["Micah Roening"],
         "term": "Spring 2023",
-        "project": "Dungeon Swing"
+        "project": "Dungeon Swing",
+        "description": "Dungeon Swing is a top-down 2D hack-and-slash proof of concept focused on complex player-enemy interactions and intent-aware enemy AI."
     },
     {
         "students": ["Katia Coleman"],
         "term": "Fall 2022",
-        "project": "Cat Fostering app"
+        "project": "Cat Fostering app",
+        "description": "Foster Friend is a website that supports cat fosterers with resources, community access, and customizable tracking of foster care information."
     },
     {
         "students": ["Ahren Gann"],
         "term": "Fall 2022",
-        "project": "Django Notion app with Canvas LTI"
+        "project": "Django Notion app with Canvas LTI",
+        "description": "OrganizED College Dashboard is a one-stop student dashboard that integrates Canvas assignments, notes, and personal tasks to help manage college workflow."
     },
     {
         "students": ["Kirkland Akins"],
         "term": "Fall 2022",
-        "project": "C# Markdown editor"
+        "project": "C# Markdown editor",
+        "description": "Quartz Markdown Editor is a markdown writing tool focused on a pleasant editing experience with live preview and productivity features inspired by Typora and Obsidian."
     },
     {
         "students": ["Zhouer Ding"],
         "term": "Fall 2022",
-        "project": "C# WPF Gobang Game with AI"
+        "project": "C# WPF Gobang Game with AI",
+        "description": "Gobang Game is a 15x15 board game implementation with AI optimization techniques, multiple graphical interfaces, and a model-view design tested with unit tests."
     },
     {
         "students": ["Steven Avila"],
         "term": "Fall 2022",
-        "project": "Diabetes Management C# App"
+        "project": "Diabetes Management C# App",
+        "description": "Diabetic Management Program helps users track insulin, carbohydrates, blood sugar, food intake, daily records, and estimated management metrics like rough A1c."
     },
     {
         "students": ["Caleb Hefty", "Jordan Austin", "Samuel Woolery"],
