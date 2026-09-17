@@ -308,6 +308,17 @@
             "awardAmount": "$685,466",
             "role": "PI",
             "abstract": "Kansas State University Department of Computer Science (KSUCS) has developed a series of high-quality computer science courses intended for a broad audience in its Computational Core Initiative (CCI). These courses are designed with flexibility and scalability in mind, utilizing an innovative online instruction platform providing on-demand video lectures, hands-on programming activities with automated grading and feedback, and a collaborative code editing environment that allows the teacher to remotely see and interact with the student and their program code. This project will continue to expand and improve our CCI offerings as well as continue support for a summer teacher training workshop and CSTA conference."
+        },
+        {
+            "agency": "U.S. Department of Education",
+            "institution": "Kansas State University",
+            "title": "Strengthening American Competitiveness with AI Education",
+            "status": "Awarded",
+            "startDate": "1/01/2026",
+            "endDate": "012/31/2029",
+            "awardAmount": "$886,922",
+            "role": "CO-PI",
+            "abstract": "I am Co-PI on this subaward under a grant from Wright State University funded by the U.S. Department of Education. This grant supports development of curricular materials and activities to teach AI, DS, and CS at all levels as well as provide professional development to K-12 teachers. The materials developed under this grant will be integrated into the learning platform proposed our other works"
         }
     ],
     "memberships": [
@@ -360,8 +371,8 @@
             "years": "2020-present"
         },
         {
-            "activity": "Associate Program Chair (APC) for ACM SIGCSE Technical Symposium",
-            "years": "2022, 2024, 2025"
+            "activity": "Associate Program Chair (APC)/ Senior Reviewer for ACM SIGCSE Technical Symposium",
+            "years": "2022, 2024-2026"
         },
         {
             "activity": "Peer Reviewer for ACM SIGCSE Technical Symposium",
@@ -394,8 +405,13 @@
     ],
     "universityService": [
         {
-            "activity": "Faculty Senator",
+            "activity": "Faculty Senate Advancing Wellbeing of Faculty and Staff Committee Co-Chair",
+            "abbreviation": "AWFS",
             "years": "2026-present"
+        },
+        {
+            "activity": "Faculty Senator",
+            "years": "2026-2029"
         },
         {
             "activity": "Undergraduate Program Director",
