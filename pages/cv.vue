@@ -148,6 +148,20 @@ const markdownLink = (label, url) => url ? `[${label}](${url})` : label;
 
 const markdownList = (items, formatter) => items.map((item) => `- ${formatter(item)}`).join('\n');
 
+const markdownCell = (value) => markdownValue(value).replace(/\|/g, '\\|').replace(/\n/g, '<br>');
+
+const markdownTable = (headers, rows) => {
+	if (rows.length === 0) {
+		return '_None listed._';
+	}
+
+	return [
+		`| ${headers.join(' | ')} |`,
+		`| ${headers.map(() => '---').join(' | ')} |`,
+		...rows.map((row) => `| ${row.map(markdownCell).join(' | ')} |`),
+	].join('\n');
+};
+
 const parseBibtex = (bibtex) => {
 	const parser = new BibtexParser();
 	parser.setInput(bibtex);
@@ -176,20 +190,20 @@ const formatRecord = (record, fields) => fields
 
 const exportCvMarkdown = () => {
 	const sections = [
-		['Education', markdownList(cvData.value.education, (item) => formatRecord(item, [['degree'], ['institution'], ['location'], ['years', 'Years'], ['description']]))],
-		['Work Experience', markdownList(cvData.value.workExperience, (item) => `${formatRecord(item, [['position'], ['company'], ['location'], ['years', 'Years']])}${item.responsibilities?.length ? `\n  - ${item.responsibilities.map(markdownValue).join('\n  - ')}` : ''}`)],
-		['Teaching', markdownList(cvData.value.coursesTaught, (item) => formatRecord(item, [['course_code'], ['course_title'], ['years', 'Years'], ['description']]))],
-		['Professional Service', markdownList(cvData.value.professionalService, (item) => formatRecord(item, [['activity'], ['years', 'Years'], ['description']]))],
-		['University Service', markdownList(cvData.value.universityService, (item) => formatRecord(item, [['activity'], ['years', 'Years'], ['description']]))],
-		['Public Service', markdownList(cvData.value.publicService, (item) => formatRecord(item, [['activity'], ['years', 'Years'], ['description']]))],
-		['Memberships', markdownList(cvData.value.memberships, (item) => formatRecord(item, [['organization'], ['chapter'], ['position'], ['institution'], ['location'], ['years', 'Years']]))],
-		['Awards', markdownList(cvData.value.awards, (item) => formatRecord(item, [['name'], ['organization'], ['placement'], ['years', 'Years']]))],
-		['Grants', markdownList(cvData.value.grants, (item) => formatRecord(item, [['title'], ['role', 'Role'], ['institution'], ['agency'], ['awardAmount', 'Amount'], ['awardNumber', 'Award number'], ['startDate', 'Start'], ['endDate', 'End'], ['abstract']]))],
+		['Education', markdownTable(['Degree', 'Institution', 'Location', 'Years', 'Description'], cvData.value.education.map((item) => [item.degree, item.institution, item.location, item.years, item.description]))],
+		['Work Experience', markdownTable(['Position', 'Company', 'Location', 'Years', 'Responsibilities'], cvData.value.workExperience.map((item) => [item.position, item.company, item.location, item.years, item.responsibilities?.map(markdownValue).join('<br>')]))],
+		['Teaching', markdownTable(['Course', 'Title', 'Years', 'Description'], cvData.value.coursesTaught.map((item) => [item.course_code, item.course_title, item.years, item.description]))],
+		['Professional Service', markdownTable(['Activity', 'Years', 'Description'], cvData.value.professionalService.map((item) => [item.activity, item.years, item.description]))],
+		['University Service', markdownTable(['Activity', 'Years', 'Description'], cvData.value.universityService.map((item) => [item.activity, item.years, item.description]))],
+		['Public Service', markdownTable(['Activity', 'Years', 'Description'], cvData.value.publicService.map((item) => [item.activity, item.years, item.description]))],
+		['Memberships', markdownTable(['Organization', 'Chapter', 'Position', 'Institution', 'Location', 'Years'], cvData.value.memberships.map((item) => [item.organization, item.chapter, item.position, item.institution, item.location, item.years]))],
+		['Awards', markdownTable(['Award', 'Organization', 'Placement', 'Years'], cvData.value.awards.map((item) => [item.name, item.organization, item.placement, item.years]))],
+		['Grants', markdownTable(['Title', 'Role', 'Host Institution', 'Awarding Agency', 'Amount', 'Award Number', 'Dates', 'Abstract'], cvData.value.grants.map((item) => [item.title, item.role, item.institution, item.agency, item.awardAmount, item.awardNumber, [item.startDate, item.endDate].filter(Boolean).join(' - '), item.abstract]))],
 		['Publications', markdownList(parseBibtex(publicationsRaw), formatPublication)],
 		['Talks, Panels, and Workshops', markdownList(parseBibtex(talksRaw), formatPublication)],
 		['Dissertations and Theses Completed Under My Supervision', markdownList(parseBibtex(advisedThesesRaw), formatPublication)],
 		['Served Graduate Committees', markdownList(parseBibtex(committeesRaw), formatPublication)],
-		['Student Projects', markdownList(ugProjParsed, (item) => formatRecord(item, [['students', 'Students'], ['project'], ['term', 'Term'], ['description']]))],
+		['Student Projects', markdownTable(['Students', 'Project', 'Term', 'Description'], ugProjParsed.map((item) => [item.students, item.project, item.term, item.description]))],
 	];
 
 	const markdown = ['# Curriculum Vitae', ...sections.map(([title, content]) => `## ${title}\n\n${content || '_None listed._'}`)].join('\n\n');
