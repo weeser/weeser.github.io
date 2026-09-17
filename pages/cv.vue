@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { BibtexParser } from 'assets/js/bibtex_js';
 
 // Custom Components
 import Education from '@/components/cv/Education.vue';
@@ -14,6 +15,10 @@ import Publications from './publications.vue';
 
 let cvDataRaw = (await import(`../data/cv.json?raw`)).default;
 let ugProjRaw = (await import(`../data/undergraduateProjects.json?raw`)).default;
+let publicationsRaw = (await import(`../data/publications.bib?raw`)).default;
+let talksRaw = (await import(`../data/talksPanelsWorkshops.bib?raw`)).default;
+let advisedThesesRaw = (await import(`../data/advisedTheses.bib?raw`)).default;
+let committeesRaw = (await import(`../data/gradCommitteesServed.bib?raw`)).default;
 let cvDataParsed = JSON.parse(cvDataRaw);
 let ugProjParsed = JSON.parse(ugProjRaw);
 
@@ -136,10 +141,73 @@ const tocItems = [
 ];
 
 const cvData = ref(cvDataParsed);
+
+const markdownValue = (value) => String(value ?? '').replace(/\s+/g, ' ').trim();
+
+const markdownLink = (label, url) => url ? `[${label}](${url})` : label;
+
+const markdownList = (items, formatter) => items.map((item) => `- ${formatter(item)}`).join('\n');
+
+const parseBibtex = (bibtex) => {
+	const parser = new BibtexParser();
+	parser.setInput(bibtex);
+	parser.bibtex();
+	return Object.values(parser.getEntries()).sort((first, second) => Number(second.YEAR ?? 0) - Number(first.YEAR ?? 0));
+};
+
+const formatPublication = (entry) => {
+	const title = markdownValue(entry.TITLE);
+	const linkedTitle = markdownLink(title, entry.DOI ? `https://doi.org/${entry.DOI}` : entry.URL);
+	const parts = [markdownValue(entry.AUTHOR), markdownValue(entry.YEAR), linkedTitle, markdownValue(entry.BOOKTITLE || entry.JOURNAL), markdownValue(entry.PUBLISHER || entry.SCHOOL), markdownValue(entry.PAGES && `pp. ${entry.PAGES}`), markdownValue(entry.NOTE)];
+	return parts.filter(Boolean).join('. ');
+};
+
+const formatRecord = (record, fields) => fields
+	.map(([key, label]) => {
+		const value = record[key];
+		if (value === undefined || value === null || value === '') {
+			return '';
+		}
+		const formatted = Array.isArray(value) ? value.join(', ') : markdownValue(value);
+		return label ? `**${label}:** ${formatted}` : formatted;
+	})
+	.filter(Boolean)
+	.join('; ');
+
+const exportCvMarkdown = () => {
+	const sections = [
+		['Education', markdownList(cvData.value.education, (item) => formatRecord(item, [['degree'], ['institution'], ['location'], ['years', 'Years'], ['description']]))],
+		['Work Experience', markdownList(cvData.value.workExperience, (item) => `${formatRecord(item, [['position'], ['company'], ['location'], ['years', 'Years']])}${item.responsibilities?.length ? `\n  - ${item.responsibilities.map(markdownValue).join('\n  - ')}` : ''}`)],
+		['Teaching', markdownList(cvData.value.coursesTaught, (item) => formatRecord(item, [['course_code'], ['course_title'], ['years', 'Years'], ['description']]))],
+		['Professional Service', markdownList(cvData.value.professionalService, (item) => formatRecord(item, [['activity'], ['years', 'Years'], ['description']]))],
+		['University Service', markdownList(cvData.value.universityService, (item) => formatRecord(item, [['activity'], ['years', 'Years'], ['description']]))],
+		['Public Service', markdownList(cvData.value.publicService, (item) => formatRecord(item, [['activity'], ['years', 'Years'], ['description']]))],
+		['Memberships', markdownList(cvData.value.memberships, (item) => formatRecord(item, [['organization'], ['chapter'], ['position'], ['institution'], ['location'], ['years', 'Years']]))],
+		['Awards', markdownList(cvData.value.awards, (item) => formatRecord(item, [['name'], ['organization'], ['placement'], ['years', 'Years']]))],
+		['Grants', markdownList(cvData.value.grants, (item) => formatRecord(item, [['title'], ['role', 'Role'], ['institution'], ['agency'], ['awardAmount', 'Amount'], ['awardNumber', 'Award number'], ['startDate', 'Start'], ['endDate', 'End'], ['abstract']]))],
+		['Publications', markdownList(parseBibtex(publicationsRaw), formatPublication)],
+		['Talks, Panels, and Workshops', markdownList(parseBibtex(talksRaw), formatPublication)],
+		['Dissertations and Theses Completed Under My Supervision', markdownList(parseBibtex(advisedThesesRaw), formatPublication)],
+		['Served Graduate Committees', markdownList(parseBibtex(committeesRaw), formatPublication)],
+		['Student Projects', markdownList(ugProjParsed, (item) => formatRecord(item, [['students', 'Students'], ['project'], ['term', 'Term'], ['description']]))],
+	];
+
+	const markdown = ['# Curriculum Vitae', ...sections.map(([title, content]) => `## ${title}\n\n${content || '_None listed._'}`)].join('\n\n');
+	const blob = new Blob([`${markdown}\n`], { type: 'text/markdown;charset=utf-8' });
+	const url = URL.createObjectURL(blob);
+	const link = document.createElement('a');
+	link.href = url;
+	link.download = 'curriculum-vitae.md';
+	link.click();
+	URL.revokeObjectURL(url);
+};
 </script>
 
 <template>
-	<h2 class="section-title mb-6">Curriculum Vitae</h2>
+	<div class="mb-6 flex flex-wrap items-center justify-between gap-3">
+		<h2 class="section-title mb-0">Curriculum Vitae</h2>
+		<PrimeButton icon="pi pi-download" label="Export Markdown" @click="exportCvMarkdown" />
+	</div>
 
 	<PrimeCard class="mb-6 border-0">
 		<template #title>Table of Contents</template>
